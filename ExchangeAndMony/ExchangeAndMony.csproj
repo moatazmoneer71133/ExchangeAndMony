@@ -81,6 +81,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="mmm\Class1.cs" />
+    <Compile Include="mmm\Class2.cs" />
     <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\AccountsGuide.cs">
       <SubType>Form</SubType>
     </Compile>
