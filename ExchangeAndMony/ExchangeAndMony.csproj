@@ -322,6 +322,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="mmm\hail\" />
     <Folder Include="pages\accountsInterface\accountsReportsInterface\" />
     <Folder Include="pages\transfer\transferprocessInterface\" />
     <Folder Include="pages\transfer\transferReportsInterface\" />
