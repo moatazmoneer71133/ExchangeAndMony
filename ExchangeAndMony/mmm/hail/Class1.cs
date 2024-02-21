@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ExchangeAndMony.mmm.hail
 {
-    class bb
+    class Class1
     {
-        //moataz moneer mmmm m,mmm bbbbb
+        public int yyy { get; set; }
     }
 }
