@@ -9,5 +9,9 @@ namespace ExchangeAndMony.mmm.hail
     class bb
     {
         //moataz moneer mmmm m,mmm bbbbb
+        void nn()
+        {
+            int o = 0;
+        }
     }
 }
