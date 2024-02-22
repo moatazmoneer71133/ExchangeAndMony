@@ -214,6 +214,12 @@
     <Compile Include="pages\transfer\transferInitializatuionInterface\GovernorateGuide.Designer.cs">
       <DependentUpon>GovernorateGuide.cs</DependentUpon>
     </Compile>
+    <Compile Include="pages\transfer\transferprocessInterface\Exchange_confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\transfer\transferprocessInterface\Exchange_confirmation.Designer.cs">
+      <DependentUpon>Exchange_confirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="pages\transfer\transferprocessInterface\Export_transfer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,12 @@
     </Compile>
     <Compile Include="pages\transfer\transferprocessInterface\Receiving_transfer.Designer.cs">
       <DependentUpon>Receiving_transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\transfer\transferprocessInterface\Stoping_transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\transfer\transferprocessInterface\Stoping_transfer.Designer.cs">
+      <DependentUpon>Stoping_transfer.cs</DependentUpon>
     </Compile>
     <Compile Include="pages\transfer\transferprocessInterface\Supplying_transfer.cs">
       <SubType>Form</SubType>
@@ -318,11 +330,17 @@
     <EmbeddedResource Include="pages\transfer\transferInitializatuionInterface\GovernorateGuide.resx">
       <DependentUpon>GovernorateGuide.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pages\transfer\transferprocessInterface\Exchange_confirmation.resx">
+      <DependentUpon>Exchange_confirmation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pages\transfer\transferprocessInterface\Export_transfer.resx">
       <DependentUpon>Export_transfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\transfer\transferprocessInterface\Receiving_transfer.resx">
       <DependentUpon>Receiving_transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\transfer\transferprocessInterface\Stoping_transfer.resx">
+      <DependentUpon>Stoping_transfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\transfer\transferprocessInterface\Supplying_transfer.resx">
       <DependentUpon>Supplying_transfer.cs</DependentUpon>
@@ -361,6 +379,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="pages\accountsInterface\accountsReportsInterface\" />
+    <Folder Include="pages\transfer\totals\" />
     <Folder Include="pages\transfer\transferReportsInterface\" />
     <Folder Include="Reports\" />
     <Folder Include="src\API\" />

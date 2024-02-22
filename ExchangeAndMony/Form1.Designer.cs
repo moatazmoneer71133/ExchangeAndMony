@@ -86,6 +86,8 @@
             this.barButtonItem36 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem37 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem38 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -109,8 +111,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_mainhome = new System.Windows.Forms.Panel();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -227,30 +227,35 @@
             this.barButtonItem15.Caption = "توريد الحوالات";
             this.barButtonItem15.Id = 34;
             this.barButtonItem15.Name = "barButtonItem15";
+            this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem15_ItemClick);
             // 
             // barButtonItem16
             // 
             this.barButtonItem16.Caption = "قبض الحوالات";
             this.barButtonItem16.Id = 35;
             this.barButtonItem16.Name = "barButtonItem16";
+            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem16_ItemClick);
             // 
             // barButtonItem17
             // 
             this.barButtonItem17.Caption = "صرف الحوالات";
             this.barButtonItem17.Id = 36;
             this.barButtonItem17.Name = "barButtonItem17";
+            this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem17_ItemClick);
             // 
             // barButtonItem18
             // 
             this.barButtonItem18.Caption = "تصدير الحوالات";
             this.barButtonItem18.Id = 37;
             this.barButtonItem18.Name = "barButtonItem18";
+            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem18_ItemClick);
             // 
             // barButtonItem19
             // 
             this.barButtonItem19.Caption = "تأكيد صرف الحوالات";
             this.barButtonItem19.Id = 38;
             this.barButtonItem19.Name = "barButtonItem19";
+            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem19_ItemClick);
             // 
             // barButtonItem21
             // 
@@ -269,6 +274,7 @@
             this.barButtonItem23.Caption = "توقيف الحوالات";
             this.barButtonItem23.Id = 42;
             this.barButtonItem23.Name = "barButtonItem23";
+            this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem23_ItemClick);
             // 
             // barButtonItem24
             // 
@@ -513,6 +519,18 @@
             this.barButtonItem38.Id = 58;
             this.barButtonItem38.Name = "barButtonItem38";
             // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.skinRibbonGalleryBarItem2);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "تغير الثيمات";
+            // 
+            // skinRibbonGalleryBarItem2
+            // 
+            this.skinRibbonGalleryBarItem2.Caption = "skinRibbonGalleryBarItem2";
+            this.skinRibbonGalleryBarItem2.Id = 60;
+            this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -580,7 +598,6 @@
             // 
             // ribbonControl1
             // 
-//            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 32, 35, 32);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -711,10 +728,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(641, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 26);
+            this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "اسم المستخدم: معتز";
             // 
@@ -736,18 +753,6 @@
             this.panel_mainhome.Size = new System.Drawing.Size(1340, 707);
             this.panel_mainhome.TabIndex = 6;
             this.panel_mainhome.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_mainhome_Paint_1);
-            // 
-            // ribbonPageGroup7
-            // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.skinRibbonGalleryBarItem2);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "تغير الثيمات";
-            // 
-            // skinRibbonGalleryBarItem2
-            // 
-            this.skinRibbonGalleryBarItem2.Caption = "skinRibbonGalleryBarItem2";
-            this.skinRibbonGalleryBarItem2.Id = 60;
-            this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
             // 
             // Form1
             // 

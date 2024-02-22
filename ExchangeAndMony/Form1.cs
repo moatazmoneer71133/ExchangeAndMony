@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface;
 using ExchangeAndMony.pages.accountsInterface.accountsprocessInterface;
 using ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface;
+using ExchangeAndMony.pages.transfer.transferprocessInterface;
 using ExchangeAndMony.pages.file;
 namespace ExchangeAndMony
 {
@@ -30,7 +31,12 @@ namespace ExchangeAndMony
         RecipientInfo recipientInfo = new RecipientInfo();
         PersonalInfo personalInfo = new PersonalInfo();
         AccountsGuide acounts_guide = new AccountsGuide();
-
+        Exchange_confirmation exchange_confirmation = new Exchange_confirmation();
+        Supplying_transfer Supplying_transfer = new Supplying_transfer();
+        Export_transfer export_transfer = new Export_transfer();
+        Receiving_transfer receiving_transfer = new Receiving_transfer();
+        Stoping_transfer stoping_transfer = new Stoping_transfer();
+        Transfer_money transfer_money = new Transfer_money();
 
         public Form1()
         {
@@ -222,9 +228,7 @@ namespace ExchangeAndMony
         }
 
         private void btn_PersonalInfo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            
-                
+        {  
             panel_mainhome.Controls.Clear();
             personalInfo.TopLevel = false;
             panel_mainhome.Controls.Add(personalInfo);
@@ -246,6 +250,60 @@ namespace ExchangeAndMony
             panel_mainhome.Controls.Add(acounts_guide);
             acounts_guide.Location = new Point(300, 0);
             acounts_guide.Show();
+        }
+        // توريد حوالة
+        private void BarButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panel_mainhome.Controls.Clear();
+            Supplying_transfer.TopLevel = false;
+            panel_mainhome.Controls.Add(Supplying_transfer);
+            Supplying_transfer.Location = new Point(300, 0);
+            Supplying_transfer.Show();
+        }
+        //تاكيد صرف حوالة
+        private void BarButtonItem19_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panel_mainhome.Controls.Clear();
+            exchange_confirmation.TopLevel = false;
+            panel_mainhome.Controls.Add(exchange_confirmation);
+            exchange_confirmation.Location = new Point(300, 0);
+            exchange_confirmation.Show();
+        }
+        // قبض حوالة
+        private void BarButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panel_mainhome.Controls.Clear();
+            receiving_transfer.TopLevel = false;
+            panel_mainhome.Controls.Add(receiving_transfer);
+            receiving_transfer.Location = new Point(300, 0);
+            receiving_transfer.Show();
+        }
+        // صرف حوالة
+        private void BarButtonItem17_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panel_mainhome.Controls.Clear();
+            transfer_money.TopLevel = false;
+            panel_mainhome.Controls.Add(transfer_money);
+            transfer_money.Location = new Point(300, 0);
+            transfer_money.Show();
+        }
+        // تصدير حوالة
+        private void BarButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panel_mainhome.Controls.Clear();
+            export_transfer.TopLevel = false;
+            panel_mainhome.Controls.Add(export_transfer);
+            export_transfer.Location = new Point(300, 0);
+            export_transfer.Show();
+        }
+        // توقيف حوالة
+        private void BarButtonItem23_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panel_mainhome.Controls.Clear();
+            stoping_transfer.TopLevel = false;
+            panel_mainhome.Controls.Add(stoping_transfer);
+            stoping_transfer.Location = new Point(300, 0);
+            stoping_transfer.Show();
         }
     }
 }
