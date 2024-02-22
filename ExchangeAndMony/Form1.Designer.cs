@@ -102,6 +102,7 @@
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage15 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup22 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage16 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -111,6 +112,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_mainhome = new System.Windows.Forms.Panel();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +145,7 @@
             // 
             // ribbonPageGroup14
             // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             this.ribbonPageGroup14.Text = "شراء العملات";
             // 
@@ -653,12 +656,15 @@
             this.barButtonItem36,
             this.barButtonItem37,
             this.barButtonItem38,
-            this.skinRibbonGalleryBarItem2});
+            this.skinRibbonGalleryBarItem2,
+            this.barButtonItem5});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 61;
+            this.ribbonControl1.MaxItemId = 62;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 385;
+            this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
+            this.ribbonPageCategory1});
             this.ribbonControl1.PageHeaderItemLinks.Add(this.barButtonItem7);
             this.ribbonControl1.PageHeaderItemLinks.Add(this.barSubItem2);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -698,6 +704,11 @@
             this.barButtonItem8.Caption = "ملفات";
             this.barButtonItem8.Id = 12;
             this.barButtonItem8.Name = "barButtonItem8";
+            // 
+            // ribbonPageCategory1
+            // 
+            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
+            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
             // 
             // ribbonPage15
             // 
@@ -753,6 +764,13 @@
             this.panel_mainhome.Size = new System.Drawing.Size(1340, 707);
             this.panel_mainhome.TabIndex = 6;
             this.panel_mainhome.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_mainhome_Paint_1);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "شراء العملات";
+            this.barButtonItem5.Id = 61;
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem5_ItemClick);
             // 
             // Form1
             // 
@@ -861,6 +879,8 @@
         internal System.Windows.Forms.Panel panel_mainhome;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
     }
 }
 

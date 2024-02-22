@@ -10,6 +10,7 @@ using ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface;
 using ExchangeAndMony.pages.accountsInterface.accountsprocessInterface;
 using ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface;
 using ExchangeAndMony.pages.transfer.transferprocessInterface;
+using ExchangeAndMony.pages.sell_and_buy;
 using ExchangeAndMony.pages.file;
 namespace ExchangeAndMony
 {
@@ -37,6 +38,8 @@ namespace ExchangeAndMony
         Receiving_transfer receiving_transfer = new Receiving_transfer();
         Stoping_transfer stoping_transfer = new Stoping_transfer();
         Transfer_money transfer_money = new Transfer_money();
+        Sell_currency sell_currency = new Sell_currency();
+
 
         public Form1()
         {
@@ -92,9 +95,6 @@ namespace ExchangeAndMony
         private void panel_mainhome_Paint_1(object sender, PaintEventArgs e)
         {
        
-           
-           
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -304,6 +304,15 @@ namespace ExchangeAndMony
             panel_mainhome.Controls.Add(stoping_transfer);
             stoping_transfer.Location = new Point(300, 0);
             stoping_transfer.Show();
+        }
+        // العملات
+        private void BarButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        { 
+            panel_mainhome.Controls.Clear();
+            sell_currency.TopLevel = false;
+            panel_mainhome.Controls.Add(sell_currency);
+            sell_currency.Location = new Point(300, 0);
+            sell_currency.Show();
         }
     }
 }

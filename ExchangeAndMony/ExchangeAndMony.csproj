@@ -186,6 +186,12 @@
     <Compile Include="pages\accountsInterface\accountsprocessInterface\SimpleRegistrationBond.Designer.cs">
       <DependentUpon>SimpleRegistrationBond.cs</DependentUpon>
     </Compile>
+    <Compile Include="pages\sell and buy\Sell_currency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\sell and buy\Sell_currency.Designer.cs">
+      <DependentUpon>Sell_currency.cs</DependentUpon>
+    </Compile>
     <Compile Include="pages\transfer\transferInitializatuionInterface\ImageCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\SimpleRegistrationBond.resx">
       <DependentUpon>SimpleRegistrationBond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\sell and buy\Sell_currency.resx">
+      <DependentUpon>Sell_currency.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\transfer\transferInitializatuionInterface\ImageCard.resx">
       <DependentUpon>ImageCard.cs</DependentUpon>
