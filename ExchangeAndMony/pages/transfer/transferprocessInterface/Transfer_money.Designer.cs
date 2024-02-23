@@ -55,10 +55,10 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_print = new DevExpress.XtraEditors.SimpleButton();
             this.btn_update = new DevExpress.XtraEditors.SimpleButton();
             this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(-7, 471);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1272, 95);
+            this.dataGridView1.Size = new System.Drawing.Size(1272, 278);
             this.dataGridView1.TabIndex = 92;
             // 
             // label3
@@ -103,7 +103,7 @@
             this.label2.Location = new System.Drawing.Point(588, 13);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 33);
+            this.label2.Size = new System.Drawing.Size(163, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "صـرف حوالــة";
             // 
@@ -321,21 +321,6 @@
             this.panel2.Size = new System.Drawing.Size(1227, 66);
             this.panel2.TabIndex = 48;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MistyRose;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-7, -3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1271, 55);
-            this.panel1.TabIndex = 47;
-            // 
             // btn_print
             // 
             this.btn_print.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -374,6 +359,21 @@
             this.btn_exit.Size = new System.Drawing.Size(125, 47);
             this.btn_exit.TabIndex = 25;
             this.btn_exit.Text = "خروج";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(-7, -3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1271, 55);
+            this.panel1.TabIndex = 47;
             // 
             // label7
             // 
@@ -496,7 +496,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 572);
+            this.ClientSize = new System.Drawing.Size(1264, 782);
             this.ControlBox = false;
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dataGridView1);

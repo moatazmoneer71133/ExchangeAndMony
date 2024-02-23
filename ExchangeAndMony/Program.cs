@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using ExchangeAndMony.pages;
-
+using ExchangeAndMony.pages.log_in;
 
 namespace ExchangeAndMony
 {

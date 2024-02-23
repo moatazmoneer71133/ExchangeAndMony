@@ -16,5 +16,10 @@ namespace ExchangeAndMony.pages.sell_and_buy
         {
             InitializeComponent();
         }
+
+        private void Sell_currency_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -33,23 +33,23 @@
             this.btn_print = new DevExpress.XtraEditors.SimpleButton();
             this.btn_update = new DevExpress.XtraEditors.SimpleButton();
             this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.date = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.com_export_dest = new System.Windows.Forms.ComboBox();
+            this.com_account_currency = new System.Windows.Forms.ComboBox();
+            this.com_Source = new System.Windows.Forms.ComboBox();
+            this.com_agent = new System.Windows.Forms.ComboBox();
+            this.t_note = new System.Windows.Forms.TextBox();
+            this.tSender = new System.Windows.Forms.TextBox();
+            this.trecipient = new System.Windows.Forms.TextBox();
+            this.taccount_amount = new System.Windows.Forms.TextBox();
+            this.tcomm_agent = new System.Windows.Forms.TextBox();
+            this.tcomm_amont = new System.Windows.Forms.TextBox();
+            this.tgeneral_number = new System.Windows.Forms.TextBox();
+            this.t_trans_curuncy = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.t_Trans_amount = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(-2, 473);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1272, 95);
+            this.dataGridView1.Size = new System.Drawing.Size(1272, 282);
             this.dataGridView1.TabIndex = 125;
             // 
             // btn_print
@@ -125,12 +125,12 @@
             this.btn_exit.TabIndex = 25;
             this.btn_exit.Text = "خروج";
             // 
-            // dateTimePicker2
+            // date
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(811, 113);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(430, 24);
-            this.dateTimePicker2.TabIndex = 126;
+            this.date.Location = new System.Drawing.Point(811, 113);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(430, 24);
+            this.date.TabIndex = 126;
             // 
             // textBox1
             // 
@@ -147,101 +147,101 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(291, 24);
             this.dateTimePicker1.TabIndex = 3;
             // 
-            // comboBox3
+            // com_export_dest
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(131, 248);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(527, 24);
-            this.comboBox3.TabIndex = 123;
+            this.com_export_dest.FormattingEnabled = true;
+            this.com_export_dest.Location = new System.Drawing.Point(131, 248);
+            this.com_export_dest.Name = "com_export_dest";
+            this.com_export_dest.Size = new System.Drawing.Size(527, 24);
+            this.com_export_dest.TabIndex = 123;
             // 
-            // comboBox4
+            // com_account_currency
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(460, 341);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(198, 24);
-            this.comboBox4.TabIndex = 122;
+            this.com_account_currency.FormattingEnabled = true;
+            this.com_account_currency.Location = new System.Drawing.Point(460, 341);
+            this.com_account_currency.Name = "com_account_currency";
+            this.com_account_currency.Size = new System.Drawing.Size(198, 24);
+            this.com_account_currency.TabIndex = 122;
             // 
-            // comboBox1
+            // com_Source
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(131, 70);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(527, 24);
-            this.comboBox1.TabIndex = 121;
+            this.com_Source.FormattingEnabled = true;
+            this.com_Source.Location = new System.Drawing.Point(131, 70);
+            this.com_Source.Name = "com_Source";
+            this.com_Source.Size = new System.Drawing.Size(527, 24);
+            this.com_Source.TabIndex = 121;
             // 
-            // comboBox2
+            // com_agent
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(130, 288);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(528, 24);
-            this.comboBox2.TabIndex = 124;
+            this.com_agent.FormattingEnabled = true;
+            this.com_agent.Location = new System.Drawing.Point(130, 288);
+            this.com_agent.Name = "com_agent";
+            this.com_agent.Size = new System.Drawing.Size(528, 24);
+            this.com_agent.TabIndex = 124;
             // 
-            // textBox5
+            // t_note
             // 
-            this.textBox5.Location = new System.Drawing.Point(811, 258);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(430, 64);
-            this.textBox5.TabIndex = 116;
+            this.t_note.Location = new System.Drawing.Point(811, 258);
+            this.t_note.Multiline = true;
+            this.t_note.Name = "t_note";
+            this.t_note.Size = new System.Drawing.Size(430, 64);
+            this.t_note.TabIndex = 116;
             // 
-            // textBox9
+            // tSender
             // 
-            this.textBox9.Location = new System.Drawing.Point(131, 203);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(527, 30);
-            this.textBox9.TabIndex = 115;
+            this.tSender.Location = new System.Drawing.Point(131, 203);
+            this.tSender.Multiline = true;
+            this.tSender.Name = "tSender";
+            this.tSender.Size = new System.Drawing.Size(527, 30);
+            this.tSender.TabIndex = 115;
             // 
-            // textBox8
+            // trecipient
             // 
-            this.textBox8.Location = new System.Drawing.Point(131, 156);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(527, 30);
-            this.textBox8.TabIndex = 114;
+            this.trecipient.Location = new System.Drawing.Point(131, 156);
+            this.trecipient.Multiline = true;
+            this.trecipient.Name = "trecipient";
+            this.trecipient.Size = new System.Drawing.Size(527, 30);
+            this.trecipient.TabIndex = 114;
             // 
-            // textBox3
+            // taccount_amount
             // 
-            this.textBox3.Location = new System.Drawing.Point(130, 335);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(203, 30);
-            this.textBox3.TabIndex = 118;
+            this.taccount_amount.Location = new System.Drawing.Point(130, 335);
+            this.taccount_amount.Multiline = true;
+            this.taccount_amount.Name = "taccount_amount";
+            this.taccount_amount.Size = new System.Drawing.Size(203, 30);
+            this.taccount_amount.TabIndex = 118;
             // 
-            // textBox12
+            // tcomm_agent
             // 
-            this.textBox12.Location = new System.Drawing.Point(810, 207);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(431, 30);
-            this.textBox12.TabIndex = 119;
+            this.tcomm_agent.Location = new System.Drawing.Point(810, 207);
+            this.tcomm_agent.Multiline = true;
+            this.tcomm_agent.Name = "tcomm_agent";
+            this.tcomm_agent.Size = new System.Drawing.Size(431, 30);
+            this.tcomm_agent.TabIndex = 119;
             // 
-            // textBox7
+            // tcomm_amont
             // 
-            this.textBox7.Location = new System.Drawing.Point(810, 159);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(431, 30);
-            this.textBox7.TabIndex = 117;
+            this.tcomm_amont.Location = new System.Drawing.Point(810, 159);
+            this.tcomm_amont.Multiline = true;
+            this.tcomm_amont.Name = "tcomm_amont";
+            this.tcomm_amont.Size = new System.Drawing.Size(431, 30);
+            this.tcomm_amont.TabIndex = 117;
             // 
-            // textBox11
+            // tgeneral_number
             // 
-            this.textBox11.Location = new System.Drawing.Point(810, 67);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(431, 30);
-            this.textBox11.TabIndex = 120;
+            this.tgeneral_number.Location = new System.Drawing.Point(810, 67);
+            this.tgeneral_number.Multiline = true;
+            this.tgeneral_number.Name = "tgeneral_number";
+            this.tgeneral_number.Size = new System.Drawing.Size(431, 30);
+            this.tgeneral_number.TabIndex = 120;
             // 
-            // textBox16
+            // t_trans_curuncy
             // 
-            this.textBox16.Location = new System.Drawing.Point(456, 112);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(202, 30);
-            this.textBox16.TabIndex = 112;
+            this.t_trans_curuncy.Location = new System.Drawing.Point(456, 112);
+            this.t_trans_curuncy.Multiline = true;
+            this.t_trans_curuncy.Name = "t_trans_curuncy";
+            this.t_trans_curuncy.Size = new System.Drawing.Size(202, 30);
+            this.t_trans_curuncy.TabIndex = 112;
             // 
             // label7
             // 
@@ -253,13 +253,13 @@
             this.label7.TabIndex = 111;
             this.label7.Text = "عملة الحوالة";
             // 
-            // textBox2
+            // t_Trans_amount
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 109);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 30);
-            this.textBox2.TabIndex = 113;
+            this.t_Trans_amount.Location = new System.Drawing.Point(131, 109);
+            this.t_Trans_amount.Multiline = true;
+            this.t_Trans_amount.Name = "t_Trans_amount";
+            this.t_Trans_amount.Size = new System.Drawing.Size(202, 30);
+            this.t_Trans_amount.TabIndex = 113;
             // 
             // label17
             // 
@@ -496,24 +496,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1269, 567);
+            this.ClientSize = new System.Drawing.Size(1269, 782);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.date);
+            this.Controls.Add(this.com_export_dest);
+            this.Controls.Add(this.com_account_currency);
+            this.Controls.Add(this.com_Source);
+            this.Controls.Add(this.com_agent);
+            this.Controls.Add(this.t_note);
+            this.Controls.Add(this.tSender);
+            this.Controls.Add(this.trecipient);
+            this.Controls.Add(this.taccount_amount);
+            this.Controls.Add(this.tcomm_agent);
+            this.Controls.Add(this.tcomm_amont);
+            this.Controls.Add(this.tgeneral_number);
+            this.Controls.Add(this.t_trans_curuncy);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.t_Trans_amount);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -536,6 +536,7 @@
             this.Name = "Export_transfer";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.Load += new System.EventHandler(this.Export_transfer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -551,23 +552,23 @@
         public DevExpress.XtraEditors.SimpleButton btn_print;
         public DevExpress.XtraEditors.SimpleButton btn_update;
         public DevExpress.XtraEditors.SimpleButton btn_exit;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.ComboBox com_export_dest;
+        private System.Windows.Forms.ComboBox com_account_currency;
+        private System.Windows.Forms.ComboBox com_Source;
+        private System.Windows.Forms.ComboBox com_agent;
+        private System.Windows.Forms.TextBox t_note;
+        private System.Windows.Forms.TextBox tSender;
+        private System.Windows.Forms.TextBox trecipient;
+        private System.Windows.Forms.TextBox taccount_amount;
+        private System.Windows.Forms.TextBox tcomm_agent;
+        private System.Windows.Forms.TextBox tcomm_amont;
+        private System.Windows.Forms.TextBox tgeneral_number;
+        private System.Windows.Forms.TextBox t_trans_curuncy;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox t_Trans_amount;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;

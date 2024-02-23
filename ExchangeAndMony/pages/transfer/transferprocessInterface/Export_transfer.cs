@@ -16,5 +16,10 @@ namespace ExchangeAndMony.pages.transfer.transferprocessInterface
         {
             InitializeComponent();
         }
+
+        private void Export_transfer_Load(object sender, EventArgs e)
+        {
+         
+        }
     }
 }

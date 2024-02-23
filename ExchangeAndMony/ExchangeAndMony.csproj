@@ -186,6 +186,12 @@
     <Compile Include="pages\accountsInterface\accountsprocessInterface\SimpleRegistrationBond.Designer.cs">
       <DependentUpon>SimpleRegistrationBond.cs</DependentUpon>
     </Compile>
+    <Compile Include="pages\log_in\log_in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\log_in\log_in.Designer.cs">
+      <DependentUpon>log_in.cs</DependentUpon>
+    </Compile>
     <Compile Include="pages\sell and buy\Sell_currency.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\SimpleRegistrationBond.resx">
       <DependentUpon>SimpleRegistrationBond.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pages\log_in\log_in.resx">
+      <DependentUpon>log_in.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pages\sell and buy\Sell_currency.resx">
       <DependentUpon>Sell_currency.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +420,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backward.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22 - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

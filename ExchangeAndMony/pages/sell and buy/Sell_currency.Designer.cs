@@ -32,15 +32,15 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.comaccunt_ma = new System.Windows.Forms.ComboBox();
+            this.compay_ma = new System.Windows.Forms.ComboBox();
+            this.comcurency = new System.Windows.Forms.ComboBox();
+            this.tnote = new System.Windows.Forms.TextBox();
+            this.tpur_of_pur = new System.Windows.Forms.TextBox();
+            this.tvalue_ma = new System.Windows.Forms.TextBox();
+            this.tprice = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tmaount = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -57,23 +57,23 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comvalue_curn = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comvalue_acuont = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comvalue_pay = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comsource = new System.Windows.Forms.ComboBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_edit = new DevExpress.XtraEditors.SimpleButton();
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_print_inv = new DevExpress.XtraEditors.SimpleButton();
             this.btn_print = new DevExpress.XtraEditors.SimpleButton();
             this.btn_update = new DevExpress.XtraEditors.SimpleButton();
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
             this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,7 +85,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 443);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1277, 118);
+            this.dataGridView1.Size = new System.Drawing.Size(1277, 315);
             this.dataGridView1.TabIndex = 125;
             // 
             // textBox1
@@ -103,61 +103,70 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(291, 24);
             this.dateTimePicker1.TabIndex = 3;
             // 
-            // comboBox3
+            // comaccunt_ma
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(136, 168);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(527, 24);
-            this.comboBox3.TabIndex = 123;
+            this.comaccunt_ma.FormattingEnabled = true;
+            this.comaccunt_ma.Items.AddRange(new object[] {
+            "الصندوق الرئيسي"});
+            this.comaccunt_ma.Location = new System.Drawing.Point(136, 168);
+            this.comaccunt_ma.Name = "comaccunt_ma";
+            this.comaccunt_ma.Size = new System.Drawing.Size(527, 24);
+            this.comaccunt_ma.TabIndex = 123;
             // 
-            // comboBox4
+            // compay_ma
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(136, 210);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(527, 24);
-            this.comboBox4.TabIndex = 122;
+            this.compay_ma.FormattingEnabled = true;
+            this.compay_ma.Items.AddRange(new object[] {
+            "نقد",
+            "من حساب"});
+            this.compay_ma.Location = new System.Drawing.Point(136, 210);
+            this.compay_ma.Name = "compay_ma";
+            this.compay_ma.Size = new System.Drawing.Size(527, 24);
+            this.compay_ma.TabIndex = 122;
             // 
-            // comboBox1
+            // comcurency
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 119);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 24);
-            this.comboBox1.TabIndex = 121;
+            this.comcurency.FormattingEnabled = true;
+            this.comcurency.Items.AddRange(new object[] {
+            "يمني",
+            "سعودي",
+            "دولار"});
+            this.comcurency.Location = new System.Drawing.Point(135, 119);
+            this.comcurency.Name = "comcurency";
+            this.comcurency.Size = new System.Drawing.Size(202, 24);
+            this.comcurency.TabIndex = 121;
             // 
-            // textBox5
+            // tnote
             // 
-            this.textBox5.Location = new System.Drawing.Point(815, 268);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(430, 64);
-            this.textBox5.TabIndex = 116;
+            this.tnote.Location = new System.Drawing.Point(815, 268);
+            this.tnote.Multiline = true;
+            this.tnote.Name = "tnote";
+            this.tnote.Size = new System.Drawing.Size(430, 64);
+            this.tnote.TabIndex = 116;
             // 
-            // textBox8
+            // tpur_of_pur
             // 
-            this.textBox8.Location = new System.Drawing.Point(136, 268);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(527, 30);
-            this.textBox8.TabIndex = 114;
+            this.tpur_of_pur.Location = new System.Drawing.Point(136, 253);
+            this.tpur_of_pur.Multiline = true;
+            this.tpur_of_pur.Name = "tpur_of_pur";
+            this.tpur_of_pur.Size = new System.Drawing.Size(527, 31);
+            this.tpur_of_pur.TabIndex = 114;
             // 
-            // textBox11
+            // tvalue_ma
             // 
-            this.textBox11.Location = new System.Drawing.Point(815, 70);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(431, 30);
-            this.textBox11.TabIndex = 120;
+            this.tvalue_ma.Location = new System.Drawing.Point(815, 70);
+            this.tvalue_ma.Multiline = true;
+            this.tvalue_ma.Name = "tvalue_ma";
+            this.tvalue_ma.Size = new System.Drawing.Size(431, 30);
+            this.tvalue_ma.TabIndex = 120;
             // 
-            // textBox16
+            // tprice
             // 
-            this.textBox16.Location = new System.Drawing.Point(461, 116);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(202, 30);
-            this.textBox16.TabIndex = 112;
+            this.tprice.Location = new System.Drawing.Point(461, 116);
+            this.tprice.Multiline = true;
+            this.tprice.Name = "tprice";
+            this.tprice.Size = new System.Drawing.Size(202, 30);
+            this.tprice.TabIndex = 112;
             // 
             // label7
             // 
@@ -169,13 +178,13 @@
             this.label7.TabIndex = 111;
             this.label7.Text = "السعر";
             // 
-            // textBox2
+            // tmaount
             // 
-            this.textBox2.Location = new System.Drawing.Point(135, 77);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(528, 30);
-            this.textBox2.TabIndex = 113;
+            this.tmaount.Location = new System.Drawing.Point(135, 77);
+            this.tmaount.Multiline = true;
+            this.tmaount.Name = "tmaount";
+            this.tmaount.Size = new System.Drawing.Size(528, 30);
+            this.tmaount.TabIndex = 113;
             // 
             // label17
             // 
@@ -250,7 +259,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(358, 327);
+            this.label9.Location = new System.Drawing.Point(358, 309);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 21);
             this.label9.TabIndex = 99;
@@ -291,7 +300,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 324);
+            this.label5.Location = new System.Drawing.Point(40, 306);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 21);
             this.label5.TabIndex = 97;
@@ -344,13 +353,13 @@
             this.panel1.Size = new System.Drawing.Size(1277, 55);
             this.panel1.TabIndex = 94;
             // 
-            // comboBox2
+            // comvalue_curn
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(816, 117);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(430, 24);
-            this.comboBox2.TabIndex = 122;
+            this.comvalue_curn.FormattingEnabled = true;
+            this.comvalue_curn.Location = new System.Drawing.Point(816, 117);
+            this.comvalue_curn.Name = "comvalue_curn";
+            this.comvalue_curn.Size = new System.Drawing.Size(430, 24);
+            this.comvalue_curn.TabIndex = 122;
             // 
             // label8
             // 
@@ -363,13 +372,13 @@
             this.label8.Text = "حساب القيمة";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // comboBox5
+            // comvalue_acuont
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(815, 159);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(430, 24);
-            this.comboBox5.TabIndex = 122;
+            this.comvalue_acuont.FormattingEnabled = true;
+            this.comvalue_acuont.Location = new System.Drawing.Point(815, 159);
+            this.comvalue_acuont.Name = "comvalue_acuont";
+            this.comvalue_acuont.Size = new System.Drawing.Size(430, 24);
+            this.comvalue_acuont.TabIndex = 122;
             // 
             // label14
             // 
@@ -382,36 +391,36 @@
             this.label14.Text = "دفع القيمة";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // comboBox6
+            // comvalue_pay
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(815, 206);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(431, 24);
-            this.comboBox6.TabIndex = 122;
+            this.comvalue_pay.FormattingEnabled = true;
+            this.comvalue_pay.Location = new System.Drawing.Point(815, 206);
+            this.comvalue_pay.Name = "comvalue_pay";
+            this.comvalue_pay.Size = new System.Drawing.Size(431, 24);
+            this.comvalue_pay.TabIndex = 122;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(0, 267);
+            this.label16.Location = new System.Drawing.Point(0, 253);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(130, 21);
             this.label16.TabIndex = 97;
             this.label16.Text = "الغرض من الشراء";
             // 
-            // comboBox7
+            // comsource
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(135, 325);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(202, 24);
-            this.comboBox7.TabIndex = 121;
+            this.comsource.FormattingEnabled = true;
+            this.comsource.Location = new System.Drawing.Point(135, 307);
+            this.comsource.Name = "comsource";
+            this.comsource.Size = new System.Drawing.Size(202, 24);
+            this.comsource.TabIndex = 121;
             // 
             // comboBox8
             // 
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(451, 326);
+            this.comboBox8.Location = new System.Drawing.Point(451, 308);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(212, 24);
             this.comboBox8.TabIndex = 121;
@@ -420,7 +429,7 @@
             // 
             this.panel2.Controls.Add(this.btn_edit);
             this.panel2.Controls.Add(this.btn_delete);
-            this.panel2.Controls.Add(this.simpleButton1);
+            this.panel2.Controls.Add(this.btn_print_inv);
             this.panel2.Controls.Add(this.btn_print);
             this.panel2.Controls.Add(this.btn_update);
             this.panel2.Controls.Add(this.btn_search);
@@ -456,6 +465,19 @@
             this.btn_delete.Size = new System.Drawing.Size(125, 47);
             this.btn_delete.TabIndex = 30;
             this.btn_delete.Text = "حذف";
+            // 
+            // btn_print_inv
+            // 
+            this.btn_print_inv.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_print_inv.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print_inv.Appearance.Options.UseFont = true;
+            this.btn_print_inv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print_inv.ImageOptions.Image")));
+            this.btn_print_inv.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btn_print_inv.Location = new System.Drawing.Point(280, 9);
+            this.btn_print_inv.Name = "btn_print_inv";
+            this.btn_print_inv.Size = new System.Drawing.Size(164, 47);
+            this.btn_print_inv.TabIndex = 29;
+            this.btn_print_inv.Text = "طباعة الفاتورة";
             // 
             // btn_print
             // 
@@ -522,41 +544,28 @@
             this.btn_exit.TabIndex = 25;
             this.btn_exit.Text = "خروج";
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton1.Location = new System.Drawing.Point(280, 9);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(164, 47);
-            this.simpleButton1.TabIndex = 29;
-            this.simpleButton1.Text = "طباعة الفاتورة";
-            // 
             // Sell_currency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1279, 561);
+            this.ClientSize = new System.Drawing.Size(1279, 785);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comaccunt_ma);
+            this.Controls.Add(this.comvalue_acuont);
+            this.Controls.Add(this.comvalue_curn);
+            this.Controls.Add(this.comvalue_pay);
+            this.Controls.Add(this.compay_ma);
             this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.comsource);
+            this.Controls.Add(this.comcurency);
+            this.Controls.Add(this.tnote);
+            this.Controls.Add(this.tpur_of_pur);
+            this.Controls.Add(this.tvalue_ma);
+            this.Controls.Add(this.tprice);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tmaount);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
@@ -577,6 +586,7 @@
             this.Name = "Sell_currency";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.Load += new System.EventHandler(this.Sell_currency_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -591,15 +601,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.ComboBox comaccunt_ma;
+        private System.Windows.Forms.ComboBox compay_ma;
+        private System.Windows.Forms.ComboBox comcurency;
+        private System.Windows.Forms.TextBox tnote;
+        private System.Windows.Forms.TextBox tpur_of_pur;
+        private System.Windows.Forms.TextBox tvalue_ma;
+        private System.Windows.Forms.TextBox tprice;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tmaount;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -616,18 +626,18 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comvalue_curn;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comvalue_acuont;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comvalue_pay;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comsource;
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.Panel panel2;
         public DevExpress.XtraEditors.SimpleButton btn_edit;
         public DevExpress.XtraEditors.SimpleButton btn_delete;
-        public DevExpress.XtraEditors.SimpleButton simpleButton1;
+        public DevExpress.XtraEditors.SimpleButton btn_print_inv;
         public DevExpress.XtraEditors.SimpleButton btn_print;
         public DevExpress.XtraEditors.SimpleButton btn_update;
         public DevExpress.XtraEditors.SimpleButton btn_search;

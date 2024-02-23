@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tnumber_bond = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -38,19 +38,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.texch_ma = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.texch_curr = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.trecipient = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tsender = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_not_sure = new System.Windows.Forms.Button();
+            this.btn_be_sure = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_view_sure = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -58,13 +58,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox11
+            // tnumber_bond
             // 
-            this.textBox11.Location = new System.Drawing.Point(73, 112);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(177, 30);
-            this.textBox11.TabIndex = 135;
+            this.tnumber_bond.Location = new System.Drawing.Point(73, 112);
+            this.tnumber_bond.Multiline = true;
+            this.tnumber_bond.Name = "tnumber_bond";
+            this.tnumber_bond.Size = new System.Drawing.Size(177, 30);
+            this.tnumber_bond.TabIndex = 135;
             // 
             // label18
             // 
@@ -161,13 +161,13 @@
             this.label5.Text = "مبلغ الصرف";
             this.label5.Click += new System.EventHandler(this.Label18_Click);
             // 
-            // textBox2
+            // texch_ma
             // 
-            this.textBox2.Location = new System.Drawing.Point(275, 112);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 30);
-            this.textBox2.TabIndex = 135;
+            this.texch_ma.Location = new System.Drawing.Point(275, 112);
+            this.texch_ma.Multiline = true;
+            this.texch_ma.Name = "texch_ma";
+            this.texch_ma.Size = new System.Drawing.Size(177, 30);
+            this.texch_ma.TabIndex = 135;
             // 
             // label6
             // 
@@ -180,13 +180,13 @@
             this.label6.Text = "عملة الصرف";
             this.label6.Click += new System.EventHandler(this.Label18_Click);
             // 
-            // textBox3
+            // texch_curr
             // 
-            this.textBox3.Location = new System.Drawing.Point(474, 112);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 30);
-            this.textBox3.TabIndex = 135;
+            this.texch_curr.Location = new System.Drawing.Point(474, 112);
+            this.texch_curr.Multiline = true;
+            this.texch_curr.Name = "texch_curr";
+            this.texch_curr.Size = new System.Drawing.Size(177, 30);
+            this.texch_curr.TabIndex = 135;
             // 
             // label7
             // 
@@ -199,13 +199,13 @@
             this.label7.Text = "اسم المستلم";
             this.label7.Click += new System.EventHandler(this.Label18_Click);
             // 
-            // textBox4
+            // trecipient
             // 
-            this.textBox4.Location = new System.Drawing.Point(672, 112);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(249, 30);
-            this.textBox4.TabIndex = 135;
+            this.trecipient.Location = new System.Drawing.Point(672, 112);
+            this.trecipient.Multiline = true;
+            this.trecipient.Name = "trecipient";
+            this.trecipient.Size = new System.Drawing.Size(249, 30);
+            this.trecipient.TabIndex = 135;
             // 
             // label8
             // 
@@ -218,74 +218,74 @@
             this.label8.Text = "اسم المرسل";
             this.label8.Click += new System.EventHandler(this.Label18_Click);
             // 
-            // textBox5
+            // tsender
             // 
-            this.textBox5.Location = new System.Drawing.Point(949, 112);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(249, 30);
-            this.textBox5.TabIndex = 135;
+            this.tsender.Location = new System.Drawing.Point(949, 112);
+            this.tsender.Multiline = true;
+            this.tsender.Name = "tsender";
+            this.tsender.Size = new System.Drawing.Size(249, 30);
+            this.tsender.TabIndex = 135;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_update);
+            this.panel2.Controls.Add(this.btn_not_sure);
+            this.panel2.Controls.Add(this.btn_be_sure);
+            this.panel2.Controls.Add(this.btn_exit);
             this.panel2.Location = new System.Drawing.Point(32, 194);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1228, 66);
             this.panel2.TabIndex = 136;
             // 
-            // button1
+            // btn_update
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(58, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 51);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "خروج";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_update.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.Location = new System.Drawing.Point(197, 8);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(114, 51);
+            this.btn_update.TabIndex = 3;
+            this.btn_update.Text = "تحديث";
+            this.btn_update.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_not_sure
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1032, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 51);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "تأكيد صرف حوالة";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_not_sure.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_not_sure.Location = new System.Drawing.Point(339, 8);
+            this.btn_not_sure.Name = "btn_not_sure";
+            this.btn_not_sure.Size = new System.Drawing.Size(114, 51);
+            this.btn_not_sure.TabIndex = 2;
+            this.btn_not_sure.Text = "إلغاء التاكيد";
+            this.btn_not_sure.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_be_sure
             // 
-            this.button3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(339, 8);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 51);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "إلغاء التاكيد";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_be_sure.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_be_sure.Location = new System.Drawing.Point(1032, 8);
+            this.btn_be_sure.Name = "btn_be_sure";
+            this.btn_be_sure.Size = new System.Drawing.Size(155, 51);
+            this.btn_be_sure.TabIndex = 1;
+            this.btn_be_sure.Text = "تأكيد صرف حوالة";
+            this.btn_be_sure.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_exit
             // 
-            this.button4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(197, 8);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 51);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "تحديث";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_exit.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Location = new System.Drawing.Point(58, 8);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(114, 51);
+            this.btn_exit.TabIndex = 0;
+            this.btn_exit.Text = "خروج";
+            this.btn_exit.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_view_sure
             // 
-            this.button5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(68, 272);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(164, 46);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "عرض المؤكدة يوم";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_view_sure.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_view_sure.Location = new System.Drawing.Point(68, 272);
+            this.btn_view_sure.Name = "btn_view_sure";
+            this.btn_view_sure.Size = new System.Drawing.Size(164, 46);
+            this.btn_view_sure.TabIndex = 4;
+            this.btn_view_sure.Text = "عرض المؤكدة يوم";
+            this.btn_view_sure.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
@@ -300,28 +300,28 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 327);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1267, 132);
+            this.dataGridView1.Size = new System.Drawing.Size(1267, 357);
             this.dataGridView1.TabIndex = 138;
             // 
             // Exchange_confirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 471);
+            this.ClientSize = new System.Drawing.Size(1272, 782);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btn_view_sure);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tsender);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.trecipient);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.texch_curr);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.texch_ma);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.tnumber_bond);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -341,7 +341,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox tnumber_bond;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
@@ -351,19 +351,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox texch_ma;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox texch_curr;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox trecipient;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tsender;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_not_sure;
+        private System.Windows.Forms.Button btn_be_sure;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_view_sure;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
