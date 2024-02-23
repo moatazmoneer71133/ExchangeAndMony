@@ -38,9 +38,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_log = new DevExpress.XtraEditors.SimpleButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -130,30 +130,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(275, 0);
+            this.label1.Location = new System.Drawing.Point(271, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 21);
             this.label1.TabIndex = 8;
             this.label1.Text = "اسم المستخدم";
             // 
-            // simpleButton1
+            // btn_log
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(533, 341);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(126, 55);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "simpleButton1";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.Image = global::ExchangeAndMony.Properties.Resources.apply_32x32;
-            this.simpleButton2.Location = new System.Drawing.Point(290, 341);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton2.Size = new System.Drawing.Size(126, 55);
-            this.simpleButton2.TabIndex = 6;
-            this.simpleButton2.Text = "simpleButton1";
-            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
+            this.btn_log.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_log.Appearance.Options.UseFont = true;
+            this.btn_log.BackgroundImage = global::ExchangeAndMony.Properties.Resources._22___Copy;
+            this.btn_log.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_log.CausesValidation = false;
+            this.btn_log.Location = new System.Drawing.Point(526, 336);
+            this.btn_log.Name = "btn_log";
+            this.btn_log.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btn_log.Size = new System.Drawing.Size(126, 55);
+            this.btn_log.TabIndex = 6;
+            this.btn_log.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // label5
             // 
@@ -168,6 +163,21 @@
             this.label5.Text = "مــرحـبـاً بــكـم   \r\n  فـي نـظـام\r\n الـصرافة والحوالات\r\n     المالية";
             this.label5.Click += new System.EventHandler(this.Label5_Click_2);
             // 
+            // btn_exit
+            // 
+            this.btn_exit.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btn_exit.Appearance.Options.UseFont = true;
+            this.btn_exit.Appearance.Options.UseForeColor = true;
+            this.btn_exit.BackgroundImage = global::ExchangeAndMony.Properties.Resources._4;
+            this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_exit.Location = new System.Drawing.Point(305, 336);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btn_exit.Size = new System.Drawing.Size(120, 55);
+            this.btn_exit.TabIndex = 6;
+            this.btn_exit.Click += new System.EventHandler(this.SimpleButton2_Click);
+            // 
             // log_in
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -178,8 +188,8 @@
             this.ClientSize = new System.Drawing.Size(696, 425);
             this.ControlBox = false;
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.btn_log);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
@@ -207,9 +217,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btn_log;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
+        private DevExpress.XtraEditors.SimpleButton btn_exit;
     }
 }
