@@ -1,0 +1,2938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBTAEMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="ACCID" />
+          </Key>
+          <Property Name="ACCID" Type="int" Nullable="false" />
+          <Property Name="Acc_Num" Type="nvarchar" MaxLength="30" />
+          <Property Name="Acc_Parent_Num" Type="int" />
+          <Property Name="Acc_Aname" Type="nchar" MaxLength="10" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="ConstNumbers" Type="int" />
+          <Property Name="Acc_Level" Type="int" />
+          <Property Name="Acc_Type" Type="int" />
+          <Property Name="Acc_Depet" Type="money" />
+          <Property Name="Acc_Credit" Type="money" />
+          <Property Name="Acc_Balance" Type="money" />
+          <Property Name="StatementNumberWared" Type="int" />
+          <Property Name="StatementNumberSader" Type="int" />
+          <Property Name="EmpNumbers" Type="int" />
+          <Property Name="ConnNumbers" Type="int" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="EditUser" Type="varbinary" MaxLength="50" />
+          <Property Name="EditDate" Type="date" />
+          <Property Name="AccNote" Type="varchar" MaxLength="50" />
+          <Property Name="NumOFEditAcc" Type="tinyint" />
+          <Property Name="Entry_Date" Type="date" />
+          <Property Name="AddUser" Type="varbinary" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Currencies">
+          <Key>
+            <PropertyRef Name="CommntNumber" />
+          </Key>
+          <Property Name="CommntNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="20" />
+          <Property Name="Source" Type="nvarchar" MaxLength="20" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="CommntCurrency" Type="nvarchar" MaxLength="20" />
+          <Property Name="DestinationCurrency" Type="nvarchar" MaxLength="20" />
+          <Property Name="DocumentType" Type="nvarchar" MaxLength="30" />
+          <Property Name="ConstNote" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Currencise">
+          <Key>
+            <PropertyRef Name="CurrencyNumbers" />
+          </Key>
+          <Property Name="CurrencyNumbers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="CurrencyName" Type="nvarchar" MaxLength="30" />
+          <Property Name="ArabicSymbol" Type="nvarchar" MaxLength="30" />
+          <Property Name="EnglishSymbol" Type="nvarchar" MaxLength="50" />
+          <Property Name="ForeignSymbol" Type="nvarchar" MaxLength="30" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Currencise1">
+          <Key>
+            <PropertyRef Name="CurrencyNumber" />
+          </Key>
+          <Property Name="CurrencyNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumber" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="CurrencyName" Type="nvarchar" MaxLength="30" />
+          <Property Name="ArabicSymbol" Type="nvarchar" MaxLength="30" />
+          <Property Name="EnglishSymbol" Type="nvarchar" MaxLength="30" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tb_AccountStop">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="ReasonStop" Type="nvarchar" MaxLength="30" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="30" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Blacklist">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="20" />
+          <Property Name="Source" Type="nvarchar" MaxLength="30" />
+          <Property Name="Types" Type="nvarchar" MaxLength="30" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="30" />
+          <Property Name="Reason" Type="nvarchar" MaxLength="30" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Box">
+          <Key>
+            <PropertyRef Name="BosNumber" />
+          </Key>
+          <Property Name="Document" Type="nvarchar" MaxLength="20" />
+          <Property Name="BosNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BoxName" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccountUser" Type="nvarchar" MaxLength="30" />
+          <Property Name="InsertDate" Type="date" />
+          <Property Name="LastEdit" Type="nvarchar" MaxLength="30" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_BuyingSelling">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="BondNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="AmountCcount" Type="nvarchar" MaxLength="30" />
+          <Property Name="AmountPay" Type="nvarchar" MaxLength="30" />
+          <Property Name="Price" Type="int" />
+          <Property Name="AmountValue" Type="int" />
+          <Property Name="ValueCcount" Type="nvarchar" MaxLength="30" />
+          <Property Name="ValueCurrency" Type="nvarchar" MaxLength="30" />
+          <Property Name="BondName" Type="nvarchar" MaxLength="30" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="castamerName" Type="nvarchar" MaxLength="30" />
+          <Property Name="ValuePay" Type="nvarchar" MaxLength="30" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_ConcelTransfer">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="Agent" Type="nvarchar" MaxLength="30" />
+          <Property Name="TransfarNumber" Type="int" />
+          <Property Name="TransfarAmount" Type="int" />
+          <Property Name="GlobleNumber" Type="int" />
+          <Property Name="TransferDate" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_ConfirmedTransfer">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="BondNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="ExchangeAmount" Type="int" />
+          <Property Name="ExchangeCurrency" Type="nvarchar" MaxLength="30" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="30" />
+          <Property Name="RecipientName" Type="nvarchar" MaxLength="30" />
+          <Property Name="ExchangeDate" Type="date" />
+          <Property Name="Confirmation" Type="date" />
+        </EntityType>
+        <EntityType Name="Tb_CurrenciesPrices">
+          <Key>
+            <PropertyRef Name="CurrencyPriceNumber" />
+          </Key>
+          <Property Name="CurrencyPriceNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurrencyNumber" Type="int" />
+          <Property Name="TtranferFrom" Type="nvarchar" MaxLength="30" />
+          <Property Name="TtranferTo" Type="nvarchar" MaxLength="30" />
+          <Property Name="TtranferPrice" Type="int" />
+          <Property Name="PurchPrice" Type="int" />
+          <Property Name="SellingPrice" Type="int" />
+          <Property Name="LowPrice" Type="int" />
+          <Property Name="HeghtPrice" Type="int" />
+          <Property Name="LowPricePay" Type="int" />
+          <Property Name="LowPriceSelling" Type="int" />
+          <Property Name="HeghtPricePay" Type="int" />
+          <Property Name="HeghtPriceSelling" Type="int" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_CustomerExchangeReceiptBonds">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="BondNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="ExchangeMethod" Type="nvarchar" MaxLength="30" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="30" />
+          <Property Name="MethodExchangeReceipt" Type="nvarchar" MaxLength="30" />
+          <Property Name="AmountName" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Handling" Type="nvarchar" MaxLength="30" />
+          <Property Name="AmountNumberMadin" Type="int" />
+          <Property Name="AmountNumberDain" Type="int" />
+          <Property Name="Box" Type="nvarchar" MaxLength="30" />
+          <Property Name="BondStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccountAmount" Type="int" />
+          <Property Name="AccountCurrency" Type="nvarchar" MaxLength="30" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_DailyRestictionsDitales">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConstNumbers" Type="int" />
+          <Property Name="ConstDate" Type="date" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="20" />
+          <Property Name="AccountNameMadin" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccountNameDain" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccountMadin" Type="int" />
+          <Property Name="AccountDain" Type="int" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="AmountMadin" Type="int" />
+          <Property Name="AmountDain" Type="int" />
+          <Property Name="Statements" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tb_DailyrestictionsHead">
+          <Key>
+            <PropertyRef Name="ConstNumber" />
+          </Key>
+          <Property Name="ConstNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConstDate" Type="date" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="20" />
+          <Property Name="AccountNameMadin" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccountNameDain" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccountMadin" Type="int" />
+          <Property Name="AccountDain" Type="int" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="GroupAmountMadin" Type="int" />
+          <Property Name="GroupAmountDain" Type="int" />
+          <Property Name="Statements" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tb_DeportationTransfar">
+          <Key>
+            <PropertyRef Name="MethodNumber" />
+          </Key>
+          <Property Name="MethodNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Side" Type="nvarchar" MaxLength="20" />
+          <Property Name="DeportationWarid" Type="nvarchar" MaxLength="30" />
+          <Property Name="DeportationSadar" Type="nvarchar" MaxLength="30" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_DoubleRestictions">
+          <Key>
+            <PropertyRef Name="ConstNumber" />
+          </Key>
+          <Property Name="ConstNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="ConstType" Type="nvarchar" MaxLength="30" />
+          <Property Name="ConstStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="30" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="TransPrice" Type="int" />
+          <Property Name="Opposite" Type="int" />
+          <Property Name="Const" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccountNumber" Type="int" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="30" />
+          <Property Name="ConstDate" Type="date" />
+          <Property Name="ConstNote" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Employee">
+          <Key>
+            <PropertyRef Name="EmpNumber" />
+          </Key>
+          <Property Name="EmpNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpName" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="AccountNumberEmp" Type="int" />
+          <Property Name="AccountEmp" Type="int" />
+          <Property Name="Functions" Type="nvarchar" MaxLength="30" />
+          <Property Name="Salary" Type="int" />
+          <Property Name="SalariesAccountName" Type="nvarchar" MaxLength="30" />
+          <Property Name="EmpStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="RegistNote" Type="nvarchar" MaxLength="30" />
+          <Property Name="RegistDate" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Entities">
+          <Key>
+            <PropertyRef Name="EntitiesNumber" />
+          </Key>
+          <Property Name="EntitiesNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="Side" Type="nvarchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="40" />
+          <Property Name="Agent" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="30" />
+          <Property Name="InsertDate" Type="date" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="30" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="30" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Groups">
+          <Key>
+            <PropertyRef Name="GroupNumber" />
+          </Key>
+          <Property Name="GroupNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_IncomingTotals">
+          <Key>
+            <PropertyRef Name="RevealNumber" />
+          </Key>
+          <Property Name="RevealNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Side" Type="nvarchar" MaxLength="20" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="TransfarNumber" Type="int" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_InventoryBox">
+          <Key>
+            <PropertyRef Name="BoxNumber" />
+          </Key>
+          <Property Name="BoxNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Box" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="30" />
+          <Property Name="SystemBalance" Type="int" />
+          <Property Name="InventoryBalance" Type="int" />
+          <Property Name="Differenc" Type="int" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_MatchingAccounts">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Account" Type="int" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="30" />
+          <Property Name="MatchingBalance" Type="int" />
+          <Property Name="BalanceStatue" Type="nvarchar" MaxLength="30" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Outgoing">
+          <Key>
+            <PropertyRef Name="RevealNumber" />
+          </Key>
+          <Property Name="RevealNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Side" Type="nvarchar" MaxLength="20" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="TransfarNumber" Type="int" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_PersonalInformation">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="30" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="20" />
+          <Property Name="SigntureImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="FrontImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="BackImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="PersonalImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="AnendDate" Type="date" />
+          <Property Name="SideRelease" Type="nvarchar" MaxLength="30" />
+          <Property Name="ReleaseDate" Type="date" />
+          <Property Name="IdNumber" Type="int" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="30" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_RoofingAccounts">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="InsertDate" Type="date" />
+          <Property Name="LastEdit" Type="nvarchar" MaxLength="30" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_RwcipientCard">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="30" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="20" />
+          <Property Name="SigntureImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="FrontImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="BackImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="PersonalImg" Type="nvarchar" MaxLength="255" />
+          <Property Name="AnendDate" Type="date" />
+          <Property Name="SideRelease" Type="nvarchar" MaxLength="30" />
+          <Property Name="ReleaseDate" Type="date" />
+          <Property Name="IdNumber" Type="int" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_SimpleRegistBond">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="BondNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="FromAccount" Type="nvarchar" MaxLength="30" />
+          <Property Name="ToAccount" Type="nvarchar" MaxLength="30" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="30" />
+          <Property Name="AmountMadin" Type="int" />
+          <Property Name="AmountDain" Type="int" />
+          <Property Name="AccountNumberMadin" Type="int" />
+          <Property Name="AccountNumberDain" Type="int" />
+          <Property Name="AccountNameMadin" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccountNameDain" Type="nvarchar" MaxLength="30" />
+          <Property Name="CurrencyMadin" Type="nvarchar" MaxLength="30" />
+          <Property Name="CurrencyDain" Type="nvarchar" MaxLength="30" />
+          <Property Name="ExchangePrice" Type="int" />
+          <Property Name="RegistStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Transfar">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="TransfarNumber" Type="int" />
+          <Property Name="BondNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="RecipientName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="PhoneNumberSender" Type="nvarchar" MaxLength="15" />
+          <Property Name="PhoneNumberRecipient" Type="nvarchar" MaxLength="15" />
+          <Property Name="TransDate" Type="date" />
+          <Property Name="ReceiptAmount" Type="int" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="20" />
+          <Property Name="Source" Type="nvarchar" MaxLength="20" />
+          <Property Name="Side" Type="nvarchar" MaxLength="20" />
+          <Property Name="Comm" Type="nvarchar" MaxLength="20" />
+          <Property Name="ServicrCurrency" Type="nvarchar" MaxLength="20" />
+          <Property Name="Price" Type="int" />
+          <Property Name="ReceiptCurrency" Type="nvarchar" MaxLength="20" />
+          <Property Name="ArrestMethod" Type="nvarchar" MaxLength="30" />
+          <Property Name="ReceiptAccount" Type="nvarchar" MaxLength="30" />
+          <Property Name="StatementNumberWared" Type="int" />
+          <Property Name="StatementNumberSader" Type="int" />
+          <Property Name="IDNunber" Type="int" />
+          <Property Name="CurrencyNumber" Type="int" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="NumberTT" Type="int" />
+          <Property Name="ReceiptAmountWared" Type="int" />
+          <Property Name="TransfarAmount" Type="int" />
+          <Property Name="RegistStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="AccredStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="TransfarStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="ConfirmStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="Agent" Type="nvarchar" MaxLength="30" />
+          <Property Name="AgentComm" Type="nvarchar" MaxLength="30" />
+          <Property Name="ReceiptCurrencyWared" Type="nvarchar" MaxLength="30" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Users">
+          <Key>
+            <PropertyRef Name="UserNumber" />
+          </Key>
+          <Property Name="UserNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="UserStatus" Type="nvarchar" MaxLength="30" />
+          <Property Name="TheDate" Type="date" />
+          <Property Name="UserGroup" Type="nvarchar" MaxLength="30" />
+          <Property Name="ChangePassword" Type="nvarchar" MaxLength="255" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <Association Name="FK__Account__ConnNum__68487DD7">
+          <End Role="Currencies" Type="Self.Currencies" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="CommntNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="ConnNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__ConstNu__6477ECF3">
+          <End Role="Tb_DailyrestictionsHead" Type="Self.Tb_DailyrestictionsHead" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_DailyrestictionsHead">
+              <PropertyRef Name="ConstNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="ConstNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__EmpNumb__6754599E">
+          <End Role="Tb_Employee" Type="Self.Tb_Employee" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Employee">
+              <PropertyRef Name="EmpNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="EmpNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__Stateme__656C112C">
+          <End Role="Tb_IncomingTotals" Type="Self.Tb_IncomingTotals" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_IncomingTotals">
+              <PropertyRef Name="RevealNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="StatementNumberWared" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__Stateme__66603565">
+          <End Role="Tb_Outgoing" Type="Self.Tb_Outgoing" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Outgoing">
+              <PropertyRef Name="RevealNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="StatementNumberSader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__UserNum__6383C8BA">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AccountSt__UserN__45F365D3">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_AccountStop" Type="Self.Tb_AccountStop" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_AccountStop">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Blacklist__UserN__403A8C7D">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Blacklist" Type="Self.Tb_Blacklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Blacklist">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Box__UserNumbers__3D5E1FD2">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Box" Type="Self.Tb_Box" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Box">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BuyingSel__UserN__15502E78">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_BuyingSelling" Type="Self.Tb_BuyingSelling" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_BuyingSelling">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ConcelTra__UserN__59063A47">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_ConcelTransfer" Type="Self.Tb_ConcelTransfer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_ConcelTransfer">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Confirmed__UserN__4BAC3F29">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_ConfirmedTransfer" Type="Self.Tb_ConfirmedTransfer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_ConfirmedTransfer">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Currencie__Curre__2F10007B">
+          <End Role="Currencise" Type="Self.Currencise" Multiplicity="0..1" />
+          <End Role="Tb_CurrenciesPrices" Type="Self.Tb_CurrenciesPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencise">
+              <PropertyRef Name="CurrencyNumbers" />
+            </Principal>
+            <Dependent Role="Tb_CurrenciesPrices">
+              <PropertyRef Name="CurrencyNumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Currencie__UserN__4E88ABD4">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Currencies" Type="Self.Currencies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Currencies">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Currencis__UserN__1B0907CE">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Currencise" Type="Self.Currencise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Currencise">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CustomerE__UserN__182C9B23">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_CustomerExchangeReceiptBonds" Type="Self.Tb_CustomerExchangeReceiptBonds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_CustomerExchangeReceiptBonds">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DailyRest__Const__534D60F1">
+          <End Role="Tb_DailyrestictionsHead" Type="Self.Tb_DailyrestictionsHead" Multiplicity="0..1" />
+          <End Role="Tb_DailyRestictionsDitales" Type="Self.Tb_DailyRestictionsDitales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_DailyrestictionsHead">
+              <PropertyRef Name="ConstNumber" />
+            </Principal>
+            <Dependent Role="Tb_DailyRestictionsDitales">
+              <PropertyRef Name="ConstNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Deportati__UserN__4316F928">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_DeportationTransfar" Type="Self.Tb_DeportationTransfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_DeportationTransfar">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DoubleRes__UserN__48CFD27E">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_DoubleRestictions" Type="Self.Tb_DoubleRestictions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_DoubleRestictions">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employee__UserNu__29572725">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Employee" Type="Self.Tb_Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Employee">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Entities__UserNu__267ABA7A">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Entities" Type="Self.Tb_Entities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Entities">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Groups__UserNumb__31EC6D26">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Groups" Type="Self.Tb_Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Groups">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IncomingT__UserN__37A5467C">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_IncomingTotals" Type="Self.Tb_IncomingTotals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_IncomingTotals">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inventory__UserN__20C1E124">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_InventoryBox" Type="Self.Tb_InventoryBox" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_InventoryBox">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MatchingA__UserN__1DE57479">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_MatchingAccounts" Type="Self.Tb_MatchingAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_MatchingAccounts">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Outgoing__UserNu__3A81B327">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Outgoing" Type="Self.Tb_Outgoing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Outgoing">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonalI__UserN__34C8D9D1">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_PersonalInformation" Type="Self.Tb_PersonalInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_PersonalInformation">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RoofingAc__UserN__2C3393D0">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_RoofingAccounts" Type="Self.Tb_RoofingAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_RoofingAccounts">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Rwcipient__UserN__5629CD9C">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_RwcipientCard" Type="Self.Tb_RwcipientCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_RwcipientCard">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SimpleReg__UserN__239E4DCF">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_SimpleRegistBond" Type="Self.Tb_SimpleRegistBond" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_SimpleRegistBond">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Curren__5EBF139D">
+          <End Role="Currencise" Type="Self.Currencise" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencise">
+              <PropertyRef Name="CurrencyNumbers" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="CurrencyNumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__IDNunb__5DCAEF64">
+          <End Role="Tb_RwcipientCard" Type="Self.Tb_RwcipientCard" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_RwcipientCard">
+              <PropertyRef Name="Numbers" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="IDNunber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Number__60A75C0F">
+          <End Role="Tb_DeportationTransfar" Type="Self.Tb_DeportationTransfar" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_DeportationTransfar">
+              <PropertyRef Name="MethodNumber" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="NumberTT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Statem__5BE2A6F2">
+          <End Role="Tb_IncomingTotals" Type="Self.Tb_IncomingTotals" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_IncomingTotals">
+              <PropertyRef Name="RevealNumber" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="StatementNumberWared" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Statem__5CD6CB2B">
+          <End Role="Tb_Outgoing" Type="Self.Tb_Outgoing" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Outgoing">
+              <PropertyRef Name="RevealNumber" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="StatementNumberSader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__UserNu__5FB337D6">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="DBTAEMModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Currencies" EntityType="Self.Currencies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Currencise" EntityType="Self.Currencise" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Currencise1" EntityType="Self.Currencise1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_AccountStop" EntityType="Self.Tb_AccountStop" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Blacklist" EntityType="Self.Tb_Blacklist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Box" EntityType="Self.Tb_Box" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_BuyingSelling" EntityType="Self.Tb_BuyingSelling" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_ConcelTransfer" EntityType="Self.Tb_ConcelTransfer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_ConfirmedTransfer" EntityType="Self.Tb_ConfirmedTransfer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_CurrenciesPrices" EntityType="Self.Tb_CurrenciesPrices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_CustomerExchangeReceiptBonds" EntityType="Self.Tb_CustomerExchangeReceiptBonds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_DailyRestictionsDitales" EntityType="Self.Tb_DailyRestictionsDitales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_DailyrestictionsHead" EntityType="Self.Tb_DailyrestictionsHead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_DeportationTransfar" EntityType="Self.Tb_DeportationTransfar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_DoubleRestictions" EntityType="Self.Tb_DoubleRestictions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Employee" EntityType="Self.Tb_Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Entities" EntityType="Self.Tb_Entities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Groups" EntityType="Self.Tb_Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_IncomingTotals" EntityType="Self.Tb_IncomingTotals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_InventoryBox" EntityType="Self.Tb_InventoryBox" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_MatchingAccounts" EntityType="Self.Tb_MatchingAccounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Outgoing" EntityType="Self.Tb_Outgoing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_PersonalInformation" EntityType="Self.Tb_PersonalInformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_RoofingAccounts" EntityType="Self.Tb_RoofingAccounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_RwcipientCard" EntityType="Self.Tb_RwcipientCard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_SimpleRegistBond" EntityType="Self.Tb_SimpleRegistBond" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Transfar" EntityType="Self.Tb_Transfar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Users" EntityType="Self.Tb_Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Account__ConnNum__68487DD7" Association="Self.FK__Account__ConnNum__68487DD7">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__ConstNu__6477ECF3" Association="Self.FK__Account__ConstNu__6477ECF3">
+            <End Role="Tb_DailyrestictionsHead" EntitySet="Tb_DailyrestictionsHead" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__EmpNumb__6754599E" Association="Self.FK__Account__EmpNumb__6754599E">
+            <End Role="Tb_Employee" EntitySet="Tb_Employee" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__Stateme__656C112C" Association="Self.FK__Account__Stateme__656C112C">
+            <End Role="Tb_IncomingTotals" EntitySet="Tb_IncomingTotals" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__Stateme__66603565" Association="Self.FK__Account__Stateme__66603565">
+            <End Role="Tb_Outgoing" EntitySet="Tb_Outgoing" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__UserNum__6383C8BA" Association="Self.FK__Account__UserNum__6383C8BA">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AccountSt__UserN__45F365D3" Association="Self.FK__AccountSt__UserN__45F365D3">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_AccountStop" EntitySet="Tb_AccountStop" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Blacklist__UserN__403A8C7D" Association="Self.FK__Blacklist__UserN__403A8C7D">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Blacklist" EntitySet="Tb_Blacklist" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Box__UserNumbers__3D5E1FD2" Association="Self.FK__Box__UserNumbers__3D5E1FD2">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Box" EntitySet="Tb_Box" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BuyingSel__UserN__15502E78" Association="Self.FK__BuyingSel__UserN__15502E78">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_BuyingSelling" EntitySet="Tb_BuyingSelling" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ConcelTra__UserN__59063A47" Association="Self.FK__ConcelTra__UserN__59063A47">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_ConcelTransfer" EntitySet="Tb_ConcelTransfer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Confirmed__UserN__4BAC3F29" Association="Self.FK__Confirmed__UserN__4BAC3F29">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_ConfirmedTransfer" EntitySet="Tb_ConfirmedTransfer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Currencie__Curre__2F10007B" Association="Self.FK__Currencie__Curre__2F10007B">
+            <End Role="Currencise" EntitySet="Currencise" />
+            <End Role="Tb_CurrenciesPrices" EntitySet="Tb_CurrenciesPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Currencie__UserN__4E88ABD4" Association="Self.FK__Currencie__UserN__4E88ABD4">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Currencies" EntitySet="Currencies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Currencis__UserN__1B0907CE" Association="Self.FK__Currencis__UserN__1B0907CE">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Currencise" EntitySet="Currencise" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CustomerE__UserN__182C9B23" Association="Self.FK__CustomerE__UserN__182C9B23">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_CustomerExchangeReceiptBonds" EntitySet="Tb_CustomerExchangeReceiptBonds" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DailyRest__Const__534D60F1" Association="Self.FK__DailyRest__Const__534D60F1">
+            <End Role="Tb_DailyrestictionsHead" EntitySet="Tb_DailyrestictionsHead" />
+            <End Role="Tb_DailyRestictionsDitales" EntitySet="Tb_DailyRestictionsDitales" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Deportati__UserN__4316F928" Association="Self.FK__Deportati__UserN__4316F928">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_DeportationTransfar" EntitySet="Tb_DeportationTransfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DoubleRes__UserN__48CFD27E" Association="Self.FK__DoubleRes__UserN__48CFD27E">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_DoubleRestictions" EntitySet="Tb_DoubleRestictions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employee__UserNu__29572725" Association="Self.FK__Employee__UserNu__29572725">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Employee" EntitySet="Tb_Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Entities__UserNu__267ABA7A" Association="Self.FK__Entities__UserNu__267ABA7A">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Entities" EntitySet="Tb_Entities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Groups__UserNumb__31EC6D26" Association="Self.FK__Groups__UserNumb__31EC6D26">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Groups" EntitySet="Tb_Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IncomingT__UserN__37A5467C" Association="Self.FK__IncomingT__UserN__37A5467C">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_IncomingTotals" EntitySet="Tb_IncomingTotals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inventory__UserN__20C1E124" Association="Self.FK__Inventory__UserN__20C1E124">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_InventoryBox" EntitySet="Tb_InventoryBox" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MatchingA__UserN__1DE57479" Association="Self.FK__MatchingA__UserN__1DE57479">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_MatchingAccounts" EntitySet="Tb_MatchingAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Outgoing__UserNu__3A81B327" Association="Self.FK__Outgoing__UserNu__3A81B327">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Outgoing" EntitySet="Tb_Outgoing" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonalI__UserN__34C8D9D1" Association="Self.FK__PersonalI__UserN__34C8D9D1">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_PersonalInformation" EntitySet="Tb_PersonalInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RoofingAc__UserN__2C3393D0" Association="Self.FK__RoofingAc__UserN__2C3393D0">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_RoofingAccounts" EntitySet="Tb_RoofingAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Rwcipient__UserN__5629CD9C" Association="Self.FK__Rwcipient__UserN__5629CD9C">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_RwcipientCard" EntitySet="Tb_RwcipientCard" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SimpleReg__UserN__239E4DCF" Association="Self.FK__SimpleReg__UserN__239E4DCF">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_SimpleRegistBond" EntitySet="Tb_SimpleRegistBond" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Curren__5EBF139D" Association="Self.FK__Transfar__Curren__5EBF139D">
+            <End Role="Currencise" EntitySet="Currencise" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__IDNunb__5DCAEF64" Association="Self.FK__Transfar__IDNunb__5DCAEF64">
+            <End Role="Tb_RwcipientCard" EntitySet="Tb_RwcipientCard" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Number__60A75C0F" Association="Self.FK__Transfar__Number__60A75C0F">
+            <End Role="Tb_DeportationTransfar" EntitySet="Tb_DeportationTransfar" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Statem__5BE2A6F2" Association="Self.FK__Transfar__Statem__5BE2A6F2">
+            <End Role="Tb_IncomingTotals" EntitySet="Tb_IncomingTotals" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Statem__5CD6CB2B" Association="Self.FK__Transfar__Statem__5CD6CB2B">
+            <End Role="Tb_Outgoing" EntitySet="Tb_Outgoing" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__UserNu__5FB337D6" Association="Self.FK__Transfar__UserNu__5FB337D6">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBTAEMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="ACCID" />
+          </Key>
+          <Property Name="ACCID" Type="Int32" Nullable="false" />
+          <Property Name="Acc_Num" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Acc_Parent_Num" Type="Int32" />
+          <Property Name="Acc_Aname" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ConstNumbers" Type="Int32" />
+          <Property Name="Acc_Level" Type="Int32" />
+          <Property Name="Acc_Type" Type="Int32" />
+          <Property Name="Acc_Depet" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Acc_Credit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Acc_Balance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="StatementNumberWared" Type="Int32" />
+          <Property Name="StatementNumberSader" Type="Int32" />
+          <Property Name="EmpNumbers" Type="Int32" />
+          <Property Name="ConnNumbers" Type="Int32" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="EditUser" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="EditDate" Type="DateTime" Precision="0" />
+          <Property Name="AccNote" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumOFEditAcc" Type="Byte" />
+          <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+          <Property Name="AddUser" Type="Binary" MaxLength="50" FixedLength="false" />
+          <NavigationProperty Name="Currency" Relationship="Self.FK__Account__ConnNum__68487DD7" FromRole="Account" ToRole="Currencies" />
+          <NavigationProperty Name="Tb_DailyrestictionsHead" Relationship="Self.FK__Account__ConstNu__6477ECF3" FromRole="Account" ToRole="Tb_DailyrestictionsHead" />
+          <NavigationProperty Name="Tb_Employee" Relationship="Self.FK__Account__EmpNumb__6754599E" FromRole="Account" ToRole="Tb_Employee" />
+          <NavigationProperty Name="Tb_IncomingTotals" Relationship="Self.FK__Account__Stateme__656C112C" FromRole="Account" ToRole="Tb_IncomingTotals" />
+          <NavigationProperty Name="Tb_Outgoing" Relationship="Self.FK__Account__Stateme__66603565" FromRole="Account" ToRole="Tb_Outgoing" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Account__UserNum__6383C8BA" FromRole="Account" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CommntNumber" />
+          </Key>
+          <Property Name="CommntNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="Currency1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="CommntCurrency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DestinationCurrency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DocumentType" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ConstNote" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__ConnNum__68487DD7" FromRole="Currencies" ToRole="Account" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Currencie__UserN__4E88ABD4" FromRole="Currencies" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Currencise">
+          <Key>
+            <PropertyRef Name="CurrencyNumbers" />
+          </Key>
+          <Property Name="CurrencyNumbers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ArabicSymbol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EnglishSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ForeignSymbol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_CurrenciesPrices" Relationship="Self.FK__Currencie__Curre__2F10007B" FromRole="Currencise" ToRole="Tb_CurrenciesPrices" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Currencis__UserN__1B0907CE" FromRole="Currencise" ToRole="Tb_Users" />
+          <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__Curren__5EBF139D" FromRole="Currencise" ToRole="Tb_Transfar" />
+        </EntityType>
+        <EntityType Name="Currencise1">
+          <Key>
+            <PropertyRef Name="CurrencyNumber" />
+          </Key>
+          <Property Name="CurrencyNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumber" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ArabicSymbol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EnglishSymbol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tb_AccountStop">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="ReasonStop" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__AccountSt__UserN__45F365D3" FromRole="Tb_AccountStop" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_Blacklist">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Nationality" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Types" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Reason" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Blacklist__UserN__403A8C7D" FromRole="Tb_Blacklist" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_Box">
+          <Key>
+            <PropertyRef Name="BosNumber" />
+          </Key>
+          <Property Name="Document" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BosNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BoxName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccountUser" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="InsertDate" Type="DateTime" Precision="0" />
+          <Property Name="LastEdit" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Box__UserNumbers__3D5E1FD2" FromRole="Tb_Box" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_BuyingSelling">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="BondNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="AmountCcount" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AmountPay" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="AmountValue" Type="Int32" />
+          <Property Name="ValueCcount" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ValueCurrency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="BondName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="castamerName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ValuePay" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__BuyingSel__UserN__15502E78" FromRole="Tb_BuyingSelling" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_ConcelTransfer">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="Agent" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TransfarNumber" Type="Int32" />
+          <Property Name="TransfarAmount" Type="Int32" />
+          <Property Name="GlobleNumber" Type="Int32" />
+          <Property Name="TransferDate" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__ConcelTra__UserN__59063A47" FromRole="Tb_ConcelTransfer" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_ConfirmedTransfer">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="BondNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="ExchangeAmount" Type="Int32" />
+          <Property Name="ExchangeCurrency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SenderName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RecipientName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ExchangeDate" Type="DateTime" Precision="0" />
+          <Property Name="Confirmation" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Confirmed__UserN__4BAC3F29" FromRole="Tb_ConfirmedTransfer" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_CurrenciesPrices">
+          <Key>
+            <PropertyRef Name="CurrencyPriceNumber" />
+          </Key>
+          <Property Name="CurrencyPriceNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrencyNumber" Type="Int32" />
+          <Property Name="TtranferFrom" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TtranferTo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TtranferPrice" Type="Int32" />
+          <Property Name="PurchPrice" Type="Int32" />
+          <Property Name="SellingPrice" Type="Int32" />
+          <Property Name="LowPrice" Type="Int32" />
+          <Property Name="HeghtPrice" Type="Int32" />
+          <Property Name="LowPricePay" Type="Int32" />
+          <Property Name="LowPriceSelling" Type="Int32" />
+          <Property Name="HeghtPricePay" Type="Int32" />
+          <Property Name="HeghtPriceSelling" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Currencise" Relationship="Self.FK__Currencie__Curre__2F10007B" FromRole="Tb_CurrenciesPrices" ToRole="Currencise" />
+        </EntityType>
+        <EntityType Name="Tb_CustomerExchangeReceiptBonds">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="BondNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="ExchangeMethod" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="MethodExchangeReceipt" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AmountName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Handling" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AmountNumberMadin" Type="Int32" />
+          <Property Name="AmountNumberDain" Type="Int32" />
+          <Property Name="Box" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="BondStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccountAmount" Type="Int32" />
+          <Property Name="AccountCurrency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__CustomerE__UserN__182C9B23" FromRole="Tb_CustomerExchangeReceiptBonds" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_DailyRestictionsDitales">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConstNumbers" Type="Int32" />
+          <Property Name="ConstDate" Type="DateTime" Precision="0" />
+          <Property Name="Currency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNameMadin" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNameDain" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccountMadin" Type="Int32" />
+          <Property Name="AccountDain" Type="Int32" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="AmountMadin" Type="Int32" />
+          <Property Name="AmountDain" Type="Int32" />
+          <Property Name="Statements" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_DailyrestictionsHead" Relationship="Self.FK__DailyRest__Const__534D60F1" FromRole="Tb_DailyRestictionsDitales" ToRole="Tb_DailyrestictionsHead" />
+        </EntityType>
+        <EntityType Name="Tb_DailyrestictionsHead">
+          <Key>
+            <PropertyRef Name="ConstNumber" />
+          </Key>
+          <Property Name="ConstNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConstDate" Type="DateTime" Precision="0" />
+          <Property Name="Currency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNameMadin" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNameDain" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccountMadin" Type="Int32" />
+          <Property Name="AccountDain" Type="Int32" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="GroupAmountMadin" Type="Int32" />
+          <Property Name="GroupAmountDain" Type="Int32" />
+          <Property Name="Statements" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__ConstNu__6477ECF3" FromRole="Tb_DailyrestictionsHead" ToRole="Account" />
+          <NavigationProperty Name="Tb_DailyRestictionsDitales" Relationship="Self.FK__DailyRest__Const__534D60F1" FromRole="Tb_DailyrestictionsHead" ToRole="Tb_DailyRestictionsDitales" />
+        </EntityType>
+        <EntityType Name="Tb_DeportationTransfar">
+          <Key>
+            <PropertyRef Name="MethodNumber" />
+          </Key>
+          <Property Name="MethodNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Side" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DeportationWarid" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DeportationSadar" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Deportati__UserN__4316F928" FromRole="Tb_DeportationTransfar" ToRole="Tb_Users" />
+          <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__Number__60A75C0F" FromRole="Tb_DeportationTransfar" ToRole="Tb_Transfar" />
+        </EntityType>
+        <EntityType Name="Tb_DoubleRestictions">
+          <Key>
+            <PropertyRef Name="ConstNumber" />
+          </Key>
+          <Property Name="ConstNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ConstType" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ConstStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="TransPrice" Type="Int32" />
+          <Property Name="Opposite" Type="Int32" />
+          <Property Name="Const" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNumber" Type="Int32" />
+          <Property Name="AccountName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ConstDate" Type="DateTime" Precision="0" />
+          <Property Name="ConstNote" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__DoubleRes__UserN__48CFD27E" FromRole="Tb_DoubleRestictions" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_Employee">
+          <Key>
+            <PropertyRef Name="EmpNumber" />
+          </Key>
+          <Property Name="EmpNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="AccountNumberEmp" Type="Int32" />
+          <Property Name="AccountEmp" Type="Int32" />
+          <Property Name="Functions" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="Int32" />
+          <Property Name="SalariesAccountName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EmpStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RegistNote" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="RegistDate" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__EmpNumb__6754599E" FromRole="Tb_Employee" ToRole="Account" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Employee__UserNu__29572725" FromRole="Tb_Employee" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_Entities">
+          <Key>
+            <PropertyRef Name="EntitiesNumber" />
+          </Key>
+          <Property Name="EntitiesNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="Side" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Agent" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="InsertDate" Type="DateTime" Precision="0" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Entities__UserNu__267ABA7A" FromRole="Tb_Entities" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_Groups">
+          <Key>
+            <PropertyRef Name="GroupNumber" />
+          </Key>
+          <Property Name="GroupNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Groups__UserNumb__31EC6D26" FromRole="Tb_Groups" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_IncomingTotals">
+          <Key>
+            <PropertyRef Name="RevealNumber" />
+          </Key>
+          <Property Name="RevealNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Side" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="TransfarNumber" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__Stateme__656C112C" FromRole="Tb_IncomingTotals" ToRole="Account" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__IncomingT__UserN__37A5467C" FromRole="Tb_IncomingTotals" ToRole="Tb_Users" />
+          <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__Statem__5BE2A6F2" FromRole="Tb_IncomingTotals" ToRole="Tb_Transfar" />
+        </EntityType>
+        <EntityType Name="Tb_InventoryBox">
+          <Key>
+            <PropertyRef Name="BoxNumber" />
+          </Key>
+          <Property Name="BoxNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Box" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="SystemBalance" Type="Int32" />
+          <Property Name="InventoryBalance" Type="Int32" />
+          <Property Name="Differenc" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Inventory__UserN__20C1E124" FromRole="Tb_InventoryBox" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_MatchingAccounts">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Account" Type="Int32" />
+          <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="MatchingBalance" Type="Int32" />
+          <Property Name="BalanceStatue" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__MatchingA__UserN__1DE57479" FromRole="Tb_MatchingAccounts" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_Outgoing">
+          <Key>
+            <PropertyRef Name="RevealNumber" />
+          </Key>
+          <Property Name="RevealNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Side" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="TransfarNumber" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__Stateme__66603565" FromRole="Tb_Outgoing" ToRole="Account" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Outgoing__UserNu__3A81B327" FromRole="Tb_Outgoing" ToRole="Tb_Users" />
+          <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__Statem__5CD6CB2B" FromRole="Tb_Outgoing" ToRole="Tb_Transfar" />
+        </EntityType>
+        <EntityType Name="Tb_PersonalInformation">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Nationality" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SigntureImg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FrontImg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BackImg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PersonalImg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AnendDate" Type="DateTime" Precision="0" />
+          <Property Name="SideRelease" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+          <Property Name="IdNumber" Type="Int32" />
+          <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__PersonalI__UserN__34C8D9D1" FromRole="Tb_PersonalInformation" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_RoofingAccounts">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="InsertDate" Type="DateTime" Precision="0" />
+          <Property Name="LastEdit" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__RoofingAc__UserN__2C3393D0" FromRole="Tb_RoofingAccounts" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_RwcipientCard">
+          <Key>
+            <PropertyRef Name="Numbers" />
+          </Key>
+          <Property Name="Numbers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Nationality" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SigntureImg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FrontImg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BackImg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PersonalImg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AnendDate" Type="DateTime" Precision="0" />
+          <Property Name="SideRelease" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+          <Property Name="IdNumber" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Rwcipient__UserN__5629CD9C" FromRole="Tb_RwcipientCard" ToRole="Tb_Users" />
+          <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__IDNunb__5DCAEF64" FromRole="Tb_RwcipientCard" ToRole="Tb_Transfar" />
+        </EntityType>
+        <EntityType Name="Tb_SimpleRegistBond">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="BondNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="FromAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ToAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AmountMadin" Type="Int32" />
+          <Property Name="AmountDain" Type="Int32" />
+          <Property Name="AccountNumberMadin" Type="Int32" />
+          <Property Name="AccountNumberDain" Type="Int32" />
+          <Property Name="AccountNameMadin" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNameDain" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyMadin" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyDain" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ExchangePrice" Type="Int32" />
+          <Property Name="RegistStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__SimpleReg__UserN__239E4DCF" FromRole="Tb_SimpleRegistBond" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_Transfar">
+          <Key>
+            <PropertyRef Name="BondNumber" />
+          </Key>
+          <Property Name="TransfarNumber" Type="Int32" />
+          <Property Name="BondNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SenderName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RecipientName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PhoneNumberSender" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberRecipient" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="TransDate" Type="DateTime" Precision="0" />
+          <Property Name="ReceiptAmount" Type="Int32" />
+          <Property Name="Currency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Side" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Comm" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ServicrCurrency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="ReceiptCurrency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ArrestMethod" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiptAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="StatementNumberWared" Type="Int32" />
+          <Property Name="StatementNumberSader" Type="Int32" />
+          <Property Name="IDNunber" Type="Int32" />
+          <Property Name="CurrencyNumber" Type="Int32" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="NumberTT" Type="Int32" />
+          <Property Name="ReceiptAmountWared" Type="Int32" />
+          <Property Name="TransfarAmount" Type="Int32" />
+          <Property Name="RegistStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AccredStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TransfarStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ConfirmStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Agent" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AgentComm" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiptCurrencyWared" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Currencise" Relationship="Self.FK__Transfar__Curren__5EBF139D" FromRole="Tb_Transfar" ToRole="Currencise" />
+          <NavigationProperty Name="Tb_DeportationTransfar" Relationship="Self.FK__Transfar__Number__60A75C0F" FromRole="Tb_Transfar" ToRole="Tb_DeportationTransfar" />
+          <NavigationProperty Name="Tb_IncomingTotals" Relationship="Self.FK__Transfar__Statem__5BE2A6F2" FromRole="Tb_Transfar" ToRole="Tb_IncomingTotals" />
+          <NavigationProperty Name="Tb_Outgoing" Relationship="Self.FK__Transfar__Statem__5CD6CB2B" FromRole="Tb_Transfar" ToRole="Tb_Outgoing" />
+          <NavigationProperty Name="Tb_RwcipientCard" Relationship="Self.FK__Transfar__IDNunb__5DCAEF64" FromRole="Tb_Transfar" ToRole="Tb_RwcipientCard" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Transfar__UserNu__5FB337D6" FromRole="Tb_Transfar" ToRole="Tb_Users" />
+        </EntityType>
+        <EntityType Name="Tb_Users">
+          <Key>
+            <PropertyRef Name="UserNumber" />
+          </Key>
+          <Property Name="UserNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="UserStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TheDate" Type="DateTime" Precision="0" />
+          <Property Name="UserGroup" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ChangePassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__UserNum__6383C8BA" FromRole="Tb_Users" ToRole="Account" />
+          <NavigationProperty Name="Currencies" Relationship="Self.FK__Currencie__UserN__4E88ABD4" FromRole="Tb_Users" ToRole="Currencies" />
+          <NavigationProperty Name="Currencises" Relationship="Self.FK__Currencis__UserN__1B0907CE" FromRole="Tb_Users" ToRole="Currencise" />
+          <NavigationProperty Name="Tb_AccountStop" Relationship="Self.FK__AccountSt__UserN__45F365D3" FromRole="Tb_Users" ToRole="Tb_AccountStop" />
+          <NavigationProperty Name="Tb_Blacklist" Relationship="Self.FK__Blacklist__UserN__403A8C7D" FromRole="Tb_Users" ToRole="Tb_Blacklist" />
+          <NavigationProperty Name="Tb_Box" Relationship="Self.FK__Box__UserNumbers__3D5E1FD2" FromRole="Tb_Users" ToRole="Tb_Box" />
+          <NavigationProperty Name="Tb_BuyingSelling" Relationship="Self.FK__BuyingSel__UserN__15502E78" FromRole="Tb_Users" ToRole="Tb_BuyingSelling" />
+          <NavigationProperty Name="Tb_ConcelTransfer" Relationship="Self.FK__ConcelTra__UserN__59063A47" FromRole="Tb_Users" ToRole="Tb_ConcelTransfer" />
+          <NavigationProperty Name="Tb_ConfirmedTransfer" Relationship="Self.FK__Confirmed__UserN__4BAC3F29" FromRole="Tb_Users" ToRole="Tb_ConfirmedTransfer" />
+          <NavigationProperty Name="Tb_CustomerExchangeReceiptBonds" Relationship="Self.FK__CustomerE__UserN__182C9B23" FromRole="Tb_Users" ToRole="Tb_CustomerExchangeReceiptBonds" />
+          <NavigationProperty Name="Tb_DeportationTransfar" Relationship="Self.FK__Deportati__UserN__4316F928" FromRole="Tb_Users" ToRole="Tb_DeportationTransfar" />
+          <NavigationProperty Name="Tb_DoubleRestictions" Relationship="Self.FK__DoubleRes__UserN__48CFD27E" FromRole="Tb_Users" ToRole="Tb_DoubleRestictions" />
+          <NavigationProperty Name="Tb_Employee" Relationship="Self.FK__Employee__UserNu__29572725" FromRole="Tb_Users" ToRole="Tb_Employee" />
+          <NavigationProperty Name="Tb_Entities" Relationship="Self.FK__Entities__UserNu__267ABA7A" FromRole="Tb_Users" ToRole="Tb_Entities" />
+          <NavigationProperty Name="Tb_Groups" Relationship="Self.FK__Groups__UserNumb__31EC6D26" FromRole="Tb_Users" ToRole="Tb_Groups" />
+          <NavigationProperty Name="Tb_IncomingTotals" Relationship="Self.FK__IncomingT__UserN__37A5467C" FromRole="Tb_Users" ToRole="Tb_IncomingTotals" />
+          <NavigationProperty Name="Tb_InventoryBox" Relationship="Self.FK__Inventory__UserN__20C1E124" FromRole="Tb_Users" ToRole="Tb_InventoryBox" />
+          <NavigationProperty Name="Tb_MatchingAccounts" Relationship="Self.FK__MatchingA__UserN__1DE57479" FromRole="Tb_Users" ToRole="Tb_MatchingAccounts" />
+          <NavigationProperty Name="Tb_Outgoing" Relationship="Self.FK__Outgoing__UserNu__3A81B327" FromRole="Tb_Users" ToRole="Tb_Outgoing" />
+          <NavigationProperty Name="Tb_PersonalInformation" Relationship="Self.FK__PersonalI__UserN__34C8D9D1" FromRole="Tb_Users" ToRole="Tb_PersonalInformation" />
+          <NavigationProperty Name="Tb_RoofingAccounts" Relationship="Self.FK__RoofingAc__UserN__2C3393D0" FromRole="Tb_Users" ToRole="Tb_RoofingAccounts" />
+          <NavigationProperty Name="Tb_RwcipientCard" Relationship="Self.FK__Rwcipient__UserN__5629CD9C" FromRole="Tb_Users" ToRole="Tb_RwcipientCard" />
+          <NavigationProperty Name="Tb_SimpleRegistBond" Relationship="Self.FK__SimpleReg__UserN__239E4DCF" FromRole="Tb_Users" ToRole="Tb_SimpleRegistBond" />
+          <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__UserNu__5FB337D6" FromRole="Tb_Users" ToRole="Tb_Transfar" />
+        </EntityType>
+        <Association Name="FK__Account__ConnNum__68487DD7">
+          <End Role="Currencies" Type="Self.Currency" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="CommntNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="ConnNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__ConstNu__6477ECF3">
+          <End Role="Tb_DailyrestictionsHead" Type="Self.Tb_DailyrestictionsHead" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_DailyrestictionsHead">
+              <PropertyRef Name="ConstNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="ConstNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__EmpNumb__6754599E">
+          <End Role="Tb_Employee" Type="Self.Tb_Employee" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Employee">
+              <PropertyRef Name="EmpNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="EmpNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__Stateme__656C112C">
+          <End Role="Tb_IncomingTotals" Type="Self.Tb_IncomingTotals" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_IncomingTotals">
+              <PropertyRef Name="RevealNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="StatementNumberWared" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__Stateme__66603565">
+          <End Role="Tb_Outgoing" Type="Self.Tb_Outgoing" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Outgoing">
+              <PropertyRef Name="RevealNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="StatementNumberSader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Account__UserNum__6383C8BA">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Currencie__UserN__4E88ABD4">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Currencies" Type="Self.Currency" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Currencies">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Currencie__Curre__2F10007B">
+          <End Role="Currencise" Type="Self.Currencise" Multiplicity="0..1" />
+          <End Role="Tb_CurrenciesPrices" Type="Self.Tb_CurrenciesPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencise">
+              <PropertyRef Name="CurrencyNumbers" />
+            </Principal>
+            <Dependent Role="Tb_CurrenciesPrices">
+              <PropertyRef Name="CurrencyNumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Currencis__UserN__1B0907CE">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Currencise" Type="Self.Currencise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Currencise">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Curren__5EBF139D">
+          <End Role="Currencise" Type="Self.Currencise" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencise">
+              <PropertyRef Name="CurrencyNumbers" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="CurrencyNumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AccountSt__UserN__45F365D3">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_AccountStop" Type="Self.Tb_AccountStop" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_AccountStop">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Blacklist__UserN__403A8C7D">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Blacklist" Type="Self.Tb_Blacklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Blacklist">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Box__UserNumbers__3D5E1FD2">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Box" Type="Self.Tb_Box" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Box">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BuyingSel__UserN__15502E78">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_BuyingSelling" Type="Self.Tb_BuyingSelling" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_BuyingSelling">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ConcelTra__UserN__59063A47">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_ConcelTransfer" Type="Self.Tb_ConcelTransfer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_ConcelTransfer">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Confirmed__UserN__4BAC3F29">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_ConfirmedTransfer" Type="Self.Tb_ConfirmedTransfer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_ConfirmedTransfer">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CustomerE__UserN__182C9B23">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_CustomerExchangeReceiptBonds" Type="Self.Tb_CustomerExchangeReceiptBonds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_CustomerExchangeReceiptBonds">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DailyRest__Const__534D60F1">
+          <End Role="Tb_DailyrestictionsHead" Type="Self.Tb_DailyrestictionsHead" Multiplicity="0..1" />
+          <End Role="Tb_DailyRestictionsDitales" Type="Self.Tb_DailyRestictionsDitales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_DailyrestictionsHead">
+              <PropertyRef Name="ConstNumber" />
+            </Principal>
+            <Dependent Role="Tb_DailyRestictionsDitales">
+              <PropertyRef Name="ConstNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Deportati__UserN__4316F928">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_DeportationTransfar" Type="Self.Tb_DeportationTransfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_DeportationTransfar">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Number__60A75C0F">
+          <End Role="Tb_DeportationTransfar" Type="Self.Tb_DeportationTransfar" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_DeportationTransfar">
+              <PropertyRef Name="MethodNumber" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="NumberTT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DoubleRes__UserN__48CFD27E">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_DoubleRestictions" Type="Self.Tb_DoubleRestictions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_DoubleRestictions">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employee__UserNu__29572725">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Employee" Type="Self.Tb_Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Employee">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Entities__UserNu__267ABA7A">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Entities" Type="Self.Tb_Entities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Entities">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Groups__UserNumb__31EC6D26">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Groups" Type="Self.Tb_Groups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Groups">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IncomingT__UserN__37A5467C">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_IncomingTotals" Type="Self.Tb_IncomingTotals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_IncomingTotals">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Statem__5BE2A6F2">
+          <End Role="Tb_IncomingTotals" Type="Self.Tb_IncomingTotals" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_IncomingTotals">
+              <PropertyRef Name="RevealNumber" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="StatementNumberWared" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Inventory__UserN__20C1E124">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_InventoryBox" Type="Self.Tb_InventoryBox" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_InventoryBox">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MatchingA__UserN__1DE57479">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_MatchingAccounts" Type="Self.Tb_MatchingAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_MatchingAccounts">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Outgoing__UserNu__3A81B327">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Outgoing" Type="Self.Tb_Outgoing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Outgoing">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Statem__5CD6CB2B">
+          <End Role="Tb_Outgoing" Type="Self.Tb_Outgoing" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Outgoing">
+              <PropertyRef Name="RevealNumber" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="StatementNumberSader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonalI__UserN__34C8D9D1">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_PersonalInformation" Type="Self.Tb_PersonalInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_PersonalInformation">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RoofingAc__UserN__2C3393D0">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_RoofingAccounts" Type="Self.Tb_RoofingAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_RoofingAccounts">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Rwcipient__UserN__5629CD9C">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_RwcipientCard" Type="Self.Tb_RwcipientCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_RwcipientCard">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__IDNunb__5DCAEF64">
+          <End Role="Tb_RwcipientCard" Type="Self.Tb_RwcipientCard" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_RwcipientCard">
+              <PropertyRef Name="Numbers" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="IDNunber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SimpleReg__UserN__239E4DCF">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_SimpleRegistBond" Type="Self.Tb_SimpleRegistBond" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_SimpleRegistBond">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__UserNu__5FB337D6">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBTAEMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Account" />
+          <EntitySet Name="Currencies" EntityType="Self.Currency" />
+          <EntitySet Name="Currencises" EntityType="Self.Currencise" />
+          <EntitySet Name="Currencise1" EntityType="Self.Currencise1" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Tb_AccountStop" EntityType="Self.Tb_AccountStop" />
+          <EntitySet Name="Tb_Blacklist" EntityType="Self.Tb_Blacklist" />
+          <EntitySet Name="Tb_Box" EntityType="Self.Tb_Box" />
+          <EntitySet Name="Tb_BuyingSelling" EntityType="Self.Tb_BuyingSelling" />
+          <EntitySet Name="Tb_ConcelTransfer" EntityType="Self.Tb_ConcelTransfer" />
+          <EntitySet Name="Tb_ConfirmedTransfer" EntityType="Self.Tb_ConfirmedTransfer" />
+          <EntitySet Name="Tb_CurrenciesPrices" EntityType="Self.Tb_CurrenciesPrices" />
+          <EntitySet Name="Tb_CustomerExchangeReceiptBonds" EntityType="Self.Tb_CustomerExchangeReceiptBonds" />
+          <EntitySet Name="Tb_DailyRestictionsDitales" EntityType="Self.Tb_DailyRestictionsDitales" />
+          <EntitySet Name="Tb_DailyrestictionsHead" EntityType="Self.Tb_DailyrestictionsHead" />
+          <EntitySet Name="Tb_DeportationTransfar" EntityType="Self.Tb_DeportationTransfar" />
+          <EntitySet Name="Tb_DoubleRestictions" EntityType="Self.Tb_DoubleRestictions" />
+          <EntitySet Name="Tb_Employee" EntityType="Self.Tb_Employee" />
+          <EntitySet Name="Tb_Entities" EntityType="Self.Tb_Entities" />
+          <EntitySet Name="Tb_Groups" EntityType="Self.Tb_Groups" />
+          <EntitySet Name="Tb_IncomingTotals" EntityType="Self.Tb_IncomingTotals" />
+          <EntitySet Name="Tb_InventoryBox" EntityType="Self.Tb_InventoryBox" />
+          <EntitySet Name="Tb_MatchingAccounts" EntityType="Self.Tb_MatchingAccounts" />
+          <EntitySet Name="Tb_Outgoing" EntityType="Self.Tb_Outgoing" />
+          <EntitySet Name="Tb_PersonalInformation" EntityType="Self.Tb_PersonalInformation" />
+          <EntitySet Name="Tb_RoofingAccounts" EntityType="Self.Tb_RoofingAccounts" />
+          <EntitySet Name="Tb_RwcipientCard" EntityType="Self.Tb_RwcipientCard" />
+          <EntitySet Name="Tb_SimpleRegistBond" EntityType="Self.Tb_SimpleRegistBond" />
+          <EntitySet Name="Tb_Transfar" EntityType="Self.Tb_Transfar" />
+          <EntitySet Name="Tb_Users" EntityType="Self.Tb_Users" />
+          <AssociationSet Name="FK__Account__ConnNum__68487DD7" Association="Self.FK__Account__ConnNum__68487DD7">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__ConstNu__6477ECF3" Association="Self.FK__Account__ConstNu__6477ECF3">
+            <End Role="Tb_DailyrestictionsHead" EntitySet="Tb_DailyrestictionsHead" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__EmpNumb__6754599E" Association="Self.FK__Account__EmpNumb__6754599E">
+            <End Role="Tb_Employee" EntitySet="Tb_Employee" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__Stateme__656C112C" Association="Self.FK__Account__Stateme__656C112C">
+            <End Role="Tb_IncomingTotals" EntitySet="Tb_IncomingTotals" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__Stateme__66603565" Association="Self.FK__Account__Stateme__66603565">
+            <End Role="Tb_Outgoing" EntitySet="Tb_Outgoing" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Account__UserNum__6383C8BA" Association="Self.FK__Account__UserNum__6383C8BA">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Currencie__UserN__4E88ABD4" Association="Self.FK__Currencie__UserN__4E88ABD4">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Currencies" EntitySet="Currencies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Currencie__Curre__2F10007B" Association="Self.FK__Currencie__Curre__2F10007B">
+            <End Role="Currencise" EntitySet="Currencises" />
+            <End Role="Tb_CurrenciesPrices" EntitySet="Tb_CurrenciesPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Currencis__UserN__1B0907CE" Association="Self.FK__Currencis__UserN__1B0907CE">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Currencise" EntitySet="Currencises" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Curren__5EBF139D" Association="Self.FK__Transfar__Curren__5EBF139D">
+            <End Role="Currencise" EntitySet="Currencises" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AccountSt__UserN__45F365D3" Association="Self.FK__AccountSt__UserN__45F365D3">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_AccountStop" EntitySet="Tb_AccountStop" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Blacklist__UserN__403A8C7D" Association="Self.FK__Blacklist__UserN__403A8C7D">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Blacklist" EntitySet="Tb_Blacklist" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Box__UserNumbers__3D5E1FD2" Association="Self.FK__Box__UserNumbers__3D5E1FD2">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Box" EntitySet="Tb_Box" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BuyingSel__UserN__15502E78" Association="Self.FK__BuyingSel__UserN__15502E78">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_BuyingSelling" EntitySet="Tb_BuyingSelling" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ConcelTra__UserN__59063A47" Association="Self.FK__ConcelTra__UserN__59063A47">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_ConcelTransfer" EntitySet="Tb_ConcelTransfer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Confirmed__UserN__4BAC3F29" Association="Self.FK__Confirmed__UserN__4BAC3F29">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_ConfirmedTransfer" EntitySet="Tb_ConfirmedTransfer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CustomerE__UserN__182C9B23" Association="Self.FK__CustomerE__UserN__182C9B23">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_CustomerExchangeReceiptBonds" EntitySet="Tb_CustomerExchangeReceiptBonds" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DailyRest__Const__534D60F1" Association="Self.FK__DailyRest__Const__534D60F1">
+            <End Role="Tb_DailyrestictionsHead" EntitySet="Tb_DailyrestictionsHead" />
+            <End Role="Tb_DailyRestictionsDitales" EntitySet="Tb_DailyRestictionsDitales" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Deportati__UserN__4316F928" Association="Self.FK__Deportati__UserN__4316F928">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_DeportationTransfar" EntitySet="Tb_DeportationTransfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Number__60A75C0F" Association="Self.FK__Transfar__Number__60A75C0F">
+            <End Role="Tb_DeportationTransfar" EntitySet="Tb_DeportationTransfar" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DoubleRes__UserN__48CFD27E" Association="Self.FK__DoubleRes__UserN__48CFD27E">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_DoubleRestictions" EntitySet="Tb_DoubleRestictions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employee__UserNu__29572725" Association="Self.FK__Employee__UserNu__29572725">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Employee" EntitySet="Tb_Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Entities__UserNu__267ABA7A" Association="Self.FK__Entities__UserNu__267ABA7A">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Entities" EntitySet="Tb_Entities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Groups__UserNumb__31EC6D26" Association="Self.FK__Groups__UserNumb__31EC6D26">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Groups" EntitySet="Tb_Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IncomingT__UserN__37A5467C" Association="Self.FK__IncomingT__UserN__37A5467C">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_IncomingTotals" EntitySet="Tb_IncomingTotals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Statem__5BE2A6F2" Association="Self.FK__Transfar__Statem__5BE2A6F2">
+            <End Role="Tb_IncomingTotals" EntitySet="Tb_IncomingTotals" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Inventory__UserN__20C1E124" Association="Self.FK__Inventory__UserN__20C1E124">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_InventoryBox" EntitySet="Tb_InventoryBox" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MatchingA__UserN__1DE57479" Association="Self.FK__MatchingA__UserN__1DE57479">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_MatchingAccounts" EntitySet="Tb_MatchingAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Outgoing__UserNu__3A81B327" Association="Self.FK__Outgoing__UserNu__3A81B327">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Outgoing" EntitySet="Tb_Outgoing" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Statem__5CD6CB2B" Association="Self.FK__Transfar__Statem__5CD6CB2B">
+            <End Role="Tb_Outgoing" EntitySet="Tb_Outgoing" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonalI__UserN__34C8D9D1" Association="Self.FK__PersonalI__UserN__34C8D9D1">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_PersonalInformation" EntitySet="Tb_PersonalInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RoofingAc__UserN__2C3393D0" Association="Self.FK__RoofingAc__UserN__2C3393D0">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_RoofingAccounts" EntitySet="Tb_RoofingAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Rwcipient__UserN__5629CD9C" Association="Self.FK__Rwcipient__UserN__5629CD9C">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_RwcipientCard" EntitySet="Tb_RwcipientCard" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__IDNunb__5DCAEF64" Association="Self.FK__Transfar__IDNunb__5DCAEF64">
+            <End Role="Tb_RwcipientCard" EntitySet="Tb_RwcipientCard" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SimpleReg__UserN__239E4DCF" Association="Self.FK__SimpleReg__UserN__239E4DCF">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_SimpleRegistBond" EntitySet="Tb_SimpleRegistBond" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__UserNu__5FB337D6" Association="Self.FK__Transfar__UserNu__5FB337D6">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DBTAEMModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DBTAEMModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBTAEMModelStoreContainer" CdmEntityContainer="DBTAEMEntities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="DBTAEMModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="ACCID" ColumnName="ACCID" />
+                <ScalarProperty Name="Acc_Num" ColumnName="Acc_Num" />
+                <ScalarProperty Name="Acc_Parent_Num" ColumnName="Acc_Parent_Num" />
+                <ScalarProperty Name="Acc_Aname" ColumnName="Acc_Aname" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ConstNumbers" ColumnName="ConstNumbers" />
+                <ScalarProperty Name="Acc_Level" ColumnName="Acc_Level" />
+                <ScalarProperty Name="Acc_Type" ColumnName="Acc_Type" />
+                <ScalarProperty Name="Acc_Depet" ColumnName="Acc_Depet" />
+                <ScalarProperty Name="Acc_Credit" ColumnName="Acc_Credit" />
+                <ScalarProperty Name="Acc_Balance" ColumnName="Acc_Balance" />
+                <ScalarProperty Name="StatementNumberWared" ColumnName="StatementNumberWared" />
+                <ScalarProperty Name="StatementNumberSader" ColumnName="StatementNumberSader" />
+                <ScalarProperty Name="EmpNumbers" ColumnName="EmpNumbers" />
+                <ScalarProperty Name="ConnNumbers" ColumnName="ConnNumbers" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="AccNote" ColumnName="AccNote" />
+                <ScalarProperty Name="NumOFEditAcc" ColumnName="NumOFEditAcc" />
+                <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+                <ScalarProperty Name="AddUser" ColumnName="AddUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencies">
+            <EntityTypeMapping TypeName="DBTAEMModel.Currency">
+              <MappingFragment StoreEntitySet="Currencies">
+                <ScalarProperty Name="CommntNumber" ColumnName="CommntNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="Currency1" ColumnName="Currency" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="CommntCurrency" ColumnName="CommntCurrency" />
+                <ScalarProperty Name="DestinationCurrency" ColumnName="DestinationCurrency" />
+                <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+                <ScalarProperty Name="ConstNote" ColumnName="ConstNote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencises">
+            <EntityTypeMapping TypeName="DBTAEMModel.Currencise">
+              <MappingFragment StoreEntitySet="Currencise">
+                <ScalarProperty Name="CurrencyNumbers" ColumnName="CurrencyNumbers" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+                <ScalarProperty Name="ArabicSymbol" ColumnName="ArabicSymbol" />
+                <ScalarProperty Name="EnglishSymbol" ColumnName="EnglishSymbol" />
+                <ScalarProperty Name="ForeignSymbol" ColumnName="ForeignSymbol" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencise1">
+            <EntityTypeMapping TypeName="DBTAEMModel.Currencise1">
+              <MappingFragment StoreEntitySet="Currencise1">
+                <ScalarProperty Name="CurrencyNumber" ColumnName="CurrencyNumber" />
+                <ScalarProperty Name="UserNumber" ColumnName="UserNumber" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+                <ScalarProperty Name="ArabicSymbol" ColumnName="ArabicSymbol" />
+                <ScalarProperty Name="EnglishSymbol" ColumnName="EnglishSymbol" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DBTAEMModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_AccountStop">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_AccountStop">
+              <MappingFragment StoreEntitySet="Tb_AccountStop">
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="ReasonStop" ColumnName="ReasonStop" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Blacklist">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Blacklist">
+              <MappingFragment StoreEntitySet="Tb_Blacklist">
+                <ScalarProperty Name="Numbers" ColumnName="Numbers" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Types" ColumnName="Types" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Box">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Box">
+              <MappingFragment StoreEntitySet="Tb_Box">
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="BosNumber" ColumnName="BosNumber" />
+                <ScalarProperty Name="BoxName" ColumnName="BoxName" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccountUser" ColumnName="AccountUser" />
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="LastEdit" ColumnName="LastEdit" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_BuyingSelling">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_BuyingSelling">
+              <MappingFragment StoreEntitySet="Tb_BuyingSelling">
+                <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="AmountCcount" ColumnName="AmountCcount" />
+                <ScalarProperty Name="AmountPay" ColumnName="AmountPay" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="AmountValue" ColumnName="AmountValue" />
+                <ScalarProperty Name="ValueCcount" ColumnName="ValueCcount" />
+                <ScalarProperty Name="ValueCurrency" ColumnName="ValueCurrency" />
+                <ScalarProperty Name="BondName" ColumnName="BondName" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="castamerName" ColumnName="castamerName" />
+                <ScalarProperty Name="ValuePay" ColumnName="ValuePay" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_ConcelTransfer">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_ConcelTransfer">
+              <MappingFragment StoreEntitySet="Tb_ConcelTransfer">
+                <ScalarProperty Name="Numbers" ColumnName="Numbers" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+                <ScalarProperty Name="TransfarNumber" ColumnName="TransfarNumber" />
+                <ScalarProperty Name="TransfarAmount" ColumnName="TransfarAmount" />
+                <ScalarProperty Name="GlobleNumber" ColumnName="GlobleNumber" />
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_ConfirmedTransfer">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_ConfirmedTransfer">
+              <MappingFragment StoreEntitySet="Tb_ConfirmedTransfer">
+                <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="ExchangeAmount" ColumnName="ExchangeAmount" />
+                <ScalarProperty Name="ExchangeCurrency" ColumnName="ExchangeCurrency" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
+                <ScalarProperty Name="ExchangeDate" ColumnName="ExchangeDate" />
+                <ScalarProperty Name="Confirmation" ColumnName="Confirmation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_CurrenciesPrices">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_CurrenciesPrices">
+              <MappingFragment StoreEntitySet="Tb_CurrenciesPrices">
+                <ScalarProperty Name="CurrencyPriceNumber" ColumnName="CurrencyPriceNumber" />
+                <ScalarProperty Name="CurrencyNumber" ColumnName="CurrencyNumber" />
+                <ScalarProperty Name="TtranferFrom" ColumnName="TtranferFrom" />
+                <ScalarProperty Name="TtranferTo" ColumnName="TtranferTo" />
+                <ScalarProperty Name="TtranferPrice" ColumnName="TtranferPrice" />
+                <ScalarProperty Name="PurchPrice" ColumnName="PurchPrice" />
+                <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+                <ScalarProperty Name="LowPrice" ColumnName="LowPrice" />
+                <ScalarProperty Name="HeghtPrice" ColumnName="HeghtPrice" />
+                <ScalarProperty Name="LowPricePay" ColumnName="LowPricePay" />
+                <ScalarProperty Name="LowPriceSelling" ColumnName="LowPriceSelling" />
+                <ScalarProperty Name="HeghtPricePay" ColumnName="HeghtPricePay" />
+                <ScalarProperty Name="HeghtPriceSelling" ColumnName="HeghtPriceSelling" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_CustomerExchangeReceiptBonds">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_CustomerExchangeReceiptBonds">
+              <MappingFragment StoreEntitySet="Tb_CustomerExchangeReceiptBonds">
+                <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="ExchangeMethod" ColumnName="ExchangeMethod" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="MethodExchangeReceipt" ColumnName="MethodExchangeReceipt" />
+                <ScalarProperty Name="AmountName" ColumnName="AmountName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Handling" ColumnName="Handling" />
+                <ScalarProperty Name="AmountNumberMadin" ColumnName="AmountNumberMadin" />
+                <ScalarProperty Name="AmountNumberDain" ColumnName="AmountNumberDain" />
+                <ScalarProperty Name="Box" ColumnName="Box" />
+                <ScalarProperty Name="BondStatus" ColumnName="BondStatus" />
+                <ScalarProperty Name="AccountAmount" ColumnName="AccountAmount" />
+                <ScalarProperty Name="AccountCurrency" ColumnName="AccountCurrency" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_DailyRestictionsDitales">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_DailyRestictionsDitales">
+              <MappingFragment StoreEntitySet="Tb_DailyRestictionsDitales">
+                <ScalarProperty Name="Numbers" ColumnName="Numbers" />
+                <ScalarProperty Name="ConstNumbers" ColumnName="ConstNumbers" />
+                <ScalarProperty Name="ConstDate" ColumnName="ConstDate" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="AccountNameMadin" ColumnName="AccountNameMadin" />
+                <ScalarProperty Name="AccountNameDain" ColumnName="AccountNameDain" />
+                <ScalarProperty Name="AccountMadin" ColumnName="AccountMadin" />
+                <ScalarProperty Name="AccountDain" ColumnName="AccountDain" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="AmountMadin" ColumnName="AmountMadin" />
+                <ScalarProperty Name="AmountDain" ColumnName="AmountDain" />
+                <ScalarProperty Name="Statements" ColumnName="Statements" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_DailyrestictionsHead">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_DailyrestictionsHead">
+              <MappingFragment StoreEntitySet="Tb_DailyrestictionsHead">
+                <ScalarProperty Name="ConstNumber" ColumnName="ConstNumber" />
+                <ScalarProperty Name="ConstDate" ColumnName="ConstDate" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="AccountNameMadin" ColumnName="AccountNameMadin" />
+                <ScalarProperty Name="AccountNameDain" ColumnName="AccountNameDain" />
+                <ScalarProperty Name="AccountMadin" ColumnName="AccountMadin" />
+                <ScalarProperty Name="AccountDain" ColumnName="AccountDain" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="GroupAmountMadin" ColumnName="GroupAmountMadin" />
+                <ScalarProperty Name="GroupAmountDain" ColumnName="GroupAmountDain" />
+                <ScalarProperty Name="Statements" ColumnName="Statements" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_DeportationTransfar">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_DeportationTransfar">
+              <MappingFragment StoreEntitySet="Tb_DeportationTransfar">
+                <ScalarProperty Name="MethodNumber" ColumnName="MethodNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Side" ColumnName="Side" />
+                <ScalarProperty Name="DeportationWarid" ColumnName="DeportationWarid" />
+                <ScalarProperty Name="DeportationSadar" ColumnName="DeportationSadar" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_DoubleRestictions">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_DoubleRestictions">
+              <MappingFragment StoreEntitySet="Tb_DoubleRestictions">
+                <ScalarProperty Name="ConstNumber" ColumnName="ConstNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ConstType" ColumnName="ConstType" />
+                <ScalarProperty Name="ConstStatus" ColumnName="ConstStatus" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TransPrice" ColumnName="TransPrice" />
+                <ScalarProperty Name="Opposite" ColumnName="Opposite" />
+                <ScalarProperty Name="Const" ColumnName="Const" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="ConstDate" ColumnName="ConstDate" />
+                <ScalarProperty Name="ConstNote" ColumnName="ConstNote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Employee">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Employee">
+              <MappingFragment StoreEntitySet="Tb_Employee">
+                <ScalarProperty Name="EmpNumber" ColumnName="EmpNumber" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="AccountNumberEmp" ColumnName="AccountNumberEmp" />
+                <ScalarProperty Name="AccountEmp" ColumnName="AccountEmp" />
+                <ScalarProperty Name="Functions" ColumnName="Functions" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="SalariesAccountName" ColumnName="SalariesAccountName" />
+                <ScalarProperty Name="EmpStatus" ColumnName="EmpStatus" />
+                <ScalarProperty Name="RegistNote" ColumnName="RegistNote" />
+                <ScalarProperty Name="RegistDate" ColumnName="RegistDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Entities">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Entities">
+              <MappingFragment StoreEntitySet="Tb_Entities">
+                <ScalarProperty Name="EntitiesNumber" ColumnName="EntitiesNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="Side" ColumnName="Side" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Groups">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Groups">
+              <MappingFragment StoreEntitySet="Tb_Groups">
+                <ScalarProperty Name="GroupNumber" ColumnName="GroupNumber" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_IncomingTotals">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_IncomingTotals">
+              <MappingFragment StoreEntitySet="Tb_IncomingTotals">
+                <ScalarProperty Name="RevealNumber" ColumnName="RevealNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Side" ColumnName="Side" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="TransfarNumber" ColumnName="TransfarNumber" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_InventoryBox">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_InventoryBox">
+              <MappingFragment StoreEntitySet="Tb_InventoryBox">
+                <ScalarProperty Name="BoxNumber" ColumnName="BoxNumber" />
+                <ScalarProperty Name="Box" ColumnName="Box" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="SystemBalance" ColumnName="SystemBalance" />
+                <ScalarProperty Name="InventoryBalance" ColumnName="InventoryBalance" />
+                <ScalarProperty Name="Differenc" ColumnName="Differenc" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_MatchingAccounts">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_MatchingAccounts">
+              <MappingFragment StoreEntitySet="Tb_MatchingAccounts">
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="MatchingBalance" ColumnName="MatchingBalance" />
+                <ScalarProperty Name="BalanceStatue" ColumnName="BalanceStatue" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Outgoing">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Outgoing">
+              <MappingFragment StoreEntitySet="Tb_Outgoing">
+                <ScalarProperty Name="RevealNumber" ColumnName="RevealNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Side" ColumnName="Side" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="TransfarNumber" ColumnName="TransfarNumber" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_PersonalInformation">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_PersonalInformation">
+              <MappingFragment StoreEntitySet="Tb_PersonalInformation">
+                <ScalarProperty Name="Numbers" ColumnName="Numbers" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="SigntureImg" ColumnName="SigntureImg" />
+                <ScalarProperty Name="FrontImg" ColumnName="FrontImg" />
+                <ScalarProperty Name="BackImg" ColumnName="BackImg" />
+                <ScalarProperty Name="PersonalImg" ColumnName="PersonalImg" />
+                <ScalarProperty Name="AnendDate" ColumnName="AnendDate" />
+                <ScalarProperty Name="SideRelease" ColumnName="SideRelease" />
+                <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_RoofingAccounts">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_RoofingAccounts">
+              <MappingFragment StoreEntitySet="Tb_RoofingAccounts">
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="LastEdit" ColumnName="LastEdit" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_RwcipientCard">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_RwcipientCard">
+              <MappingFragment StoreEntitySet="Tb_RwcipientCard">
+                <ScalarProperty Name="Numbers" ColumnName="Numbers" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="SigntureImg" ColumnName="SigntureImg" />
+                <ScalarProperty Name="FrontImg" ColumnName="FrontImg" />
+                <ScalarProperty Name="BackImg" ColumnName="BackImg" />
+                <ScalarProperty Name="PersonalImg" ColumnName="PersonalImg" />
+                <ScalarProperty Name="AnendDate" ColumnName="AnendDate" />
+                <ScalarProperty Name="SideRelease" ColumnName="SideRelease" />
+                <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_SimpleRegistBond">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_SimpleRegistBond">
+              <MappingFragment StoreEntitySet="Tb_SimpleRegistBond">
+                <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="FromAccount" ColumnName="FromAccount" />
+                <ScalarProperty Name="ToAccount" ColumnName="ToAccount" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="AmountMadin" ColumnName="AmountMadin" />
+                <ScalarProperty Name="AmountDain" ColumnName="AmountDain" />
+                <ScalarProperty Name="AccountNumberMadin" ColumnName="AccountNumberMadin" />
+                <ScalarProperty Name="AccountNumberDain" ColumnName="AccountNumberDain" />
+                <ScalarProperty Name="AccountNameMadin" ColumnName="AccountNameMadin" />
+                <ScalarProperty Name="AccountNameDain" ColumnName="AccountNameDain" />
+                <ScalarProperty Name="CurrencyMadin" ColumnName="CurrencyMadin" />
+                <ScalarProperty Name="CurrencyDain" ColumnName="CurrencyDain" />
+                <ScalarProperty Name="ExchangePrice" ColumnName="ExchangePrice" />
+                <ScalarProperty Name="RegistStatus" ColumnName="RegistStatus" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Transfar">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Transfar">
+              <MappingFragment StoreEntitySet="Tb_Transfar">
+                <ScalarProperty Name="TransfarNumber" ColumnName="TransfarNumber" />
+                <ScalarProperty Name="BondNumber" ColumnName="BondNumber" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
+                <ScalarProperty Name="PhoneNumberSender" ColumnName="PhoneNumberSender" />
+                <ScalarProperty Name="PhoneNumberRecipient" ColumnName="PhoneNumberRecipient" />
+                <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+                <ScalarProperty Name="ReceiptAmount" ColumnName="ReceiptAmount" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Side" ColumnName="Side" />
+                <ScalarProperty Name="Comm" ColumnName="Comm" />
+                <ScalarProperty Name="ServicrCurrency" ColumnName="ServicrCurrency" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ReceiptCurrency" ColumnName="ReceiptCurrency" />
+                <ScalarProperty Name="ArrestMethod" ColumnName="ArrestMethod" />
+                <ScalarProperty Name="ReceiptAccount" ColumnName="ReceiptAccount" />
+                <ScalarProperty Name="StatementNumberWared" ColumnName="StatementNumberWared" />
+                <ScalarProperty Name="StatementNumberSader" ColumnName="StatementNumberSader" />
+                <ScalarProperty Name="IDNunber" ColumnName="IDNunber" />
+                <ScalarProperty Name="CurrencyNumber" ColumnName="CurrencyNumber" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="NumberTT" ColumnName="NumberTT" />
+                <ScalarProperty Name="ReceiptAmountWared" ColumnName="ReceiptAmountWared" />
+                <ScalarProperty Name="TransfarAmount" ColumnName="TransfarAmount" />
+                <ScalarProperty Name="RegistStatus" ColumnName="RegistStatus" />
+                <ScalarProperty Name="AccredStatus" ColumnName="AccredStatus" />
+                <ScalarProperty Name="TransfarStatus" ColumnName="TransfarStatus" />
+                <ScalarProperty Name="ConfirmStatus" ColumnName="ConfirmStatus" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+                <ScalarProperty Name="AgentComm" ColumnName="AgentComm" />
+                <ScalarProperty Name="ReceiptCurrencyWared" ColumnName="ReceiptCurrencyWared" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Users">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Users">
+              <MappingFragment StoreEntitySet="Tb_Users">
+                <ScalarProperty Name="UserNumber" ColumnName="UserNumber" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+                <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+                <ScalarProperty Name="ChangePassword" ColumnName="ChangePassword" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DBTAEMModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DBTAEMModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DBTAEMModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DBTAEMModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBTAEMModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DBTAEMModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBTAEMModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DBTAEMModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DBTAEMModel.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
