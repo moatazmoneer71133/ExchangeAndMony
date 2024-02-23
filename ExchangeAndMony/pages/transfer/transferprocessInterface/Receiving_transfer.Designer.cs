@@ -31,33 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receiving_transfer));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.com_Service_currency = new System.Windows.Forms.ComboBox();
+            this.com_payment_method = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
-            this.com = new System.Windows.Forms.ComboBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.com_Source = new System.Windows.Forms.ComboBox();
+            this.t_Total_comm = new System.Windows.Forms.TextBox();
+            this.t_note = new System.Windows.Forms.TextBox();
+            this.t_Sender = new System.Windows.Forms.TextBox();
+            this.t_recipient = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.t_service_comm = new System.Windows.Forms.TextBox();
+            this.t_trans_currency = new System.Windows.Forms.TextBox();
+            this.t_Sender_pho = new System.Windows.Forms.TextBox();
+            this.t_recipient_pho = new System.Windows.Forms.TextBox();
+            this.t_amunt_arrest = new System.Windows.Forms.TextBox();
+            this.t_general_num = new System.Windows.Forms.TextBox();
+            this.t_trans_ma = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -79,15 +77,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.com_side = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.t_total_and_comm = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.com_account_arrest = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.t_price = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.com_currency_arrest = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -99,7 +97,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 591);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1272, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(1272, 179);
             this.dataGridView1.TabIndex = 46;
             // 
             // panel3
@@ -110,21 +108,21 @@
             this.panel3.Size = new System.Drawing.Size(431, 162);
             this.panel3.TabIndex = 45;
             // 
-            // comboBox2
+            // com_Service_currency
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(450, 359);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 24);
-            this.comboBox2.TabIndex = 44;
+            this.com_Service_currency.FormattingEnabled = true;
+            this.com_Service_currency.Location = new System.Drawing.Point(450, 359);
+            this.com_Service_currency.Name = "com_Service_currency";
+            this.com_Service_currency.Size = new System.Drawing.Size(199, 24);
+            this.com_Service_currency.TabIndex = 44;
             // 
-            // comboBox3
+            // com_payment_method
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(813, 134);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(431, 24);
-            this.comboBox3.TabIndex = 43;
+            this.com_payment_method.FormattingEnabled = true;
+            this.com_payment_method.Location = new System.Drawing.Point(813, 134);
+            this.com_payment_method.Name = "com_payment_method";
+            this.com_payment_method.Size = new System.Drawing.Size(431, 24);
+            this.com_payment_method.TabIndex = 43;
             // 
             // textBox1
             // 
@@ -167,53 +165,45 @@
             this.btn_add.TabIndex = 26;
             this.btn_add.Text = "اضافة";
             // 
-            // com
+            // com_Source
             // 
-            this.com.FormattingEnabled = true;
-            this.com.Location = new System.Drawing.Point(122, 94);
-            this.com.Name = "com";
-            this.com.Size = new System.Drawing.Size(202, 24);
-            this.com.TabIndex = 42;
+            this.com_Source.FormattingEnabled = true;
+            this.com_Source.Location = new System.Drawing.Point(122, 94);
+            this.com_Source.Name = "com_Source";
+            this.com_Source.Size = new System.Drawing.Size(202, 24);
+            this.com_Source.TabIndex = 42;
             // 
-            // textBox13
+            // t_Total_comm
             // 
-            this.textBox13.Location = new System.Drawing.Point(122, 447);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(139, 30);
-            this.textBox13.TabIndex = 30;
+            this.t_Total_comm.Location = new System.Drawing.Point(122, 363);
+            this.t_Total_comm.Multiline = true;
+            this.t_Total_comm.Name = "t_Total_comm";
+            this.t_Total_comm.Size = new System.Drawing.Size(202, 30);
+            this.t_Total_comm.TabIndex = 31;
             // 
-            // textBox6
+            // t_note
             // 
-            this.textBox6.Location = new System.Drawing.Point(122, 363);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(202, 30);
-            this.textBox6.TabIndex = 31;
+            this.t_note.Location = new System.Drawing.Point(122, 317);
+            this.t_note.Multiline = true;
+            this.t_note.Name = "t_note";
+            this.t_note.Size = new System.Drawing.Size(527, 30);
+            this.t_note.TabIndex = 32;
             // 
-            // textBox10
+            // t_Sender
             // 
-            this.textBox10.Location = new System.Drawing.Point(122, 317);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(527, 30);
-            this.textBox10.TabIndex = 32;
+            this.t_Sender.Location = new System.Drawing.Point(122, 273);
+            this.t_Sender.Multiline = true;
+            this.t_Sender.Name = "t_Sender";
+            this.t_Sender.Size = new System.Drawing.Size(202, 30);
+            this.t_Sender.TabIndex = 35;
             // 
-            // textBox9
+            // t_recipient
             // 
-            this.textBox9.Location = new System.Drawing.Point(122, 273);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(202, 30);
-            this.textBox9.TabIndex = 35;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(122, 226);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(202, 30);
-            this.textBox8.TabIndex = 33;
+            this.t_recipient.Location = new System.Drawing.Point(122, 226);
+            this.t_recipient.Multiline = true;
+            this.t_recipient.Name = "t_recipient";
+            this.t_recipient.Size = new System.Drawing.Size(202, 30);
+            this.t_recipient.TabIndex = 33;
             // 
             // label1
             // 
@@ -226,61 +216,61 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "رقــم الكـشف";
             // 
-            // textBox14
+            // t_service_comm
             // 
-            this.textBox14.Location = new System.Drawing.Point(286, 447);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(136, 30);
-            this.textBox14.TabIndex = 34;
+            this.t_service_comm.Location = new System.Drawing.Point(200, 438);
+            this.t_service_comm.Multiline = true;
+            this.t_service_comm.Name = "t_service_comm";
+            this.t_service_comm.Size = new System.Drawing.Size(136, 30);
+            this.t_service_comm.TabIndex = 34;
             // 
-            // textBox5
+            // t_trans_currency
             // 
-            this.textBox5.Location = new System.Drawing.Point(447, 94);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(202, 30);
-            this.textBox5.TabIndex = 41;
+            this.t_trans_currency.Location = new System.Drawing.Point(447, 94);
+            this.t_trans_currency.Multiline = true;
+            this.t_trans_currency.Name = "t_trans_currency";
+            this.t_trans_currency.Size = new System.Drawing.Size(202, 30);
+            this.t_trans_currency.TabIndex = 41;
             // 
-            // textBox4
+            // t_Sender_pho
             // 
-            this.textBox4.Location = new System.Drawing.Point(450, 268);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 30);
-            this.textBox4.TabIndex = 36;
+            this.t_Sender_pho.Location = new System.Drawing.Point(450, 268);
+            this.t_Sender_pho.Multiline = true;
+            this.t_Sender_pho.Name = "t_Sender_pho";
+            this.t_Sender_pho.Size = new System.Drawing.Size(199, 30);
+            this.t_Sender_pho.TabIndex = 36;
             // 
-            // textBox3
+            // t_recipient_pho
             // 
-            this.textBox3.Location = new System.Drawing.Point(450, 221);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 30);
-            this.textBox3.TabIndex = 37;
+            this.t_recipient_pho.Location = new System.Drawing.Point(450, 221);
+            this.t_recipient_pho.Multiline = true;
+            this.t_recipient_pho.Name = "t_recipient_pho";
+            this.t_recipient_pho.Size = new System.Drawing.Size(199, 30);
+            this.t_recipient_pho.TabIndex = 37;
             // 
-            // textBox7
+            // t_amunt_arrest
             // 
-            this.textBox7.Location = new System.Drawing.Point(813, 226);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(165, 30);
-            this.textBox7.TabIndex = 39;
+            this.t_amunt_arrest.Location = new System.Drawing.Point(813, 226);
+            this.t_amunt_arrest.Multiline = true;
+            this.t_amunt_arrest.Name = "t_amunt_arrest";
+            this.t_amunt_arrest.Size = new System.Drawing.Size(165, 30);
+            this.t_amunt_arrest.TabIndex = 39;
             // 
-            // textBox11
+            // t_general_num
             // 
-            this.textBox11.Location = new System.Drawing.Point(813, 91);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(431, 30);
-            this.textBox11.TabIndex = 40;
+            this.t_general_num.Location = new System.Drawing.Point(813, 91);
+            this.t_general_num.Multiline = true;
+            this.t_general_num.Name = "t_general_num";
+            this.t_general_num.Size = new System.Drawing.Size(431, 30);
+            this.t_general_num.TabIndex = 40;
             // 
-            // textBox2
+            // t_trans_ma
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 183);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(527, 30);
-            this.textBox2.TabIndex = 29;
+            this.t_trans_ma.Location = new System.Drawing.Point(122, 183);
+            this.t_trans_ma.Multiline = true;
+            this.t_trans_ma.Name = "t_trans_ma";
+            this.t_trans_ma.Size = new System.Drawing.Size(527, 30);
+            this.t_trans_ma.TabIndex = 29;
             // 
             // label17
             // 
@@ -324,7 +314,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(299, 413);
+            this.label23.Location = new System.Drawing.Point(213, 404);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(99, 21);
             this.label23.TabIndex = 12;
@@ -339,16 +329,6 @@
             this.label7.Size = new System.Drawing.Size(50, 21);
             this.label7.TabIndex = 13;
             this.label7.Text = "الجهة";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(138, 413);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(93, 21);
-            this.label21.TabIndex = 14;
-            this.label21.Text = "عمولة الفرع";
             // 
             // label16
             // 
@@ -585,31 +565,31 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "التــاريــخ";
             // 
-            // comboBox4
+            // com_side
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(122, 138);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(527, 24);
-            this.comboBox4.TabIndex = 42;
+            this.com_side.FormattingEnabled = true;
+            this.com_side.Location = new System.Drawing.Point(122, 138);
+            this.com_side.Name = "com_side";
+            this.com_side.Size = new System.Drawing.Size(527, 24);
+            this.com_side.TabIndex = 42;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(464, 413);
+            this.label24.Location = new System.Drawing.Point(378, 404);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(151, 21);
             this.label24.TabIndex = 12;
             this.label24.Text = "الاجمالي مع العمولة";
             // 
-            // textBox15
+            // t_total_and_comm
             // 
-            this.textBox15.Location = new System.Drawing.Point(450, 447);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(199, 30);
-            this.textBox15.TabIndex = 34;
+            this.t_total_and_comm.Location = new System.Drawing.Point(364, 438);
+            this.t_total_and_comm.Multiline = true;
+            this.t_total_and_comm.Name = "t_total_and_comm";
+            this.t_total_and_comm.Size = new System.Drawing.Size(199, 30);
+            this.t_total_and_comm.TabIndex = 34;
             // 
             // label19
             // 
@@ -622,13 +602,13 @@
             this.label19.Text = "حساب القبض";
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // comboBox5
+            // com_account_arrest
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(813, 179);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(431, 24);
-            this.comboBox5.TabIndex = 43;
+            this.com_account_arrest.FormattingEnabled = true;
+            this.com_account_arrest.Location = new System.Drawing.Point(813, 179);
+            this.com_account_arrest.Name = "com_account_arrest";
+            this.com_account_arrest.Size = new System.Drawing.Size(431, 24);
+            this.com_account_arrest.TabIndex = 43;
             // 
             // label25
             // 
@@ -641,14 +621,14 @@
             this.label25.Text = "السعر";
             this.label25.Click += new System.EventHandler(this.Label25_Click);
             // 
-            // textBox12
+            // t_price
             // 
-            this.textBox12.Location = new System.Drawing.Point(1079, 226);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(165, 30);
-            this.textBox12.TabIndex = 39;
-            this.textBox12.TextChanged += new System.EventHandler(this.TextBox12_TextChanged);
+            this.t_price.Location = new System.Drawing.Point(1079, 226);
+            this.t_price.Multiline = true;
+            this.t_price.Name = "t_price";
+            this.t_price.Size = new System.Drawing.Size(165, 30);
+            this.t_price.TabIndex = 39;
+            this.t_price.TextChanged += new System.EventHandler(this.TextBox12_TextChanged);
             // 
             // label26
             // 
@@ -661,13 +641,13 @@
             this.label26.Text = "عملة القبض";
             this.label26.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // comboBox6
+            // com_currency_arrest
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(813, 268);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(431, 24);
-            this.comboBox6.TabIndex = 43;
+            this.com_currency_arrest.FormattingEnabled = true;
+            this.com_currency_arrest.Location = new System.Drawing.Point(813, 268);
+            this.com_currency_arrest.Name = "com_currency_arrest";
+            this.com_currency_arrest.Size = new System.Drawing.Size(431, 24);
+            this.com_currency_arrest.TabIndex = 43;
             // 
             // Receiving_transfer
             // 
@@ -677,26 +657,25 @@
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.com);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.com_Service_currency);
+            this.Controls.Add(this.com_currency_arrest);
+            this.Controls.Add(this.com_account_arrest);
+            this.Controls.Add(this.com_payment_method);
+            this.Controls.Add(this.com_side);
+            this.Controls.Add(this.com_Source);
+            this.Controls.Add(this.t_Total_comm);
+            this.Controls.Add(this.t_note);
+            this.Controls.Add(this.t_Sender);
+            this.Controls.Add(this.t_recipient);
+            this.Controls.Add(this.t_total_and_comm);
+            this.Controls.Add(this.t_service_comm);
+            this.Controls.Add(this.t_trans_currency);
+            this.Controls.Add(this.t_Sender_pho);
+            this.Controls.Add(this.t_recipient_pho);
+            this.Controls.Add(this.t_price);
+            this.Controls.Add(this.t_amunt_arrest);
+            this.Controls.Add(this.t_general_num);
+            this.Controls.Add(this.t_trans_ma);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
@@ -704,7 +683,6 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
@@ -740,34 +718,32 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox com_Service_currency;
+        private System.Windows.Forms.ComboBox com_payment_method;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         public DevExpress.XtraEditors.SimpleButton btn_search;
         public DevExpress.XtraEditors.SimpleButton btn_add;
         public DevExpress.XtraEditors.SimpleButton btn_exit;
-        private System.Windows.Forms.ComboBox com;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox com_Source;
+        private System.Windows.Forms.TextBox t_Total_comm;
+        private System.Windows.Forms.TextBox t_note;
+        private System.Windows.Forms.TextBox t_Sender;
+        private System.Windows.Forms.TextBox t_recipient;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox t_service_comm;
+        private System.Windows.Forms.TextBox t_trans_currency;
+        private System.Windows.Forms.TextBox t_Sender_pho;
+        private System.Windows.Forms.TextBox t_recipient_pho;
+        private System.Windows.Forms.TextBox t_amunt_arrest;
+        private System.Windows.Forms.TextBox t_general_num;
+        private System.Windows.Forms.TextBox t_trans_ma;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
@@ -788,14 +764,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox com_side;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox t_total_and_comm;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox com_account_arrest;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox t_price;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox com_currency_arrest;
     }
 }

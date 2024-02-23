@@ -12,54 +12,16 @@ namespace ExchangeAndMony.pages.log_in
 {
     public partial class log_in : Form
     {
+        Form1 home1 = new Form1();
         public log_in()
         {
             InitializeComponent();
         }
 
-        private void Label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Btn_log_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void Label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label5_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SimpleButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
+            home1.Show();
         }
     }
 }

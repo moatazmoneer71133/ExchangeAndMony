@@ -32,9 +32,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.com_Validity = new System.Windows.Forms.ComboBox();
+            this.t_pass = new System.Windows.Forms.TextBox();
+            this.t_name = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,9 +69,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.com_Validity);
+            this.panel1.Controls.Add(this.t_pass);
+            this.panel1.Controls.Add(this.t_name);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -80,30 +80,30 @@
             this.panel1.Size = new System.Drawing.Size(416, 208);
             this.panel1.TabIndex = 5;
             // 
-            // comboBox1
+            // com_Validity
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(35, 171);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(371, 24);
-            this.comboBox1.TabIndex = 13;
+            this.com_Validity.AllowDrop = true;
+            this.com_Validity.FormattingEnabled = true;
+            this.com_Validity.Location = new System.Drawing.Point(35, 171);
+            this.com_Validity.Name = "com_Validity";
+            this.com_Validity.Size = new System.Drawing.Size(371, 24);
+            this.com_Validity.TabIndex = 13;
             // 
-            // textBox2
+            // t_pass
             // 
-            this.textBox2.Location = new System.Drawing.Point(35, 97);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(371, 33);
-            this.textBox2.TabIndex = 12;
+            this.t_pass.Location = new System.Drawing.Point(35, 97);
+            this.t_pass.Multiline = true;
+            this.t_pass.Name = "t_pass";
+            this.t_pass.Size = new System.Drawing.Size(371, 33);
+            this.t_pass.TabIndex = 12;
             // 
-            // textBox1
+            // t_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(35, 35);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(371, 31);
-            this.textBox1.TabIndex = 11;
+            this.t_name.Location = new System.Drawing.Point(35, 35);
+            this.t_name.Multiline = true;
+            this.t_name.Name = "t_name";
+            this.t_name.Size = new System.Drawing.Size(371, 31);
+            this.t_name.TabIndex = 11;
             // 
             // label3
             // 
@@ -114,7 +114,6 @@
             this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 10;
             this.label3.Text = "الصلاحية";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label2
             // 
@@ -148,7 +147,7 @@
             this.btn_log.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btn_log.Size = new System.Drawing.Size(126, 55);
             this.btn_log.TabIndex = 6;
-            this.btn_log.Click += new System.EventHandler(this.SimpleButton2_Click);
+            this.btn_log.Click += new System.EventHandler(this.Btn_log_Click);
             // 
             // label5
             // 
@@ -161,7 +160,6 @@
             this.label5.Size = new System.Drawing.Size(226, 116);
             this.label5.TabIndex = 7;
             this.label5.Text = "مــرحـبـاً بــكـم   \r\n  فـي نـظـام\r\n الـصرافة والحوالات\r\n     المالية";
-            this.label5.Click += new System.EventHandler(this.Label5_Click_2);
             // 
             // btn_exit
             // 
@@ -176,7 +174,6 @@
             this.btn_exit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btn_exit.Size = new System.Drawing.Size(120, 55);
             this.btn_exit.TabIndex = 6;
-            this.btn_exit.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // log_in
             // 
@@ -212,14 +209,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox t_pass;
+        private System.Windows.Forms.TextBox t_name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btn_log;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox com_Validity;
         private DevExpress.XtraEditors.SimpleButton btn_exit;
     }
 }
