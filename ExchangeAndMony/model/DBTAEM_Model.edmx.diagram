@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ca03aad426bd4f6e919767016e209c6b" Name="Diagram1">
+        <EntityTypeShape EntityType="DBTAEMModel.Account" Width="1.5" PointX="5.25" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Currency" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Currencise" Width="1.5" PointX="3" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Currencise1" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_AccountStop" Width="1.5" PointX="3" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_Blacklist" Width="1.5" PointX="3" PointY="33.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_Box" Width="1.5" PointX="3" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_BuyingSelling" Width="1.5" PointX="3" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_ConcelTransfer" Width="1.5" PointX="3" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_ConfirmedTransfer" Width="1.5" PointX="3" PointY="49.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_CurrenciesPrices" Width="1.5" PointX="5.25" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_CustomerExchangeReceiptBonds" Width="1.5" PointX="3" PointY="52.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_DailyRestictionsDitales" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_DailyrestictionsHead" Width="1.5" PointX="3" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_DeportationTransfar" Width="1.5" PointX="3" PointY="58.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_DoubleRestictions" Width="1.5" PointX="3" PointY="61.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_Employee" Width="1.5" PointX="3" PointY="66.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_Entities" Width="1.5" PointX="3" PointY="70.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_Groups" Width="1.5" PointX="3" PointY="74.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_IncomingTotals" Width="1.5" PointX="3" PointY="77.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_InventoryBox" Width="1.5" PointX="3" PointY="81.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_MatchingAccounts" Width="1.5" PointX="3" PointY="85.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_Outgoing" Width="1.5" PointX="3" PointY="88.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_PersonalInformation" Width="1.5" PointX="3" PointY="92.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_RoofingAccounts" Width="1.5" PointX="3" PointY="97.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_RwcipientCard" Width="1.5" PointX="3" PointY="101.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_SimpleRegistBond" Width="1.5" PointX="3" PointY="106.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_Transfar" Width="1.5" PointX="5.25" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTAEMModel.Tb_Users" Width="1.5" PointX="0.75" PointY="55.625" IsExpanded="true" />
+        <AssociationConnector Association="DBTAEMModel.FK__Account__ConnNum__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Account__ConstNu__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Account__EmpNumb__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Account__Stateme__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Account__Stateme__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Account__UserNum__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Currencie__UserN__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Currencie__Curre__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Currencis__UserN__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Transfar__Curren__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__AccountSt__UserN__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Blacklist__UserN__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Box__UserNumbers__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__BuyingSel__UserN__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__ConcelTra__UserN__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Confirmed__UserN__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__CustomerE__UserN__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__DailyRest__Const__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Deportati__UserN__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Transfar__Number__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__DoubleRes__UserN__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Employee__UserNu__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Entities__UserNu__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Groups__UserNumb__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__IncomingT__UserN__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Transfar__Statem__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Inventory__UserN__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__MatchingA__UserN__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Outgoing__UserNu__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Transfar__Statem__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__PersonalI__UserN__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__RoofingAc__UserN__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Rwcipient__UserN__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Transfar__IDNunb__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__SimpleReg__UserN__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTAEMModel.FK__Transfar__UserNu__5FB337D6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
