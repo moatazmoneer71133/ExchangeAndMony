@@ -47,7 +47,9 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
             }
 
             return ID;
+#pragma warning disable CS0162 // Unreachable code detected
             da.Dispose();
+#pragma warning restore CS0162 // Unreachable code detected
             dt.Dispose();
         }
 
@@ -107,7 +109,9 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
 
             return MyNewID;
             // لتخلص من ال"dataAdepter"  من الرام
+#pragma warning disable CS0162 // Unreachable code detected
             da.Dispose();
+#pragma warning restore CS0162 // Unreachable code detected
             dt.Dispose();
 
         }
@@ -309,7 +313,9 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
 
 
         }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 // MsgBox(ex.Message)
                 return;

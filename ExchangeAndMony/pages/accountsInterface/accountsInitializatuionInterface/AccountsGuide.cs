@@ -347,7 +347,9 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         }
 
+#pragma warning disable CS0108 // 'AccountsGuide.Update()' hides inherited member 'Control.Update()'. Use the new keyword if hiding was intended.
         private void Update()
+#pragma warning restore CS0108 // 'AccountsGuide.Update()' hides inherited member 'Control.Update()'. Use the new keyword if hiding was intended.
         {
             xx.FillCombFromTable(this.com_Acc_Parent);
             xx.FillTables(tbl_accounts);

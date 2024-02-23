@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v19.2" />
     <Reference Include="DevExpress.Data.Desktop.v19.2" />
@@ -89,6 +92,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="moataz\Class1.cs" />
     <Compile Include="model\Account.cs">
       <DependentUpon>DBTAEM_Model.tt</DependentUpon>
     </Compile>
@@ -568,7 +572,6 @@
     <None Include="Resources\apply_32x32.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\close_32x32.png" />
   </ItemGroup>
   <ItemGroup>
@@ -576,7 +579,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4.jpg" />
-=======
     <Content Include="model\DBTAEM_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DBTAEM_Model.edmx</DependentUpon>
@@ -590,8 +592,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-
 </Project>
