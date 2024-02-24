@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="BL\accountsClasses\accountsInitializatuionClasses\Class_GroupsGuide.cs" />
     <Compile Include="BL\accountsClasses\accountsProcessClasses\Class1.cs" />
+    <Compile Include="BL\accountsClasses\accountsProcessClasses\Class2.cs" />
     <Compile Include="BL\Languages.cs" />
     <Compile Include="BL\transferClasses\Class1.cs" />
     <Compile Include="data\ADB.cs" />

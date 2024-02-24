@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExchangeAndMony.BL.accountsClasses.accountsProcessClasses
 {
-    class Class1
+    class Class2
     {
-       //llllll
-       //llllllpp
-
-
     }
 }
