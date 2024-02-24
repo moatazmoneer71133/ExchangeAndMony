@@ -21,7 +21,7 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         DataTable dt = new DataTable();
 
         currency_class curr_class = new currency_class();
-        Language lang = new Language();
+        Languages lang = new Languages();
         
 
 
@@ -85,13 +85,13 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
             data.conection.con.Close();
 
 
-            DGV_currency.Columns[0].HeaderText = "رقم العملة";
-            DGV_currency.Columns[1].HeaderText = " اسم العملة";
-            DGV_currency.Columns[2].HeaderText = "الرمز بالعربي";
-            DGV_currency.Columns[3].HeaderText = "  الرمز بالانجليزي";
-            DGV_currency.Columns[4].HeaderText = "اسم المستخدم";
-            DGV_currency.Columns[5].HeaderText = "التاريخ ";
-            DGV_currency.Columns[6].HeaderText = "  الملاحظة";
+                DGV_currency.Columns[0].HeaderText = "رقم العملة";
+                DGV_currency.Columns[1].HeaderText = " اسم العملة";
+                DGV_currency.Columns[2].HeaderText = "الرمز بالعربي";
+                DGV_currency.Columns[3].HeaderText = "  الرمز بالانجليزي";
+                DGV_currency.Columns[4].HeaderText = "اسم المستخدم";
+                DGV_currency.Columns[5].HeaderText = "التاريخ ";
+                DGV_currency.Columns[6].HeaderText = "  الملاحظة";
             dt.Dispose();
             dataAdapter.Dispose();
         }
@@ -198,6 +198,11 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         }
 
         private void DGV_currency_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Txt_CurrencyName_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -84,7 +84,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\accountsCode\accountsInitializatuionCode.cs" />
+    <Compile Include="BL\accountsClasses\accountsInitializatuionClasses\Class_GroupsGuide.cs" />
+    <Compile Include="BL\Languages.cs" />
     <Compile Include="data\ADB.cs" />
     <Compile Include="data\conection.cs" />
     <Compile Include="Form1.cs">
@@ -273,7 +274,6 @@
     </Compile>
     <Compile Include="pages\accountsInterface\Classes\currency_class.cs" />
     <Compile Include="pages\accountsInterface\Classes\Gen_Class.cs" />
-    <Compile Include="pages\accountsInterface\Classes\Language.cs" />
     <Compile Include="pages\accountsInterface\Class_Accounts.cs" />
     <Compile Include="pages\currencie_com.cs">
       <SubType>UserControl</SubType>
@@ -534,7 +534,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BL\accountsCode\accountsInitializatuionCode\" />
+    <Folder Include="BL\accountsClasses\accountsProcessClasses\" />
+    <Folder Include="BL\accountsClasses\accountsReportsClasses\" />
+    <Folder Include="BL\accountsClasses\fileClasses\" />
+    <Folder Include="BL\transferClasses\transferInitializatuionClasses\" />
+    <Folder Include="BL\transferClasses\transferProcessClasses\" />
+    <Folder Include="BL\transferClasses\transferReportsClasses\" />
     <Folder Include="pages\accountsInterface\accountsReportsInterface\" />
     <Folder Include="pages\transfer\totals\" />
     <Folder Include="pages\transfer\transferReportsInterface\" />

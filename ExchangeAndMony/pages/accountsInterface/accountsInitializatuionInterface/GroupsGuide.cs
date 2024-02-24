@@ -9,44 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface;
+using ExchangeAndMony.BL.accountsClasses.accountsInitializatuionClasses;
 using ExchangeAndMony.model;
+using ExchangeAndMony.BL;
+using ExchangeAndMony.pages.accountsInterface.Classes;
 
 namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface
 {
     
     public partial class GroupsGuide : DevExpress.XtraEditors.XtraForm
     {
+        int id_group;
         DBTAEMEntities db;
         Tb_Groups add_Group;
-
-        // nameDocument.Text="سند قيد بسيط";
+        Class_GroupsGuide class_GroupsGuide = new Class_GroupsGuide();
+        Languages lang = new Languages();
+       
+        
         public GroupsGuide()
         {
 
            // nameDocument.Text = "سند قيد بسيط";
             InitializeComponent();
-            loadData();
+            class_GroupsGuide.loadData(this);
         }
-        private void loadData()
-        {
-            try
-            {
-                db = new DBTAEMEntities();
-                dataGridView_groups.DataSource = db.Tb_Groups.ToList();
-                dataGridView_groups.Columns[0].HeaderText = "رقم المجموعة";
-                dataGridView_groups.Columns[1].HeaderText = "اسم المجموعة";
-                dataGridView_groups.Columns[2].HeaderText = "رقم المستخدم";
-                dataGridView_groups.Columns[3].HeaderText = "اسم المستخدم";
-                dataGridView_groups.Columns[4].HeaderText = "التاريخ ";
-                dataGridView_groups.Columns[5].HeaderText = "الوصف";
-
-            }
-            catch
-            {
-
-            }
-
-        }
+        
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -59,26 +46,42 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         private void Btn_add_Click(object sender, EventArgs e)
         {
-            try { 
-            db = new DBTAEMEntities();
-            add_Group = new Tb_Groups();
-            add_Group.GroupName = txt_groupName.Text;
-            add_Group.Note = txt_groupDescription.Text;
-                //add_Group.UserName = "معتز منير";
-                //add_Group.UserNumbers = 1;
-            add_Group.TheDate = DateTime.Now.Date;
-                db.Entry(add_Group).State = System.Data.Entity.EntityState.Added;
-            db.SaveChanges();
-                txt_groupName.Text = txt_groupDescription.Text = "";
-                loadData();
-               
-                MessageBox.Show("تم الاضافة بنجاح");
-            }
-            catch
-            {
-                MessageBox.Show("لم يتم الاضافة ");
-            }
+           // accountsInitializatuionCode groups = new accountsInitializatuionCode();
+            class_GroupsGuide.addGroup(this);
+        }
 
+        private void Btn_edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Timer_message_seccess_Tick(object sender, EventArgs e)
+        {
+            this.lbl_Message.Text = null;
+            this.PictureBoxMessage.Image = null;
+            timer_message_seccess.Stop();
+        }
+
+        private void DataGridView_groups_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView_groups_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id_group = Convert.ToInt32(dataGridView_groups.CurrentRow.Cells[0].Value);
+            txt_groupName.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[1].Value);
+            txt_groupDescription.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[4].Value);
+        }
+
+        private void Txt_groupName_Enter(object sender, EventArgs e)
+        {
+            lang.arabicLanguage();
+        }
+
+        private void Txt_groupDescription_Enter(object sender, EventArgs e)
+        {
+            lang.arabicLanguage();
         }
     }
 }
