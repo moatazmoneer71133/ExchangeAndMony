@@ -11,7 +11,7 @@ namespace ExchangeAndMony.data
     class ADB
     {
 
-        SqlConnection conn=new SqlConnection(@"server=DESKTOP-6FOQ2KB\SQLEXPRESS; database=db_acount; integrated security=true");
+        SqlConnection conn=new SqlConnection(@"server=DESKTOP-8TSV5U7; database=db_acount; integrated security=true");
         SqlCommand cmd = new SqlCommand();
         
        // public ADB(){
