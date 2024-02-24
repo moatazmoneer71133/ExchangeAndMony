@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="data\ADB.cs" />
     <Compile Include="data\conection.cs" />
+    <Compile Include="data\hj.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
