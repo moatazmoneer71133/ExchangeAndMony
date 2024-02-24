@@ -9,5 +9,6 @@ namespace ExchangeAndMony.BL.accountsClasses.accountsProcessClasses
     class Class1
     {
        //llllll
+       //llllllpp
     }
 }
