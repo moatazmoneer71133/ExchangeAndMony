@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_conFormat));
             this.group_db = new System.Windows.Forms.GroupBox();
-            this.txt_conn = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_server = new System.Windows.Forms.TextBox();
-            this.txt_db = new System.Windows.Forms.TextBox();
-            this.txt_user = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txt_pass = new System.Windows.Forms.TextBox();
+            this.txt_user = new System.Windows.Forms.TextBox();
+            this.txt_db = new System.Windows.Forms.TextBox();
+            this.txt_server = new System.Windows.Forms.TextBox();
+            this.txt_conn = new System.Windows.Forms.TextBox();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_new = new System.Windows.Forms.Button();
@@ -65,42 +65,15 @@
             this.group_db.TabStop = false;
             this.group_db.Text = "قاعدة البيانات";
             // 
-            // txt_conn
+            // label5
             // 
-            this.txt_conn.Location = new System.Drawing.Point(41, 48);
-            this.txt_conn.Name = "txt_conn";
-            this.txt_conn.Size = new System.Drawing.Size(333, 24);
-            this.txt_conn.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label1.Location = new System.Drawing.Point(402, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "نمط الاتصال";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label2.Location = new System.Drawing.Point(402, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "اسم السيرفر";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label3.Location = new System.Drawing.Point(402, 195);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "كلمة المرور";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label5.Location = new System.Drawing.Point(402, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 18);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "قاعدة البيانات";
             // 
             // label4
             // 
@@ -112,29 +85,42 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "المستخدم";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label5.Location = new System.Drawing.Point(402, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "قاعدة البيانات";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label3.Location = new System.Drawing.Point(402, 195);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "كلمة المرور";
             // 
-            // txt_server
+            // label2
             // 
-            this.txt_server.Location = new System.Drawing.Point(41, 81);
-            this.txt_server.Name = "txt_server";
-            this.txt_server.Size = new System.Drawing.Size(333, 24);
-            this.txt_server.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label2.Location = new System.Drawing.Point(402, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "اسم السيرفر";
             // 
-            // txt_db
+            // label1
             // 
-            this.txt_db.Location = new System.Drawing.Point(41, 117);
-            this.txt_db.Name = "txt_db";
-            this.txt_db.Size = new System.Drawing.Size(333, 24);
-            this.txt_db.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label1.Location = new System.Drawing.Point(402, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "نمط الاتصال";
+            // 
+            // txt_pass
+            // 
+            this.txt_pass.Location = new System.Drawing.Point(41, 189);
+            this.txt_pass.Name = "txt_pass";
+            this.txt_pass.Size = new System.Drawing.Size(333, 24);
+            this.txt_pass.TabIndex = 5;
             // 
             // txt_user
             // 
@@ -143,12 +129,26 @@
             this.txt_user.Size = new System.Drawing.Size(333, 24);
             this.txt_user.TabIndex = 4;
             // 
-            // txt_pass
+            // txt_db
             // 
-            this.txt_pass.Location = new System.Drawing.Point(41, 189);
-            this.txt_pass.Name = "txt_pass";
-            this.txt_pass.Size = new System.Drawing.Size(333, 24);
-            this.txt_pass.TabIndex = 5;
+            this.txt_db.Location = new System.Drawing.Point(41, 117);
+            this.txt_db.Name = "txt_db";
+            this.txt_db.Size = new System.Drawing.Size(333, 24);
+            this.txt_db.TabIndex = 3;
+            // 
+            // txt_server
+            // 
+            this.txt_server.Location = new System.Drawing.Point(41, 81);
+            this.txt_server.Name = "txt_server";
+            this.txt_server.Size = new System.Drawing.Size(333, 24);
+            this.txt_server.TabIndex = 2;
+            // 
+            // txt_conn
+            // 
+            this.txt_conn.Location = new System.Drawing.Point(41, 48);
+            this.txt_conn.Name = "txt_conn";
+            this.txt_conn.Size = new System.Drawing.Size(333, 24);
+            this.txt_conn.TabIndex = 1;
             // 
             // btn_exit
             // 

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ca03aad426bd4f6e919767016e209c6b" Name="Diagram1">
+      <Diagram DiagramId="ca03aad426bd4f6e919767016e209c6b" Name="Diagram1" ZoomLevel="128">
         <EntityTypeShape EntityType="DBTAEMModel.Account" Width="1.5" PointX="5.25" PointY="49.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTAEMModel.Currency" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTAEMModel.Currencise" Width="1.5" PointX="3" PointY="26" IsExpanded="true" />
