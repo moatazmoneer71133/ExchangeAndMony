@@ -59,25 +59,40 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         private void Btn_add_Click(object sender, EventArgs e)
         {
-            try { 
-            db = new DBTAEMEntities();
-            add_Group = new Tb_Groups();
-            add_Group.GroupName = txt_groupName.Text;
+            try {
+
+                
+                db = new DBTAEMEntities();
+              
+                add_Group = new Tb_Groups();
+                
+                add_Group.GroupName = txt_groupName.Text;
             add_Group.Note = txt_groupDescription.Text;
                 //add_Group.UserName = "معتز منير";
-                //add_Group.UserNumbers = 1;
-            add_Group.TheDate = DateTime.Now.Date;
-                db.Entry(add_Group).State = System.Data.Entity.EntityState.Added;
+                //add_Group.UserNumbers = 1;        
+                add_Group.TheDate = DateTime.Now.Date;      
+            db.Entry(add_Group).State = System.Data.Entity.EntityState.Added;
             db.SaveChanges();
-                txt_groupName.Text = txt_groupDescription.Text = "";
-                loadData();
                
-                MessageBox.Show("تم الاضافة بنجاح");
+            txt_groupName.Text = txt_groupDescription.Text = "";
+            loadData();
+               
+                MessageBox.Show("تم الاضافة بنجاح"); 
             }
             catch
             {
                 MessageBox.Show("لم يتم الاضافة ");
             }
+
+        }
+
+        private void Btn_edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView_groups_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
