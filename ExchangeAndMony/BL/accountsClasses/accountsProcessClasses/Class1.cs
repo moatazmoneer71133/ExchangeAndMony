@@ -10,7 +10,6 @@ namespace ExchangeAndMony.BL.accountsClasses.accountsProcessClasses
     {
        //llllll
        //llllllpp
-
-
+       //kkjjjj
     }
 }
