@@ -196,5 +196,10 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
 
         }
+
+        private void DGV_currency_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
