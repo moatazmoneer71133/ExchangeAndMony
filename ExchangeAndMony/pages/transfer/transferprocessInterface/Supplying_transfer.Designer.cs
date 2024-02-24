@@ -362,6 +362,10 @@
             // com_currency_service
             // 
             this.com_currency_service.FormattingEnabled = true;
+            this.com_currency_service.Items.AddRange(new object[] {
+            "ريال يمني",
+            "دولار امريكي",
+            "ريال سعودي"});
             this.com_currency_service.Location = new System.Drawing.Point(328, 399);
             this.com_currency_service.Name = "com_currency_service";
             this.com_currency_service.Size = new System.Drawing.Size(125, 30);
@@ -503,6 +507,10 @@
             // com_agent
             // 
             this.com_agent.FormattingEnabled = true;
+            this.com_agent.Items.AddRange(new object[] {
+            "بن امين للصرافة",
+            "الحزمي للصرافة ",
+            "الاكوع للصرافة"});
             this.com_agent.Location = new System.Drawing.Point(814, 123);
             this.com_agent.Name = "com_agent";
             this.com_agent.Size = new System.Drawing.Size(431, 30);
