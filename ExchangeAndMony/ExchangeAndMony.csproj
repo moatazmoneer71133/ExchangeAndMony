@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\accountsCode\accountsInitializatuionCode.cs" />
     <Compile Include="data\ADB.cs" />
     <Compile Include="data\conection.cs" />
     <Compile Include="Form1.cs">
@@ -274,6 +275,12 @@
     <Compile Include="pages\accountsInterface\Classes\Gen_Class.cs" />
     <Compile Include="pages\accountsInterface\Classes\Language.cs" />
     <Compile Include="pages\accountsInterface\Class_Accounts.cs" />
+    <Compile Include="pages\currencie_com.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pages\currencie_com.Designer.cs">
+      <DependentUpon>currencie_com.cs</DependentUpon>
+    </Compile>
     <Compile Include="pages\file\frm_conFormat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +439,9 @@
     <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\AccountReconcilement.resx">
       <DependentUpon>AccountReconcilement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pages\currencie_com.resx">
+      <DependentUpon>currencie_com.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pages\file\frm_conFormat.resx">
       <DependentUpon>frm_conFormat.cs</DependentUpon>
     </EmbeddedResource>
@@ -524,6 +534,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BL\accountsCode\accountsInitializatuionCode\" />
     <Folder Include="pages\accountsInterface\accountsReportsInterface\" />
     <Folder Include="pages\transfer\totals\" />
     <Folder Include="pages\transfer\transferReportsInterface\" />
