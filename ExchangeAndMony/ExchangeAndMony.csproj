@@ -84,9 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\accountsClasses\accountsInitializatuionClasses\Class_GroupsGuide.cs" />
+    <Compile Include="BL\accountsClasses\accountsProcessClasses\Class1.cs" />
+    <Compile Include="BL\Languages.cs" />
+    <Compile Include="BL\transferClasses\Class1.cs" />
     <Compile Include="data\ADB.cs" />
     <Compile Include="data\conection.cs" />
-    <Compile Include="data\hj.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,13 +276,12 @@
     </Compile>
     <Compile Include="pages\accountsInterface\Classes\currency_class.cs" />
     <Compile Include="pages\accountsInterface\Classes\Gen_Class.cs" />
-    <Compile Include="pages\accountsInterface\Classes\Language.cs" />
     <Compile Include="pages\accountsInterface\Class_Accounts.cs" />
-    <Compile Include="pages\file\About_the_program.cs">
-      <SubType>Form</SubType>
+    <Compile Include="pages\currencie_com.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pages\file\About_the_program.Designer.cs">
-      <DependentUpon>About_the_program.cs</DependentUpon>
+    <Compile Include="pages\currencie_com.Designer.cs">
+      <DependentUpon>currencie_com.cs</DependentUpon>
     </Compile>
     <Compile Include="pages\file\frm_conFormat.cs">
       <SubType>Form</SubType>
@@ -322,24 +324,6 @@
     </Compile>
     <Compile Include="pages\log_in\log_in.Designer.cs">
       <DependentUpon>log_in.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pages\scurety\change_Password.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\scurety\change_Password.Designer.cs">
-      <DependentUpon>change_Password.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pages\scurety\Lock_processes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\scurety\Lock_processes.Designer.cs">
-      <DependentUpon>Lock_processes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pages\scurety\Users_Guide.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\scurety\Users_Guide.Designer.cs">
-      <DependentUpon>Users_Guide.cs</DependentUpon>
     </Compile>
     <Compile Include="pages\sell and buy\Sell_currency.cs">
       <SubType>Form</SubType>
@@ -457,8 +441,8 @@
     <EmbeddedResource Include="pages\accountsInterface\accountsprocessInterface\AccountReconcilement.resx">
       <DependentUpon>AccountReconcilement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pages\file\About_the_program.resx">
-      <DependentUpon>About_the_program.cs</DependentUpon>
+    <EmbeddedResource Include="pages\currencie_com.resx">
+      <DependentUpon>currencie_com.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\file\frm_conFormat.resx">
       <DependentUpon>frm_conFormat.cs</DependentUpon>
@@ -480,15 +464,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pages\log_in\log_in.resx">
       <DependentUpon>log_in.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\scurety\change_Password.resx">
-      <DependentUpon>change_Password.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\scurety\Lock_processes.resx">
-      <DependentUpon>Lock_processes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\scurety\Users_Guide.resx">
-      <DependentUpon>Users_Guide.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\sell and buy\Sell_currency.resx">
       <DependentUpon>Sell_currency.cs</DependentUpon>
@@ -561,6 +536,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BL\accountsClasses\accountsReportsClasses\" />
+    <Folder Include="BL\accountsClasses\fileClasses\" />
+    <Folder Include="BL\transferClasses\transferInitializatuionClasses\" />
+    <Folder Include="BL\transferClasses\transferProcessClasses\" />
+    <Folder Include="BL\transferClasses\transferReportsClasses\" />
     <Folder Include="pages\accountsInterface\accountsReportsInterface\" />
     <Folder Include="pages\transfer\totals\" />
     <Folder Include="pages\transfer\transferReportsInterface\" />

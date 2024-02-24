@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ExchangeAndMony.pages.accountsInterface.Classes
 {
-    class Language
+    class Languages
     {
 
        public void englishLanguage()

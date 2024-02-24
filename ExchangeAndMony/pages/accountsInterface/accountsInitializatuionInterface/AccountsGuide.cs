@@ -10,13 +10,15 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Globalization;
 using ExchangeAndMony.pages.accountsInterface.Classes;
+using ExchangeAndMony.BL;
+
 
 namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface
 {
     public partial class AccountsGuide : DevExpress.XtraEditors.XtraForm
     {
         Class_Accounts class_Accounts = new Class_Accounts();
-        Language lang = new Language();
+        Languages lang = new Languages();
         //SqlDataAdapter bus = new SqlDataAdapter();
         Classes.Gen_Class xx = new Classes.Gen_Class();
         // nameDocument.Text="سند قيد بسيط";
