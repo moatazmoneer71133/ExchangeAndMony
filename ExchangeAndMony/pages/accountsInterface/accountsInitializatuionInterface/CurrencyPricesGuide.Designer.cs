@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrencyPricesGuide));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gridControl_Divert = new DevExpress.XtraGrid.GridControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.tbCurrenciesPricesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTAEMDataSet = new ExchangeAndMony.DBTAEMDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_edit = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_print = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_update = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_search = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_add = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
+            this.colTtranferFrom = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTtranferTo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTtranferPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPurchPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSellingPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLowPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHeghtPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLowPricePay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLowPriceSelling = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHeghtPricePay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHeghtPriceSelling = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,19 +72,37 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_edit = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_print = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_update = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_search = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_add = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tb_CurrenciesPricesTableAdapter = new ExchangeAndMony.DBTAEMDataSetTableAdapters.Tb_CurrenciesPricesTableAdapter();
+            this.picture_Search = new System.Windows.Forms.PictureBox();
+            this.txt_Search = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Divert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCurrenciesPricesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_Search)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.gridControl1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.gridControl_Divert);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(6, 4);
             this.panel1.Name = "panel1";
@@ -89,168 +110,175 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // gridControl_Divert
+            // gridControl1
             // 
-            this.gridControl_Divert.Location = new System.Drawing.Point(3, 437);
-            this.gridControl_Divert.MainView = this.gridView1;
-            this.gridControl_Divert.Name = "gridControl_Divert";
-            this.gridControl_Divert.Size = new System.Drawing.Size(1302, 324);
-            this.gridControl_Divert.TabIndex = 5;
-            this.gridControl_Divert.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControl1.DataSource = this.tbCurrenciesPricesBindingSource;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridControl1.Location = new System.Drawing.Point(0, 437);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.gridControl1.Size = new System.Drawing.Size(1308, 334);
+            this.gridControl1.TabIndex = 12;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // tbCurrenciesPricesBindingSource
+            // 
+            this.tbCurrenciesPricesBindingSource.DataMember = "Tb_CurrenciesPrices";
+            this.tbCurrenciesPricesBindingSource.DataSource = this.dBTAEMDataSet;
+            // 
+            // dBTAEMDataSet
+            // 
+            this.dBTAEMDataSet.DataSetName = "DBTAEMDataSet";
+            this.dBTAEMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl_Divert;
+            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseFont = true;
+            this.gridView1.Appearance.FixedLine.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FixedLine.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.gridView1.Appearance.Preview.Options.UseFont = true;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colTtranferFrom,
+            this.colTtranferTo,
+            this.colTtranferPrice,
+            this.colPurchPrice,
+            this.colSellingPrice,
+            this.colLowPrice,
+            this.colHeghtPrice,
+            this.colLowPricePay,
+            this.colLowPriceSelling,
+            this.colHeghtPricePay,
+            this.colHeghtPriceSelling,
+            this.colNote});
+            this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // panel2
+            // colTtranferFrom
             // 
-            this.panel2.BackColor = System.Drawing.Color.SeaShell;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Font = new System.Drawing.Font("Tempus Sans ITC", 8F);
-            this.panel2.Location = new System.Drawing.Point(0, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1325, 63);
-            this.panel2.TabIndex = 1;
+            this.colTtranferFrom.Caption = "التحويل من";
+            this.colTtranferFrom.FieldName = "TtranferFrom";
+            this.colTtranferFrom.MinWidth = 25;
+            this.colTtranferFrom.Name = "colTtranferFrom";
+            this.colTtranferFrom.Visible = true;
+            this.colTtranferFrom.VisibleIndex = 0;
+            this.colTtranferFrom.Width = 89;
             // 
-            // label3
+            // colTtranferTo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1226, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 26);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "التاريخ";
+            this.colTtranferTo.Caption = "التحويل الي";
+            this.colTtranferTo.FieldName = "TtranferTo";
+            this.colTtranferTo.MinWidth = 25;
+            this.colTtranferTo.Name = "colTtranferTo";
+            this.colTtranferTo.Visible = true;
+            this.colTtranferTo.VisibleIndex = 1;
+            this.colTtranferTo.Width = 89;
             // 
-            // dateTimePicker1
+            // colTtranferPrice
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1031, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeftLayout = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 25);
-            this.dateTimePicker1.TabIndex = 3;
+            this.colTtranferPrice.Caption = "سعر التحويل";
+            this.colTtranferPrice.FieldName = "TtranferPrice";
+            this.colTtranferPrice.MinWidth = 25;
+            this.colTtranferPrice.Name = "colTtranferPrice";
+            this.colTtranferPrice.Visible = true;
+            this.colTtranferPrice.VisibleIndex = 2;
+            this.colTtranferPrice.Width = 89;
             // 
-            // label2
+            // colPurchPrice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(544, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(247, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "دليل أسعار العملات";
+            this.colPurchPrice.Caption = "سعر الشراء";
+            this.colPurchPrice.FieldName = "PurchPrice";
+            this.colPurchPrice.MinWidth = 25;
+            this.colPurchPrice.Name = "colPurchPrice";
+            this.colPurchPrice.Visible = true;
+            this.colPurchPrice.VisibleIndex = 3;
+            this.colPurchPrice.Width = 89;
             // 
-            // groupBox3
+            // colSellingPrice
             // 
-            this.groupBox3.Controls.Add(this.btn_edit);
-            this.groupBox3.Controls.Add(this.btn_delete);
-            this.groupBox3.Controls.Add(this.btn_print);
-            this.groupBox3.Controls.Add(this.btn_update);
-            this.groupBox3.Controls.Add(this.btn_search);
-            this.groupBox3.Controls.Add(this.btn_add);
-            this.groupBox3.Controls.Add(this.btn_exit);
-            this.groupBox3.Location = new System.Drawing.Point(28, 338);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1265, 93);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
+            this.colSellingPrice.Caption = "سعر البيع";
+            this.colSellingPrice.FieldName = "SellingPrice";
+            this.colSellingPrice.MinWidth = 25;
+            this.colSellingPrice.Name = "colSellingPrice";
+            this.colSellingPrice.Visible = true;
+            this.colSellingPrice.VisibleIndex = 4;
+            this.colSellingPrice.Width = 89;
             // 
-            // btn_edit
+            // colLowPrice
             // 
-            this.btn_edit.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_edit.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Appearance.Options.UseFont = true;
-            this.btn_edit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.ImageOptions.Image")));
-            this.btn_edit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_edit.Location = new System.Drawing.Point(996, 23);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(125, 47);
-            this.btn_edit.TabIndex = 24;
-            this.btn_edit.Text = "تعديل";
+            this.colLowPrice.Caption = "السعر الادنى";
+            this.colLowPrice.FieldName = "LowPrice";
+            this.colLowPrice.MinWidth = 25;
+            this.colLowPrice.Name = "colLowPrice";
+            this.colLowPrice.Visible = true;
+            this.colLowPrice.VisibleIndex = 5;
+            this.colLowPrice.Width = 89;
             // 
-            // btn_delete
+            // colHeghtPrice
             // 
-            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_delete.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Appearance.Options.UseFont = true;
-            this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
-            this.btn_delete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_delete.Location = new System.Drawing.Point(865, 23);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(125, 47);
-            this.btn_delete.TabIndex = 23;
-            this.btn_delete.Text = "حذف";
+            this.colHeghtPrice.Caption = "السعر الاعلى";
+            this.colHeghtPrice.FieldName = "HeghtPrice";
+            this.colHeghtPrice.MinWidth = 25;
+            this.colHeghtPrice.Name = "colHeghtPrice";
+            this.colHeghtPrice.Visible = true;
+            this.colHeghtPrice.VisibleIndex = 6;
+            this.colHeghtPrice.Width = 89;
             // 
-            // btn_print
+            // colLowPricePay
             // 
-            this.btn_print.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_print.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print.Appearance.Options.UseFont = true;
-            this.btn_print.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print.ImageOptions.Image")));
-            this.btn_print.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_print.Location = new System.Drawing.Point(472, 23);
-            this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(125, 47);
-            this.btn_print.TabIndex = 22;
-            this.btn_print.Text = "طباعة";
+            this.colLowPricePay.Caption = "سعر الادنى للشراء";
+            this.colLowPricePay.FieldName = "LowPricePay";
+            this.colLowPricePay.MinWidth = 25;
+            this.colLowPricePay.Name = "colLowPricePay";
+            this.colLowPricePay.Visible = true;
+            this.colLowPricePay.VisibleIndex = 7;
+            this.colLowPricePay.Width = 89;
             // 
-            // btn_update
+            // colLowPriceSelling
             // 
-            this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_update.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Appearance.Options.UseFont = true;
-            this.btn_update.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.ImageOptions.Image")));
-            this.btn_update.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_update.Location = new System.Drawing.Point(734, 23);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(125, 47);
-            this.btn_update.TabIndex = 21;
-            this.btn_update.Text = "تحديث";
+            this.colLowPriceSelling.Caption = "السعر الادنى للبيع";
+            this.colLowPriceSelling.FieldName = "LowPriceSelling";
+            this.colLowPriceSelling.MinWidth = 25;
+            this.colLowPriceSelling.Name = "colLowPriceSelling";
+            this.colLowPriceSelling.Visible = true;
+            this.colLowPriceSelling.VisibleIndex = 8;
+            this.colLowPriceSelling.Width = 89;
             // 
-            // btn_search
+            // colHeghtPricePay
             // 
-            this.btn_search.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_search.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Appearance.Options.UseFont = true;
-            this.btn_search.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_search.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_search.ImageOptions.SvgImage")));
-            this.btn_search.Location = new System.Drawing.Point(603, 23);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(125, 47);
-            this.btn_search.TabIndex = 20;
-            this.btn_search.Text = "بحث";
+            this.colHeghtPricePay.Caption = "السعر الاعلى للشراء";
+            this.colHeghtPricePay.FieldName = "HeghtPricePay";
+            this.colHeghtPricePay.MinWidth = 25;
+            this.colHeghtPricePay.Name = "colHeghtPricePay";
+            this.colHeghtPricePay.Visible = true;
+            this.colHeghtPricePay.VisibleIndex = 9;
+            this.colHeghtPricePay.Width = 89;
             // 
-            // btn_add
+            // colHeghtPriceSelling
             // 
-            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_add.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Appearance.Options.UseFont = true;
-            this.btn_add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_add.ImageOptions.SvgImage")));
-            this.btn_add.Location = new System.Drawing.Point(1127, 23);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(128, 47);
-            this.btn_add.TabIndex = 19;
-            this.btn_add.Text = "اضافة";
+            this.colHeghtPriceSelling.Caption = "السعر الاعلى للبيع";
+            this.colHeghtPriceSelling.FieldName = "HeghtPriceSelling";
+            this.colHeghtPriceSelling.MinWidth = 25;
+            this.colHeghtPriceSelling.Name = "colHeghtPriceSelling";
+            this.colHeghtPriceSelling.Visible = true;
+            this.colHeghtPriceSelling.VisibleIndex = 10;
+            this.colHeghtPriceSelling.Width = 89;
             // 
-            // btn_exit
+            // colNote
             // 
-            this.btn_exit.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_exit.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.Appearance.Options.UseFont = true;
-            this.btn_exit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_exit.ImageOptions.Image")));
-            this.btn_exit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_exit.Location = new System.Drawing.Point(17, 23);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(125, 47);
-            this.btn_exit.TabIndex = 18;
-            this.btn_exit.Text = "خروج";
+            this.colNote.Caption = "ملاحظات";
+            this.colNote.FieldName = "Note";
+            this.colNote.MinWidth = 25;
+            this.colNote.Name = "colNote";
+            this.colNote.Visible = true;
+            this.colNote.VisibleIndex = 11;
+            this.colNote.Width = 102;
             // 
             // groupBox1
             // 
@@ -514,6 +542,180 @@
             this.textBox4.Size = new System.Drawing.Size(768, 25);
             this.textBox4.TabIndex = 30;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btn_edit);
+            this.groupBox3.Controls.Add(this.btn_delete);
+            this.groupBox3.Controls.Add(this.btn_print);
+            this.groupBox3.Controls.Add(this.btn_update);
+            this.groupBox3.Controls.Add(this.btn_search);
+            this.groupBox3.Controls.Add(this.btn_add);
+            this.groupBox3.Controls.Add(this.btn_exit);
+            this.groupBox3.Location = new System.Drawing.Point(28, 338);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1265, 93);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_edit.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.Appearance.Options.UseFont = true;
+            this.btn_edit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.ImageOptions.Image")));
+            this.btn_edit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btn_edit.Location = new System.Drawing.Point(996, 23);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(125, 47);
+            this.btn_edit.TabIndex = 24;
+            this.btn_edit.Text = "تعديل";
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_delete.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Appearance.Options.UseFont = true;
+            this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
+            this.btn_delete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btn_delete.Location = new System.Drawing.Point(865, 23);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(125, 47);
+            this.btn_delete.TabIndex = 23;
+            this.btn_delete.Text = "حذف";
+            // 
+            // btn_print
+            // 
+            this.btn_print.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_print.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print.Appearance.Options.UseFont = true;
+            this.btn_print.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print.ImageOptions.Image")));
+            this.btn_print.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btn_print.Location = new System.Drawing.Point(472, 23);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(125, 47);
+            this.btn_print.TabIndex = 22;
+            this.btn_print.Text = "طباعة";
+            // 
+            // btn_update
+            // 
+            this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_update.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.Appearance.Options.UseFont = true;
+            this.btn_update.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.ImageOptions.Image")));
+            this.btn_update.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btn_update.Location = new System.Drawing.Point(734, 23);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(125, 47);
+            this.btn_update.TabIndex = 21;
+            this.btn_update.Text = "تحديث";
+            // 
+            // btn_search
+            // 
+            this.btn_search.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_search.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Appearance.Options.UseFont = true;
+            this.btn_search.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btn_search.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_search.ImageOptions.SvgImage")));
+            this.btn_search.Location = new System.Drawing.Point(603, 23);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(125, 47);
+            this.btn_search.TabIndex = 20;
+            this.btn_search.Text = "بحث";
+            // 
+            // btn_add
+            // 
+            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_add.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Appearance.Options.UseFont = true;
+            this.btn_add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btn_add.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_add.ImageOptions.SvgImage")));
+            this.btn_add.Location = new System.Drawing.Point(1127, 23);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(128, 47);
+            this.btn_add.TabIndex = 19;
+            this.btn_add.Text = "اضافة";
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_exit.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Appearance.Options.UseFont = true;
+            this.btn_exit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_exit.ImageOptions.Image")));
+            this.btn_exit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btn_exit.Location = new System.Drawing.Point(17, 23);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(125, 47);
+            this.btn_exit.TabIndex = 18;
+            this.btn_exit.Text = "خروج";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SeaShell;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.picture_Search);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txt_Search);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Font = new System.Drawing.Font("Tempus Sans ITC", 8F);
+            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1325, 63);
+            this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1226, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 26);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "التاريخ";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(1031, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.RightToLeftLayout = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(180, 25);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(544, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(247, 39);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "دليل أسعار العملات";
+            // 
+            // tb_CurrenciesPricesTableAdapter
+            // 
+            this.tb_CurrenciesPricesTableAdapter.ClearBeforeFill = true;
+            // 
+            // picture_Search
+            // 
+            this.picture_Search.Location = new System.Drawing.Point(8, 14);
+            this.picture_Search.Name = "picture_Search";
+            this.picture_Search.Size = new System.Drawing.Size(30, 28);
+            this.picture_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_Search.TabIndex = 70;
+            this.picture_Search.TabStop = false;
+            // 
+            // txt_Search
+            // 
+            this.txt_Search.Location = new System.Drawing.Point(44, 11);
+            this.txt_Search.Multiline = true;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_Search.Size = new System.Drawing.Size(171, 34);
+            this.txt_Search.TabIndex = 69;
+            this.txt_Search.Tag = "";
+            this.txt_Search.TextChanged += new System.EventHandler(this.Txt_Search_TextChanged);
+            // 
             // CurrencyPricesGuide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -523,14 +725,18 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CurrencyPricesGuide";
             this.Text = "/*";
+            this.Load += new System.EventHandler(this.CurrencyPricesGuide_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Divert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCurrenciesPricesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_Search)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,8 +748,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
-        public DevExpress.XtraGrid.GridControl gridControl_Divert;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label5;
@@ -577,5 +781,24 @@
         public DevExpress.XtraEditors.SimpleButton btn_search;
         public DevExpress.XtraEditors.SimpleButton btn_add;
         public DevExpress.XtraEditors.SimpleButton btn_exit;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DBTAEMDataSet dBTAEMDataSet;
+        private System.Windows.Forms.BindingSource tbCurrenciesPricesBindingSource;
+        private DBTAEMDataSetTableAdapters.Tb_CurrenciesPricesTableAdapter tb_CurrenciesPricesTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colTtranferFrom;
+        private DevExpress.XtraGrid.Columns.GridColumn colTtranferTo;
+        private DevExpress.XtraGrid.Columns.GridColumn colTtranferPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colPurchPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colSellingPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colLowPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colHeghtPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colLowPricePay;
+        private DevExpress.XtraGrid.Columns.GridColumn colLowPriceSelling;
+        private DevExpress.XtraGrid.Columns.GridColumn colHeghtPricePay;
+        private DevExpress.XtraGrid.Columns.GridColumn colHeghtPriceSelling;
+        private DevExpress.XtraGrid.Columns.GridColumn colNote;
+        internal System.Windows.Forms.PictureBox picture_Search;
+        private System.Windows.Forms.TextBox txt_Search;
     }
 }

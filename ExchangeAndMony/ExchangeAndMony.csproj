@@ -91,6 +91,16 @@
     <Compile Include="BL\transferClasses\Class1.cs" />
     <Compile Include="data\ADB.cs" />
     <Compile Include="data\conection.cs" />
+    <Compile Include="DBTAEMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBTAEMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBTAEMDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBTAEMDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -522,6 +532,28 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DBTAEM_Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DBTAEMDataSet.xsc">
+      <DependentUpon>DBTAEMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBTAEMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBTAEMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBTAEMDataSet.xss">
+      <DependentUpon>DBTAEMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBTAEMDataSet1.xsc">
+      <DependentUpon>DBTAEMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBTAEMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBTAEMDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBTAEMDataSet1.xss">
+      <DependentUpon>DBTAEMDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="model\DBTAEM_Model.edmx.diagram">
       <DependentUpon>DBTAEM_Model.edmx</DependentUpon>
     </None>

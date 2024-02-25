@@ -105,7 +105,8 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
             if (string.IsNullOrEmpty(txt_Search.Text))
             {
                 // عرض جميع البيانات
-                 dataGridView_groups.DataSource = db.Tb_Groups.ToList();
+                class_GroupsGuide.loadData(this);
+            
             }
             else
             {
@@ -127,6 +128,11 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
             Form1 panel_mainhome = new Form1();
             this.Hide();
             panel_mainhome.Controls.Clear();
+        }
+
+        private void Picture_Search_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }
