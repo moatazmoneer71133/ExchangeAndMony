@@ -596,6 +596,7 @@
     <None Include="Resources\4 - Copy.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Search_16x16.png" />
     <None Include="Resources\4.jpg" />
     <Content Include="model\DBTAEM_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

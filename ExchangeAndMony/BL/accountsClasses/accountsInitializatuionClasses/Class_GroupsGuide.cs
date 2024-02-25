@@ -80,23 +80,56 @@ namespace ExchangeAndMony.BL.accountsClasses.accountsInitializatuionClasses
         }
 
 
-        public void edit_groups(GroupsGuide groups,int id)
+        public void edit_groups(GroupsGuide groups)
         {
             Tb_Groups edit_Group;
             try
             {
                 db = new DBTAEMEntities();
                 edit_Group = new Tb_Groups();
+                //int id = 
+                edit_Group.GroupNumber =Convert.ToInt32( groups.txt_groupNumber.Text);
                 edit_Group.GroupName = groups.txt_groupName.Text;
                 edit_Group.Note = groups.txt_groupDescription.Text;
                 //edit_Group.UserName = "معتز منير";
                 //edit_Group.UserNumbers = 1;
                 edit_Group.TheDate = DateTime.Now.Date;
-                db.Entry(edit_Group).State = System.Data.Entity.EntityState.Added;
+                db.Entry(edit_Group).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 groups.txt_groupName.Text = groups.txt_groupDescription.Text = "";
                 loadData(groups);
-                groups.lbl_Message.Text = "تم الحفظ بنجاح";
+                groups.lbl_Message.Text = "تم التعديل بنجاح";
+                groups.PictureBoxMessage.Image = Properties.Resources.OK;
+                groups.timer_message_seccess.Start();
+
+            }
+            catch
+            {
+                //MessageBox.Show("لم يتم الاضافة ");
+            }
+
+
+        }
+
+        public void delete_groups(GroupsGuide groups)
+        {
+            Tb_Groups delete_Group;
+            try
+            {
+                db = new DBTAEMEntities();
+                delete_Group = new Tb_Groups();
+                //int id = 
+                delete_Group.GroupNumber = Convert.ToInt32(groups.txt_groupNumber.Text);
+                //edit_Group.GroupName = groups.txt_groupName.Text;
+                //edit_Group.Note = groups.txt_groupDescription.Text;
+                //edit_Group.UserName = "معتز منير";
+                //edit_Group.UserNumbers = 1;
+                //edit_Group.TheDate = DateTime.Now.Date;
+                db.Entry(delete_Group).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+                groups.txt_groupName.Text = groups.txt_groupDescription.Text = "";
+                loadData(groups);
+                groups.lbl_Message.Text = "تم الحذف بنجاح";
                 groups.PictureBoxMessage.Image = Properties.Resources.OK;
                 groups.timer_message_seccess.Start();
 

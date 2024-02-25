@@ -13,6 +13,7 @@ using ExchangeAndMony.BL.accountsClasses.accountsInitializatuionClasses;
 using ExchangeAndMony.model;
 using ExchangeAndMony.BL;
 using ExchangeAndMony.pages.accountsInterface.Classes;
+using System.Data.SqlClient;
 
 namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface
 {
@@ -24,8 +25,8 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         Tb_Groups add_Group;
         Class_GroupsGuide class_GroupsGuide = new Class_GroupsGuide();
         Languages lang = new Languages();
-       
-        
+        DataTable stor = new DataTable();
+
         public GroupsGuide()
         {
 
@@ -52,7 +53,7 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         private void Btn_edit_Click(object sender, EventArgs e)
         {
-
+            class_GroupsGuide.edit_groups(this);
         }
 
         private void Timer_message_seccess_Tick(object sender, EventArgs e)
@@ -72,6 +73,7 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
             id_group = Convert.ToInt32(dataGridView_groups.CurrentRow.Cells[0].Value);
             txt_groupName.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[1].Value);
             txt_groupDescription.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[4].Value);
+            txt_groupNumber.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[0].Value);
         }
 
         private void Txt_groupName_Enter(object sender, EventArgs e)
@@ -83,5 +85,48 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         {
             lang.arabicLanguage();
         }
+
+        private void Btn_delete_Click(object sender, EventArgs e)
+        {
+            class_GroupsGuide.delete_groups(this);
+        }
+
+        private void Btn_update_Click(object sender, EventArgs e)
+        {
+            //class_GroupsGuide.loadData(this);
+        }
+
+        private void Txt_Search_TextChanged(object sender, EventArgs e)
+        {
+
+            db = new DBTAEMEntities();
+
+            var t = db.Tb_Groups.Where(x => x.GroupName.Contains(txt_Search.Text)).ToList();
+            if (string.IsNullOrEmpty(txt_Search.Text))
+            {
+                // عرض جميع البيانات
+                 dataGridView_groups.DataSource = db.Tb_Groups.ToList();
+            }
+            else
+            {
+                // تصفية البيانات بناءً على نص البحث
+                dataGridView_groups.DataSource = db.Tb_Groups.Where(x => x.GroupName.Contains(txt_Search.Text)).ToList();
+            }
+
+
+
+        }
+
+        private void GroupsGuide_Load(object sender, EventArgs e)
+        {
+            picture_Search.Image = Properties.Resources.Search_16x16;
+        }
+
+        private void Btn_exit_Click(object sender, EventArgs e)
+        {
+            Form1 panel_mainhome = new Form1();
+            this.Hide();
+            panel_mainhome.Controls.Clear();
+        }
     }
-}
+    }

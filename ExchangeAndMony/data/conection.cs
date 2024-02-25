@@ -14,7 +14,7 @@ namespace ExchangeAndMony.data
     
         
         
-        public static SqlConnection con = new SqlConnection(@"Server =HAIL-444;DataBase=DBTAEM;Trusted_Connection=yes");
+        public static SqlConnection con = new SqlConnection(@"Server =DESKTOP-6FOQ2KB\SQLEXPRESS;DataBase=DBTAEM;Trusted_Connection=yes");
 
     }
 }
