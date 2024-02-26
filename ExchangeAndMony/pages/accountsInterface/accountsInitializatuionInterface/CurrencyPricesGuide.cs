@@ -12,13 +12,18 @@ using ExchangeAndMony.pages;
 using ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface;
 using ExchangeAndMony.model;
 using System.Data.Entity;
+using ExchangeAndMony.BL;
+using ExchangeAndMony.BL.accountsClasses.accountsInitializatuionClasses;
 
 namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface
 {
     public partial class CurrencyPricesGuide : DevExpress.XtraEditors.XtraForm
     {
-
+        int id ;
+        Class_CurrencyPricesGuide class_CurrencyPricesGuide = new Class_CurrencyPricesGuide();
         DBTAEMEntities db;
+        Languages lang = new Languages();
+        DataTable tb = new DataTable();
         public CurrencyPricesGuide()
         {
 
@@ -51,63 +56,38 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         {
             // TODO: This line of code loads data into the 'dBTAEMDataSet2.Tb_CurrenciesPrices' table. You can move, or remove it, as needed.
             this.tb_CurrenciesPricesTableAdapter.Fill(this.dBTAEMDataSet2.Tb_CurrenciesPrices);
-
             picture_Search.Image = Properties.Resources.Search_16x16;
+            class_CurrencyPricesGuide.loadData(this);
             
-
         }
 
         private void Txt_Search_TextChanged(object sender, EventArgs e)
         {
+           
             db = new DBTAEMEntities();
-            //gridControl_CurrencyPrice.DataSource = db.Tb_CurrenciesPrices.Where(x => x.TtranferFrom.Contains(txt_Search.Text)).ToList();
+            gridControl1.DataSource = db.Tb_CurrenciesPrices.Where(x => x.TtranferFrom.Contains(txt_Search.Text)).ToList();
         }
 
         private void Btn_print_Click(object sender, EventArgs e)
         {
-
+            //tb.Columns[]
         }
 
         private void Btn_delete_Click(object sender, EventArgs e)
         {
-            if (
-                txt_PurchasePrice.Text != "" && txt_SellingPrice.Text !="" && txt_LowPricePurchasing.Text != "" &&
-                txt_HighestPricePurchasing.Text !="" && txt_LowPrice.Text !="" && txt_HighestPrice.Text !="" && txt_LowPriceSelling.Text !="" &&
-                txt_HighestPriceSelling.Text !="" && txt_HighestPricePurchasing.Text !="" && txt_TtranferPrice.Text != ""
-                )
+            
+
+            var Responsetext = MessageBox.Show("هل أنت متأكد من الحذف", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(Responsetext.ToString() == "Yes" )
             {
-                if (Convert.ToDecimal(txt_PurchasePrice.Text) > Convert.ToDecimal(txt_SellingPrice.Text))
-                {
-                    var Responsetext = MessageBox.Show("سعر البيع أقل من سعر الشراء هل تريد المتابعة", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    MessageBox.Show(Responsetext.ToString());
-                }
-                if (Convert.ToDecimal(txt_LowPricePurchasing.Text) > Convert.ToDecimal(txt_HighestPricePurchasing.Text))
-                {
-                    var Responsetext = MessageBox.Show("أعلى سعر للشراء أقل من أدنى سعر للشراء هل تريد المتابعة", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    MessageBox.Show(Responsetext.ToString());
-                }
-                if (Convert.ToDecimal(txt_LowPrice.Text) > Convert.ToDecimal(txt_HighestPrice.Text))
-                {
-                    var Responsetext = MessageBox.Show("أعلى سعر أقل من أدنى سعر هل تريد المتابعة", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    MessageBox.Show(Responsetext.ToString());
-                }
-                if (Convert.ToDecimal(txt_LowPriceSelling.Text) > Convert.ToDecimal(txt_HighestPriceSelling.Text))
-                {
-                    var Responsetext = MessageBox.Show("أعلى سعر بيع أقل من أدنى سعر بيع هل تريد المتابعة", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    MessageBox.Show(Responsetext.ToString());
-                }
-                if (Convert.ToDecimal(txt_LowPriceSelling.Text) > Convert.ToDecimal(txt_HighestPricePurchasing.Text))
-                {
-                    var Responsetext = MessageBox.Show("أعلى سعر للشراء أقل من أدنى سعر بيع هل تريد المتابعة", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    MessageBox.Show(Responsetext.ToString());
-                }
+                class_CurrencyPricesGuide.delete_price(this, id);
+                emptyForm();
             }
             else
             {
-                MessageBox.Show("إحدى الحقول فارغة تأكد من إدخال البيانات ");
+                MessageBox.Show("mjnnn");
             }
-           
-          
+
 
 
         }
@@ -124,45 +104,97 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         private void Btn_add_Click_1(object sender, EventArgs e)
         {
-            db = new DBTAEMEntities();
-            Tb_CurrenciesPrices add_price;
 
-            if(Convert.ToDecimal(txt_PurchasePrice.Text) < Convert.ToDecimal(txt_SellingPrice.Text))
+
+            // chackcunt نستخدم هذا المتغير كالعدد من أجل حفظ البيانات في حال كنا نري المتابعة حتى اذا كان يوجد تحذيرات
+            int counter = 0;
+            // textMessage نستخدم هذه (اليست) من أحل تخزين الرسائل التحذيريه
+            List<string> textMessage = new List<string>();
+
+            if (
+                txt_PurchasePrice.Text != "" && txt_SellingPrice.Text != "" && txt_LowPricePurchasing.Text != "" &&
+                txt_HighestPricePurchasing.Text != "" && txt_LowPrice.Text != "" && txt_HighestPrice.Text != "" && txt_LowPriceSelling.Text != "" &&
+                txt_HighestPriceSelling.Text != "" && txt_HighestPricePurchasing.Text != "" && txt_TtranferPrice.Text != ""
+                )
             {
-                var Responsetext = MessageBox.Show("message", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                MessageBox.Show(Responsetext.ToString());
+
+
+
+                // التحقق من سعر البيع و سعر الشراء
+                if (Convert.ToDecimal(txt_PurchasePrice.Text) > Convert.ToDecimal(txt_SellingPrice.Text))
+                {
+                    textMessage.Add("سعر البيع أقل من سعر الشراء هل تريد المتابعة");
+                    counter++;
+                    // MessageBox.Show(chackcunt.ToString());
+                }
+                if (Convert.ToDecimal(txt_HighestPricePurchasing.Text) > Convert.ToDecimal(txt_LowPriceSelling.Text))
+                {
+                    //التحقق من أعلى سعر للشراء و أدنى سعر بيع
+                    textMessage.Add("أدنى سعر للبيع أقل من أعلى سعر للشراء هل تريد المتابعة");
+                    counter++;
+                    //  MessageBox.Show(chackcunt.ToString()+"  KK");
+                }
+                if (Convert.ToDecimal(txt_LowPriceSelling.Text) > Convert.ToDecimal(txt_HighestPriceSelling.Text))
+                {
+                    // التحقق من أعلى سعر بيع و أدنى سعر بيع
+                    textMessage.Add("أعلى سعر بيع أقل من أدنى سعر بيع هل تريد المتابعة");
+                    counter++;
+                    // MessageBox.Show(chackcunt.ToString());
+                }
+
+                if (Convert.ToDecimal(txt_LowPrice.Text) > Convert.ToDecimal(txt_HighestPrice.Text))
+                {
+                    //التحقق من أعلى سعر و أدنى سعر
+                    textMessage.Add("أعلى سعر أقل من أدنى سعر هل تريد المتابعة");
+                    counter++;
+                    // MessageBox.Show(chackcunt.ToString());
+                }
+                // أعلى سعر للشراء و أدنى سعر للشراء
+                if (Convert.ToDecimal(txt_LowPricePurchasing.Text) > Convert.ToDecimal(txt_HighestPricePurchasing.Text))
+                {
+                    // var Responsetext = MessageBox.Show("أعلى سعر للشراء أقل من أدنى سعر للشراء هل تريد المتابعة", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    textMessage.Add("أعلى سعر للشراء أقل من أدنى سعر للشراء هل تريد المتابعة");
+                    counter++;
+                    // MessageBox.Show(chackcunt.ToString());
+                }
+
+
+
+
+                // تعمل على التحقق من أن هناك تحذيرات في الليست
+                if (textMessage.Count().ToString() != "0")
+                {
+                    // تمر على التحذيرات الموجودة في الَيست
+                    foreach (var message in textMessage)
+                    {
+                        var Responsetext = MessageBox.Show(message.ToString(), "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        // تعمل على حفظ البيانات بعد موافقة العميل على كل التحذيرات
+                        if (Responsetext.ToString() == "Yes" && counter == 1)
+                        {
+                            class_CurrencyPricesGuide.add_price(this);
+                            emptyForm();
+                        }
+                        //  تعمل على وقف اللوب إذا كانت إجابة الرسبونس ب لا
+                        if (Responsetext.ToString() == "No")
+                        {
+                            break;
+                        }
+                        counter--;
+
+                    }
+                }
+                else
+                {
+                    class_CurrencyPricesGuide.add_price(this);
+                    emptyForm();
+                }
+
             }
-            try
+            else
             {
-                db = new DBTAEMEntities();
-                add_price = new Tb_CurrenciesPrices();
-                add_price.TtranferFrom = currencie_com1.selecteditem();
-                add_price.TtranferTo = currencie_com2.selecteditem();
-                add_price.TtranferPrice = Convert.ToDecimal(txt_TtranferPrice.Text);
-                add_price.PurchasePrice = Convert.ToDecimal(txt_PurchasePrice.Text);
-                add_price.SellingPrice = Convert.ToDecimal(txt_SellingPrice.Text);
-                add_price.LowPrice = Convert.ToDecimal(txt_LowPrice.Text);
-                add_price.HighestPrice = Convert.ToDecimal(txt_HighestPrice.Text);
-                add_price.LowPricePurchasing = Convert.ToDecimal(txt_LowPricePurchasing.Text);
-                add_price.LowPriceSelling = Convert.ToDecimal(txt_LowPriceSelling.Text);
-                add_price.HighestPricePurchasing = Convert.ToDecimal(txt_HighestPricePurchasing.Text);
-                add_price.HighestPriceSelling = Convert.ToDecimal(txt_HighestPriceSelling.Text);
-                add_price.Note = txt_Note.Text;
-                db.Entry(add_price).State = System.Data.Entity.EntityState.Added;
-                db.SaveChanges();
-                // txt_groupName.Text = groups.txt_groupDescription.Text = "";
-                // loadData(groups);
-
-                lbl_Message.Text = "تم الحفظ بنجاح";
-                PictureBoxMessage.Image = Properties.Resources.OK;
-                timer_message_seccess.Start();
+                MessageBox.Show("إحدى الحقول فارغة تأكد من إدخال البيانات", "title", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-            catch
-            {
-                //MessageBox.Show("لم يتم الاضافة ");
-            }
-
         }
 
         private void GridControl_CurrencyPrice_Click(object sender, EventArgs e)
@@ -179,19 +211,258 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         private void Txt_TtranferPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            //MessageBox.Show(e.KeyChar.ToString());
             // التحقق من رمز الحرف
-            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar))
-            {
-                // إلغاء الحدث
-                e.Handled = true;
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            { 
+                    e.Handled = true;   
             }
         }
 
         private void Txt_PurchasePrice_TextChanged(object sender, EventArgs e)
         {
            // sender.
+        }
+
+        private void Txt_Search_Enter(object sender, EventArgs e)
+        {
+            lang.arabicLanguage();
+        }
+
+        private void Btn_update_Click(object sender, EventArgs e)
+        {
+            //var data = new List<string>() {  "John",  "30" };
+
+            //// ربط مصدر البيانات بـ GridControl
+            //gridControl1.DataSource = data;
+
+            //// إضافة صف جديد
+            //var newRow = gridControl1.MainView.GetRow(gridControl1.MainView.RowCount);
+            //gridControl1.MainView.Add(newRow);
+
+        }
+
+        private void GridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+           // MessageBox.Show("kkkkk");
+           // txt_HighestPrice.Text = gridView1.GetRowCellValue(e.RowHandle, e.Column).ToString();
+        }
+
+        private void GridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+          //  MessageBox.Show("kkkkk");
+            txt_TtranferPrice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TtranferPrice").ToString();
+            txt_LowPrice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "LowPrice").ToString();
+            txt_HighestPrice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HighestPrice").ToString();
+
+            txt_PurchasePrice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "PurchasePrice").ToString();
+            txt_LowPricePurchasing.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "LowPricePurchasing").ToString();
+            txt_HighestPricePurchasing.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HighestPricePurchasing").ToString();
+
+            txt_SellingPrice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SellingPrice").ToString();
+            txt_LowPriceSelling.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "LowPriceSelling").ToString();
+            txt_HighestPriceSelling.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HighestPriceSelling").ToString();
+
+            txt_Note.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Note").ToString();
+           id = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "CurrencyPriceNumber"));
+
+            //
+        }
+
+        private void GridView1_Click(object sender, EventArgs e)
+        {
+           // MessageBox.Show("kkkkk");
+        }
+
+        private void Txt_LowPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // التحقق من رمز الحرف
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_HighestPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // التحقق من رمز الحرف
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_PurchasePrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // التحقق من رمز الحرف
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_LowPricePurchasing_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // التحقق من رمز الحرف
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_HighestPricePurchasing_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // التحقق من رمز الحرف
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_SellingPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // التحقق من رمز الحرف
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_LowPriceSelling_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // التحقق من رمز الحرف
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_HighestPriceSelling_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // التحقق من رمز الحرف
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_Note_Enter(object sender, EventArgs e)
+        {
+            lang.arabicLanguage();
+        }
+
+        private void Btn_edit_Click(object sender, EventArgs e)
+        {
+
+
+            // chackcunt نستخدم هذا المتغير كالعدد من أجل حفظ البيانات في حال كنا نري المتابعة حتى اذا كان يوجد تحذيرات
+            int counter = 0;
+            // textMessage نستخدم هذه (اليست) من أحل تخزين الرسائل التحذيريه
+            List<string> textMessage = new List<string>();
+
+            if (
+                txt_PurchasePrice.Text != "" && txt_SellingPrice.Text != "" && txt_LowPricePurchasing.Text != "" &&
+                txt_HighestPricePurchasing.Text != "" && txt_LowPrice.Text != "" && txt_HighestPrice.Text != "" && txt_LowPriceSelling.Text != "" &&
+                txt_HighestPriceSelling.Text != "" && txt_HighestPricePurchasing.Text != "" && txt_TtranferPrice.Text != ""
+                )
+            {
+
+
+
+                // التحقق من سعر البيع و سعر الشراء
+                if (Convert.ToDecimal(txt_PurchasePrice.Text) > Convert.ToDecimal(txt_SellingPrice.Text))
+                {
+                    textMessage.Add("سعر البيع أقل من سعر الشراء هل تريد المتابعة");
+                    counter++;
+                    // MessageBox.Show(chackcunt.ToString());
+                }
+                if (Convert.ToDecimal(txt_HighestPricePurchasing.Text) > Convert.ToDecimal(txt_LowPriceSelling.Text))
+                {
+                    //التحقق من أعلى سعر للشراء و أدنى سعر بيع
+                    textMessage.Add("أدنى سعر للبيع أقل من أعلى سعر للشراء هل تريد المتابعة");
+                    counter++;
+                    //  MessageBox.Show(chackcunt.ToString()+"  KK");
+                }
+                if (Convert.ToDecimal(txt_LowPriceSelling.Text) > Convert.ToDecimal(txt_HighestPriceSelling.Text))
+                {
+                    // التحقق من أعلى سعر بيع و أدنى سعر بيع
+                    textMessage.Add("أعلى سعر بيع أقل من أدنى سعر بيع هل تريد المتابعة");
+                    counter++;
+                    // MessageBox.Show(chackcunt.ToString());
+                }
+
+                if (Convert.ToDecimal(txt_LowPrice.Text) > Convert.ToDecimal(txt_HighestPrice.Text))
+                {
+                    //التحقق من أعلى سعر و أدنى سعر
+                    textMessage.Add("أعلى سعر أقل من أدنى سعر هل تريد المتابعة");
+                    counter++;
+                    // MessageBox.Show(chackcunt.ToString());
+                }
+                // أعلى سعر للشراء و أدنى سعر للشراء
+                if (Convert.ToDecimal(txt_LowPricePurchasing.Text) > Convert.ToDecimal(txt_HighestPricePurchasing.Text))
+                {
+                    // var Responsetext = MessageBox.Show("أعلى سعر للشراء أقل من أدنى سعر للشراء هل تريد المتابعة", "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    textMessage.Add("أعلى سعر للشراء أقل من أدنى سعر للشراء هل تريد المتابعة");
+                    counter++;
+                    // MessageBox.Show(chackcunt.ToString());
+                }
+
+
+
+
+                // تعمل على التحقق من أن هناك تحذيرات في الليست
+                if (textMessage.Count().ToString() != "0")
+                {
+                    // تمر على التحذيرات الموجودة في الَيست
+                    foreach (var message in textMessage)
+                    {
+                        var Responsetext = MessageBox.Show(message.ToString(), "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        // تعمل على حفظ البيانات بعد موافقة العميل على كل التحذيرات
+                        if (Responsetext.ToString() == "Yes" && counter == 1)
+                        {
+                            class_CurrencyPricesGuide.edit_price(this, id);
+                            emptyForm();
+                        }
+                        //  تعمل على وقف اللوب إذا كانت إجابة الرسبونس ب لا
+                        if (Responsetext.ToString() == "No")
+                        {
+                            break;
+                        }
+                        counter--;
+
+                    }
+                }
+                else
+                {
+                    class_CurrencyPricesGuide.edit_price(this, id);
+                    emptyForm();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("إحدى الحقول فارغة تأكد من إدخال البيانات", "title", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }           
+        public void emptyForm()
+        {
+            txt_TtranferPrice.Text = "";
+            txt_HighestPrice.Text = "";
+            txt_LowPrice.Text = "";
+            txt_PurchasePrice.Text = "";
+            txt_LowPricePurchasing.Text = "";
+            txt_HighestPricePurchasing.Text = "";
+            txt_SellingPrice.Text = "";
+            txt_LowPriceSelling.Text = "";
+            txt_HighestPriceSelling.Text = "";
+            txt_Note.Text = "";
+        }
+
+        private void Btn_exit_Click(object sender, EventArgs e)
+        {
+            Form1 panel_mainhome = new Form1();
+            this.Hide();
+            panel_mainhome.Controls.Clear();
         }
     }
 }

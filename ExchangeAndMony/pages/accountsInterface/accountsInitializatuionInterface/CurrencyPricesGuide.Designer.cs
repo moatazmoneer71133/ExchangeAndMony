@@ -35,8 +35,6 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dBTAEMDataSet2 = new ExchangeAndMony.DBTAEMDataSet2();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colCurrencyPriceNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCurrencyNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTtranferFrom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTtranferTo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTtranferPrice = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,7 +77,6 @@
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
             this.btn_print = new DevExpress.XtraEditors.SimpleButton();
             this.btn_update = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
             this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -126,6 +123,7 @@
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gridControl1.Size = new System.Drawing.Size(1308, 334);
             this.gridControl1.TabIndex = 12;
+            this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -141,9 +139,16 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.HeaderPanel.BackColor2 = System.Drawing.SystemColors.ScrollBar;
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.Row.Options.UseForeColor = true;
+            this.gridView1.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colCurrencyPriceNumber,
-            this.colCurrencyNumber,
             this.colTtranferFrom,
             this.colTtranferTo,
             this.colTtranferPrice,
@@ -157,133 +162,155 @@
             this.colHighestPriceSelling,
             this.colNote});
             this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupRowHeight = 40;
+            this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gridView1.LevelIndent = 0;
             this.gridView1.Name = "gridView1";
+            this.gridView1.NewItemRowText = "0";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsPrint.AutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // colCurrencyPriceNumber
-            // 
-            this.colCurrencyPriceNumber.FieldName = "CurrencyPriceNumber";
-            this.colCurrencyPriceNumber.MinWidth = 25;
-            this.colCurrencyPriceNumber.Name = "colCurrencyPriceNumber";
-            this.colCurrencyPriceNumber.Visible = true;
-            this.colCurrencyPriceNumber.VisibleIndex = 0;
-            this.colCurrencyPriceNumber.Width = 94;
-            // 
-            // colCurrencyNumber
-            // 
-            this.colCurrencyNumber.FieldName = "CurrencyNumber";
-            this.colCurrencyNumber.MinWidth = 25;
-            this.colCurrencyNumber.Name = "colCurrencyNumber";
-            this.colCurrencyNumber.Visible = true;
-            this.colCurrencyNumber.VisibleIndex = 1;
-            this.colCurrencyNumber.Width = 94;
+            this.gridView1.PreviewIndent = 0;
+            this.gridView1.PreviewLineCount = 10;
+            this.gridView1.RowHeight = 30;
+            this.gridView1.ScrollStyle = DevExpress.XtraGrid.Views.Grid.ScrollStyleFlags.None;
+            this.gridView1.SynchronizeClones = false;
+            this.gridView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.GridView1_RowClick);
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView1_RowCellClick);
+            this.gridView1.Click += new System.EventHandler(this.GridView1_Click);
             // 
             // colTtranferFrom
             // 
+            this.colTtranferFrom.Caption = "التحويل من";
             this.colTtranferFrom.FieldName = "TtranferFrom";
             this.colTtranferFrom.MinWidth = 25;
             this.colTtranferFrom.Name = "colTtranferFrom";
+            this.colTtranferFrom.OptionsColumn.ReadOnly = true;
             this.colTtranferFrom.Visible = true;
-            this.colTtranferFrom.VisibleIndex = 2;
+            this.colTtranferFrom.VisibleIndex = 0;
             this.colTtranferFrom.Width = 94;
             // 
             // colTtranferTo
             // 
+            this.colTtranferTo.Caption = "التحويل الي";
             this.colTtranferTo.FieldName = "TtranferTo";
             this.colTtranferTo.MinWidth = 25;
             this.colTtranferTo.Name = "colTtranferTo";
+            this.colTtranferTo.OptionsColumn.ReadOnly = true;
             this.colTtranferTo.Visible = true;
-            this.colTtranferTo.VisibleIndex = 3;
+            this.colTtranferTo.VisibleIndex = 1;
             this.colTtranferTo.Width = 94;
             // 
             // colTtranferPrice
             // 
+            this.colTtranferPrice.Caption = "سعر التحويل";
             this.colTtranferPrice.FieldName = "TtranferPrice";
             this.colTtranferPrice.MinWidth = 25;
             this.colTtranferPrice.Name = "colTtranferPrice";
+            this.colTtranferPrice.OptionsColumn.ReadOnly = true;
             this.colTtranferPrice.Visible = true;
-            this.colTtranferPrice.VisibleIndex = 4;
+            this.colTtranferPrice.VisibleIndex = 2;
             this.colTtranferPrice.Width = 94;
             // 
             // colPurchasePrice
             // 
+            this.colPurchasePrice.Caption = "سعر الشراء";
             this.colPurchasePrice.FieldName = "PurchasePrice";
             this.colPurchasePrice.MinWidth = 25;
             this.colPurchasePrice.Name = "colPurchasePrice";
+            this.colPurchasePrice.OptionsColumn.ReadOnly = true;
             this.colPurchasePrice.Visible = true;
-            this.colPurchasePrice.VisibleIndex = 5;
+            this.colPurchasePrice.VisibleIndex = 3;
             this.colPurchasePrice.Width = 94;
             // 
             // colSellingPrice
             // 
+            this.colSellingPrice.Caption = " سعر البيع";
             this.colSellingPrice.FieldName = "SellingPrice";
             this.colSellingPrice.MinWidth = 25;
             this.colSellingPrice.Name = "colSellingPrice";
+            this.colSellingPrice.OptionsColumn.ReadOnly = true;
             this.colSellingPrice.Visible = true;
-            this.colSellingPrice.VisibleIndex = 6;
+            this.colSellingPrice.VisibleIndex = 4;
             this.colSellingPrice.Width = 94;
             // 
             // colLowPrice
             // 
+            this.colLowPrice.Caption = "أدنى سعر";
             this.colLowPrice.FieldName = "LowPrice";
             this.colLowPrice.MinWidth = 25;
             this.colLowPrice.Name = "colLowPrice";
+            this.colLowPrice.OptionsColumn.ReadOnly = true;
             this.colLowPrice.Visible = true;
-            this.colLowPrice.VisibleIndex = 7;
+            this.colLowPrice.VisibleIndex = 5;
             this.colLowPrice.Width = 94;
             // 
             // colHighestPrice
             // 
+            this.colHighestPrice.Caption = "أعلى سعر";
             this.colHighestPrice.FieldName = "HighestPrice";
             this.colHighestPrice.MinWidth = 25;
             this.colHighestPrice.Name = "colHighestPrice";
+            this.colHighestPrice.OptionsColumn.ReadOnly = true;
             this.colHighestPrice.Visible = true;
-            this.colHighestPrice.VisibleIndex = 8;
+            this.colHighestPrice.VisibleIndex = 6;
             this.colHighestPrice.Width = 94;
             // 
             // colLowPricePurchasing
             // 
+            this.colLowPricePurchasing.Caption = "أدنى سعر للشراء";
             this.colLowPricePurchasing.FieldName = "LowPricePurchasing";
             this.colLowPricePurchasing.MinWidth = 25;
             this.colLowPricePurchasing.Name = "colLowPricePurchasing";
+            this.colLowPricePurchasing.OptionsColumn.ReadOnly = true;
             this.colLowPricePurchasing.Visible = true;
-            this.colLowPricePurchasing.VisibleIndex = 9;
+            this.colLowPricePurchasing.VisibleIndex = 7;
             this.colLowPricePurchasing.Width = 94;
             // 
             // colLowPriceSelling
             // 
+            this.colLowPriceSelling.Caption = "أدنى سعر للبيع";
             this.colLowPriceSelling.FieldName = "LowPriceSelling";
             this.colLowPriceSelling.MinWidth = 25;
             this.colLowPriceSelling.Name = "colLowPriceSelling";
+            this.colLowPriceSelling.OptionsColumn.ReadOnly = true;
             this.colLowPriceSelling.Visible = true;
-            this.colLowPriceSelling.VisibleIndex = 10;
+            this.colLowPriceSelling.VisibleIndex = 8;
             this.colLowPriceSelling.Width = 94;
             // 
             // colHighestPricePurchasing
             // 
+            this.colHighestPricePurchasing.Caption = "أعلى سعر للشراء";
             this.colHighestPricePurchasing.FieldName = "HighestPricePurchasing";
             this.colHighestPricePurchasing.MinWidth = 25;
             this.colHighestPricePurchasing.Name = "colHighestPricePurchasing";
+            this.colHighestPricePurchasing.OptionsColumn.ReadOnly = true;
             this.colHighestPricePurchasing.Visible = true;
-            this.colHighestPricePurchasing.VisibleIndex = 11;
+            this.colHighestPricePurchasing.VisibleIndex = 9;
             this.colHighestPricePurchasing.Width = 94;
             // 
             // colHighestPriceSelling
             // 
+            this.colHighestPriceSelling.Caption = "أعلى سعر للبيع";
             this.colHighestPriceSelling.FieldName = "HighestPriceSelling";
             this.colHighestPriceSelling.MinWidth = 25;
             this.colHighestPriceSelling.Name = "colHighestPriceSelling";
+            this.colHighestPriceSelling.OptionsColumn.ReadOnly = true;
             this.colHighestPriceSelling.Visible = true;
-            this.colHighestPriceSelling.VisibleIndex = 12;
+            this.colHighestPriceSelling.VisibleIndex = 10;
             this.colHighestPriceSelling.Width = 94;
             // 
             // colNote
             // 
+            this.colNote.Caption = "ملاحظة";
             this.colNote.FieldName = "Note";
             this.colNote.MinWidth = 25;
             this.colNote.Name = "colNote";
+            this.colNote.OptionsColumn.ReadOnly = true;
             this.colNote.Visible = true;
-            this.colNote.VisibleIndex = 13;
+            this.colNote.VisibleIndex = 11;
             this.colNote.Width = 94;
             // 
             // groupBox1
@@ -360,6 +387,7 @@
             this.txt_HighestPriceSelling.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_HighestPriceSelling.Size = new System.Drawing.Size(159, 26);
             this.txt_HighestPriceSelling.TabIndex = 11;
+            this.txt_HighestPriceSelling.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_HighestPriceSelling_KeyPress);
             // 
             // txt_HighestPricePurchasing
             // 
@@ -369,6 +397,7 @@
             this.txt_HighestPricePurchasing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_HighestPricePurchasing.Size = new System.Drawing.Size(159, 26);
             this.txt_HighestPricePurchasing.TabIndex = 8;
+            this.txt_HighestPricePurchasing.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_HighestPricePurchasing_KeyPress);
             // 
             // label13
             // 
@@ -398,6 +427,7 @@
             this.txt_LowPriceSelling.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_LowPriceSelling.Size = new System.Drawing.Size(159, 26);
             this.txt_LowPriceSelling.TabIndex = 10;
+            this.txt_LowPriceSelling.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_LowPriceSelling_KeyPress);
             // 
             // label12
             // 
@@ -417,6 +447,7 @@
             this.txt_LowPricePurchasing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_LowPricePurchasing.Size = new System.Drawing.Size(159, 26);
             this.txt_LowPricePurchasing.TabIndex = 7;
+            this.txt_LowPricePurchasing.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_LowPricePurchasing_KeyPress);
             // 
             // txt_SellingPrice
             // 
@@ -426,6 +457,7 @@
             this.txt_SellingPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_SellingPrice.Size = new System.Drawing.Size(159, 26);
             this.txt_SellingPrice.TabIndex = 9;
+            this.txt_SellingPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_SellingPrice_KeyPress);
             // 
             // label11
             // 
@@ -446,6 +478,7 @@
             this.txt_PurchasePrice.Size = new System.Drawing.Size(159, 26);
             this.txt_PurchasePrice.TabIndex = 6;
             this.txt_PurchasePrice.TextChanged += new System.EventHandler(this.Txt_PurchasePrice_TextChanged);
+            this.txt_PurchasePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_PurchasePrice_KeyPress);
             // 
             // label9
             // 
@@ -465,6 +498,7 @@
             this.txt_HighestPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_HighestPrice.Size = new System.Drawing.Size(159, 26);
             this.txt_HighestPrice.TabIndex = 5;
+            this.txt_HighestPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_HighestPrice_KeyPress);
             // 
             // label8
             // 
@@ -484,6 +518,7 @@
             this.txt_LowPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_LowPrice.Size = new System.Drawing.Size(159, 26);
             this.txt_LowPrice.TabIndex = 4;
+            this.txt_LowPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_LowPrice_KeyPress);
             // 
             // label4
             // 
@@ -543,6 +578,7 @@
             this.txt_Note.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_Note.Size = new System.Drawing.Size(768, 25);
             this.txt_Note.TabIndex = 12;
+            this.txt_Note.Enter += new System.EventHandler(this.Txt_Note_Enter);
             // 
             // groupBox3
             // 
@@ -550,7 +586,6 @@
             this.groupBox3.Controls.Add(this.btn_delete);
             this.groupBox3.Controls.Add(this.btn_print);
             this.groupBox3.Controls.Add(this.btn_update);
-            this.groupBox3.Controls.Add(this.btn_search);
             this.groupBox3.Controls.Add(this.btn_add);
             this.groupBox3.Controls.Add(this.btn_exit);
             this.groupBox3.Location = new System.Drawing.Point(28, 338);
@@ -571,6 +606,7 @@
             this.btn_edit.Size = new System.Drawing.Size(125, 47);
             this.btn_edit.TabIndex = 24;
             this.btn_edit.Text = "تعديل";
+            this.btn_edit.Click += new System.EventHandler(this.Btn_edit_Click);
             // 
             // btn_delete
             // 
@@ -593,7 +629,7 @@
             this.btn_print.Appearance.Options.UseFont = true;
             this.btn_print.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print.ImageOptions.Image")));
             this.btn_print.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_print.Location = new System.Drawing.Point(472, 23);
+            this.btn_print.Location = new System.Drawing.Point(601, 23);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(125, 47);
             this.btn_print.TabIndex = 22;
@@ -612,19 +648,7 @@
             this.btn_update.Size = new System.Drawing.Size(125, 47);
             this.btn_update.TabIndex = 21;
             this.btn_update.Text = "تحديث";
-            // 
-            // btn_search
-            // 
-            this.btn_search.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_search.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Appearance.Options.UseFont = true;
-            this.btn_search.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_search.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_search.ImageOptions.SvgImage")));
-            this.btn_search.Location = new System.Drawing.Point(603, 23);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(125, 47);
-            this.btn_search.TabIndex = 20;
-            this.btn_search.Text = "بحث";
+            this.btn_update.Click += new System.EventHandler(this.Btn_update_Click);
             // 
             // btn_add
             // 
@@ -652,6 +676,7 @@
             this.btn_exit.Size = new System.Drawing.Size(125, 47);
             this.btn_exit.TabIndex = 18;
             this.btn_exit.Text = "خروج";
+            this.btn_exit.Click += new System.EventHandler(this.Btn_exit_Click);
             // 
             // panel2
             // 
@@ -716,6 +741,7 @@
             this.txt_Search.TabIndex = 69;
             this.txt_Search.Tag = "";
             this.txt_Search.TextChanged += new System.EventHandler(this.Txt_Search_TextChanged);
+            this.txt_Search.Enter += new System.EventHandler(this.Txt_Search_Enter);
             // 
             // dateTimePicker1
             // 
@@ -795,17 +821,13 @@
         public DevExpress.XtraEditors.SimpleButton btn_delete;
         public DevExpress.XtraEditors.SimpleButton btn_print;
         public DevExpress.XtraEditors.SimpleButton btn_update;
-        public DevExpress.XtraEditors.SimpleButton btn_search;
         public DevExpress.XtraEditors.SimpleButton btn_add;
         public DevExpress.XtraEditors.SimpleButton btn_exit;
         private System.Windows.Forms.BindingSource tbCurrenciesPricesBindingSource;
         internal System.Windows.Forms.PictureBox picture_Search;
         private System.Windows.Forms.TextBox txt_Search;
-        private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DBTAEMDataSet2 dBTAEMDataSet2;
-        private DevExpress.XtraGrid.Columns.GridColumn colCurrencyPriceNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colCurrencyNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colTtranferFrom;
         private DevExpress.XtraGrid.Columns.GridColumn colTtranferTo;
         private DevExpress.XtraGrid.Columns.GridColumn colTtranferPrice;
@@ -837,5 +859,6 @@
         internal currencie_com currencie_com2;
         internal System.Windows.Forms.PictureBox PictureBoxMessage;
         internal System.Windows.Forms.Label lbl_Message;
+        internal DevExpress.XtraGrid.GridControl gridControl1;
     }
 }

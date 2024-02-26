@@ -31,6 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoofingAccounts));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.tbRoofingAccountsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTAEMDataSet2 = new ExchangeAndMony.DBTAEMDataSet2();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colAccountNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAccountName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserNumbers = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colInsertDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLastEdit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,33 +58,24 @@
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
             this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
-            this.tbRoofingAccountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBTAEMDataSet2 = new ExchangeAndMony.DBTAEMDataSet2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbRoofingAccountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_RoofingAccountsTableAdapter = new ExchangeAndMony.DBTAEMDataSet2TableAdapters.Tb_RoofingAccountsTableAdapter();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tbRoofingAccountsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.colAccountNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAccountName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUserNumbers = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colInsertDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLastEdit = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tbGroupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_GroupsTableAdapter = new ExchangeAndMony.DBTAEMDataSet2TableAdapters.Tb_GroupsTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbRoofingAccountsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbRoofingAccountsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbRoofingAccountsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbRoofingAccountsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGroupsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,6 +89,114 @@
             this.panel1.Size = new System.Drawing.Size(1308, 771);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.tbGroupsBindingSource;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridControl1.Location = new System.Drawing.Point(0, 376);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1308, 395);
+            this.gridControl1.TabIndex = 10;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // tbRoofingAccountsBindingSource1
+            // 
+            this.tbRoofingAccountsBindingSource1.DataMember = "Tb_RoofingAccounts";
+            this.tbRoofingAccountsBindingSource1.DataSource = this.dBTAEMDataSet2;
+            // 
+            // dBTAEMDataSet2
+            // 
+            this.dBTAEMDataSet2.DataSetName = "DBTAEMDataSet2";
+            this.dBTAEMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colAccountNumber,
+            this.colAccountName,
+            this.colUserNumbers,
+            this.colUserName,
+            this.colAmount,
+            this.colInsertDate,
+            this.colLastEdit,
+            this.colNote});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // colAccountNumber
+            // 
+            this.colAccountNumber.FieldName = "AccountNumber";
+            this.colAccountNumber.MinWidth = 25;
+            this.colAccountNumber.Name = "colAccountNumber";
+            this.colAccountNumber.Visible = true;
+            this.colAccountNumber.VisibleIndex = 0;
+            this.colAccountNumber.Width = 94;
+            // 
+            // colAccountName
+            // 
+            this.colAccountName.FieldName = "AccountName";
+            this.colAccountName.MinWidth = 25;
+            this.colAccountName.Name = "colAccountName";
+            this.colAccountName.Visible = true;
+            this.colAccountName.VisibleIndex = 1;
+            this.colAccountName.Width = 94;
+            // 
+            // colUserNumbers
+            // 
+            this.colUserNumbers.FieldName = "UserNumbers";
+            this.colUserNumbers.MinWidth = 25;
+            this.colUserNumbers.Name = "colUserNumbers";
+            this.colUserNumbers.Visible = true;
+            this.colUserNumbers.VisibleIndex = 2;
+            this.colUserNumbers.Width = 94;
+            // 
+            // colUserName
+            // 
+            this.colUserName.FieldName = "UserName";
+            this.colUserName.MinWidth = 25;
+            this.colUserName.Name = "colUserName";
+            this.colUserName.Visible = true;
+            this.colUserName.VisibleIndex = 3;
+            this.colUserName.Width = 94;
+            // 
+            // colAmount
+            // 
+            this.colAmount.FieldName = "Amount";
+            this.colAmount.MinWidth = 25;
+            this.colAmount.Name = "colAmount";
+            this.colAmount.Visible = true;
+            this.colAmount.VisibleIndex = 4;
+            this.colAmount.Width = 94;
+            // 
+            // colInsertDate
+            // 
+            this.colInsertDate.FieldName = "InsertDate";
+            this.colInsertDate.MinWidth = 25;
+            this.colInsertDate.Name = "colInsertDate";
+            this.colInsertDate.Visible = true;
+            this.colInsertDate.VisibleIndex = 5;
+            this.colInsertDate.Width = 94;
+            // 
+            // colLastEdit
+            // 
+            this.colLastEdit.FieldName = "LastEdit";
+            this.colLastEdit.MinWidth = 25;
+            this.colLastEdit.Name = "colLastEdit";
+            this.colLastEdit.Visible = true;
+            this.colLastEdit.VisibleIndex = 6;
+            this.colLastEdit.Width = 94;
+            // 
+            // colNote
+            // 
+            this.colNote.FieldName = "Note";
+            this.colNote.MinWidth = 25;
+            this.colNote.Name = "colNote";
+            this.colNote.Visible = true;
+            this.colNote.VisibleIndex = 7;
+            this.colNote.Width = 94;
             // 
             // groupBox1
             // 
@@ -247,6 +358,7 @@
             this.btn_add.Size = new System.Drawing.Size(128, 47);
             this.btn_add.TabIndex = 19;
             this.btn_add.Text = "اضافة";
+            this.btn_add.Click += new System.EventHandler(this.Btn_add_Click_1);
             // 
             // btn_exit
             // 
@@ -260,16 +372,6 @@
             this.btn_exit.Size = new System.Drawing.Size(125, 47);
             this.btn_exit.TabIndex = 18;
             this.btn_exit.Text = "خروج";
-            // 
-            // tbRoofingAccountsBindingSource
-            // 
-            this.tbRoofingAccountsBindingSource.DataMember = "Tb_RoofingAccounts";
-            this.tbRoofingAccountsBindingSource.DataSource = this.dBTAEMDataSet2;
-            // 
-            // dBTAEMDataSet2
-            // 
-            this.dBTAEMDataSet2.DataSetName = "DBTAEMDataSet2";
-            this.dBTAEMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel2
             // 
@@ -313,112 +415,23 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "تسقيف الحسابات";
             // 
+            // tbRoofingAccountsBindingSource
+            // 
+            this.tbRoofingAccountsBindingSource.DataMember = "Tb_RoofingAccounts";
+            this.tbRoofingAccountsBindingSource.DataSource = this.dBTAEMDataSet2;
+            // 
             // tb_RoofingAccountsTableAdapter
             // 
             this.tb_RoofingAccountsTableAdapter.ClearBeforeFill = true;
             // 
-            // gridControl1
+            // tbGroupsBindingSource
             // 
-            this.gridControl1.DataSource = this.tbRoofingAccountsBindingSource1;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl1.Location = new System.Drawing.Point(0, 376);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1308, 395);
-            this.gridControl1.TabIndex = 10;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.tbGroupsBindingSource.DataMember = "Tb_Groups";
+            this.tbGroupsBindingSource.DataSource = this.dBTAEMDataSet2;
             // 
-            // gridView1
+            // tb_GroupsTableAdapter
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colAccountNumber,
-            this.colAccountName,
-            this.colUserNumbers,
-            this.colUserName,
-            this.colAmount,
-            this.colInsertDate,
-            this.colLastEdit,
-            this.colNote});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // tbRoofingAccountsBindingSource1
-            // 
-            this.tbRoofingAccountsBindingSource1.DataMember = "Tb_RoofingAccounts";
-            this.tbRoofingAccountsBindingSource1.DataSource = this.dBTAEMDataSet2;
-            // 
-            // colAccountNumber
-            // 
-            this.colAccountNumber.FieldName = "AccountNumber";
-            this.colAccountNumber.MinWidth = 25;
-            this.colAccountNumber.Name = "colAccountNumber";
-            this.colAccountNumber.Visible = true;
-            this.colAccountNumber.VisibleIndex = 0;
-            this.colAccountNumber.Width = 94;
-            // 
-            // colAccountName
-            // 
-            this.colAccountName.FieldName = "AccountName";
-            this.colAccountName.MinWidth = 25;
-            this.colAccountName.Name = "colAccountName";
-            this.colAccountName.Visible = true;
-            this.colAccountName.VisibleIndex = 1;
-            this.colAccountName.Width = 94;
-            // 
-            // colUserNumbers
-            // 
-            this.colUserNumbers.FieldName = "UserNumbers";
-            this.colUserNumbers.MinWidth = 25;
-            this.colUserNumbers.Name = "colUserNumbers";
-            this.colUserNumbers.Visible = true;
-            this.colUserNumbers.VisibleIndex = 2;
-            this.colUserNumbers.Width = 94;
-            // 
-            // colUserName
-            // 
-            this.colUserName.FieldName = "UserName";
-            this.colUserName.MinWidth = 25;
-            this.colUserName.Name = "colUserName";
-            this.colUserName.Visible = true;
-            this.colUserName.VisibleIndex = 3;
-            this.colUserName.Width = 94;
-            // 
-            // colAmount
-            // 
-            this.colAmount.FieldName = "Amount";
-            this.colAmount.MinWidth = 25;
-            this.colAmount.Name = "colAmount";
-            this.colAmount.Visible = true;
-            this.colAmount.VisibleIndex = 4;
-            this.colAmount.Width = 94;
-            // 
-            // colInsertDate
-            // 
-            this.colInsertDate.FieldName = "InsertDate";
-            this.colInsertDate.MinWidth = 25;
-            this.colInsertDate.Name = "colInsertDate";
-            this.colInsertDate.Visible = true;
-            this.colInsertDate.VisibleIndex = 5;
-            this.colInsertDate.Width = 94;
-            // 
-            // colLastEdit
-            // 
-            this.colLastEdit.FieldName = "LastEdit";
-            this.colLastEdit.MinWidth = 25;
-            this.colLastEdit.Name = "colLastEdit";
-            this.colLastEdit.Visible = true;
-            this.colLastEdit.VisibleIndex = 6;
-            this.colLastEdit.Width = 94;
-            // 
-            // colNote
-            // 
-            this.colNote.FieldName = "Note";
-            this.colNote.MinWidth = 25;
-            this.colNote.Name = "colNote";
-            this.colNote.Visible = true;
-            this.colNote.VisibleIndex = 7;
-            this.colNote.Width = 94;
+            this.tb_GroupsTableAdapter.ClearBeforeFill = true;
             // 
             // RoofingAccounts
             // 
@@ -431,16 +444,17 @@
             this.Text = "/*";
             this.Load += new System.EventHandler(this.RoofingAccounts_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbRoofingAccountsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbRoofingAccountsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbRoofingAccountsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbRoofingAccountsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGroupsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +495,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colInsertDate;
         private DevExpress.XtraGrid.Columns.GridColumn colLastEdit;
         private DevExpress.XtraGrid.Columns.GridColumn colNote;
+        private System.Windows.Forms.BindingSource tbGroupsBindingSource;
+        private DBTAEMDataSet2TableAdapters.Tb_GroupsTableAdapter tb_GroupsTableAdapter;
     }
 }

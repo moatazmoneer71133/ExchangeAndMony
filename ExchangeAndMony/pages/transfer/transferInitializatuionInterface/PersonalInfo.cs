@@ -47,5 +47,15 @@ namespace ExchangeAndMony.pages.transfer.transferInitializatuionInterface
         {
 
         }
+
+        private void GridControl_Divert_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+
+        }
     }
 }

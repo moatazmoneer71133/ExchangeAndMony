@@ -332,7 +332,7 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         private void AccountsGuide_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dBTAEMDataSet1.Tb_Currencise' table. You can move, or remove it, as needed.
-            this.accountTableAdapter.Fill(this.dBTAEMDataSet1.Account);
+           // this.accountTableAdapter.Fill(this.dBTAEMDataSet1.Account);
             this.AccID.Text = xx.GetNewID_From_AccountTbl().ToString();
             xx.FillCombFromTable(this.com_Acc_Parent);
             xx.FillTables(tbl_accounts);

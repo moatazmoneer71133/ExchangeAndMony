@@ -53,8 +53,15 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         private void RoofingAccounts_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dBTAEMDataSet2.Tb_Groups' table. You can move, or remove it, as needed.
+            this.tb_GroupsTableAdapter.Fill(this.dBTAEMDataSet2.Tb_Groups);
             // TODO: This line of code loads data into the 'dBTAEMDataSet2.Tb_RoofingAccounts' table. You can move, or remove it, as needed.
             this.tb_RoofingAccountsTableAdapter.Fill(this.dBTAEMDataSet2.Tb_RoofingAccounts);
+
+        }
+
+        private void Btn_add_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

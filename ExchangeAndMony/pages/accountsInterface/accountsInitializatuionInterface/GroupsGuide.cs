@@ -124,7 +124,7 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
             // TODO: This line of code loads data into the 'dBTAEMDataSet2.Tb_Groups' table. You can move, or remove it, as needed.
             this.tb_GroupsTableAdapter1.Fill(this.dBTAEMDataSet2.Tb_Groups);
             // TODO: This line of code loads data into the 'dBTAEMDataSet1.Tb_Groups' table. You can move, or remove it, as needed.
-            this.tb_GroupsTableAdapter.Fill(this.dBTAEMDataSet1.Tb_Groups);
+            //this.tb_GroupsTableAdapter.Fill(this.dBTAEMDataSet1.Tb_Groups);
             picture_Search.Image = Properties.Resources.Search_16x16;
         }
 

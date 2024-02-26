@@ -96,11 +96,6 @@ namespace ExchangeAndMony.BL.accountsClasses.accountsInitializatuionClasses
                 delete_Group = new Tb_Groups();
                 //int id = 
                 delete_Group.GroupNumber = Convert.ToInt32(groups.txt_groupNumber.Text);
-                //edit_Group.GroupName = groups.txt_groupName.Text;
-                //edit_Group.Note = groups.txt_groupDescription.Text;
-                //edit_Group.UserName = "معتز منير";
-                //edit_Group.UserNumbers = 1;
-                //edit_Group.TheDate = DateTime.Now.Date;
                 db.Entry(delete_Group).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();
                 groups.txt_groupName.Text = groups.txt_groupDescription.Text = "";
