@@ -101,6 +101,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBTAEMDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBTAEMDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBTAEMDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,115 +114,109 @@
     </Compile>
     <Compile Include="moataz\Class1.cs" />
     <Compile Include="model\Account.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\Currencise.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+    <Compile Include="model\Currencies.cs">
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Currencise1.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\Currency.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\DBTAEM_Model.Context.cs">
+    <Compile Include="model\DBTAEMEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBTAEM_Model.Context.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\DBTAEM_Model.cs">
+    <Compile Include="model\DBTAEMEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\DBTAEM_Model.Designer.cs">
+    <Compile Include="model\DBTAEMEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBTAEM_Model.edmx</DependentUpon>
+      <DependentUpon>DBTAEMEntities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="model\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\sp_helpdiagrams_Result.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\sysdiagram.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+    <Compile Include="model\sysdiagrams.cs">
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_AccountStop.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_Blacklist.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_Box.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_BuyingSelling.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_ConcelTransfer.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_ConfirmedTransfer.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_CurrenciesPrices.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Tb_Currencise.cs">
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_CustomerExchangeReceiptBonds.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_DailyRestictionsDitales.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_DailyrestictionsHead.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_DeportationTransfar.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_DoubleRestictions.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_Employee.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_Entities.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_Groups.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_IncomingTotals.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_InventoryBox.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_MatchingAccounts.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_Outgoing.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_PersonalInformation.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_RoofingAccounts.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_RwcipientCard.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_SimpleRegistBond.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_Transfar.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tb_Users.cs">
-      <DependentUpon>DBTAEM_Model.tt</DependentUpon>
+      <DependentUpon>DBTAEMEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="pages\accountsInterface\accountsInitializatuionInterface\AccountsGuide.cs">
       <SubType>Form</SubType>
@@ -528,10 +527,6 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
-    <EntityDeploy Include="model\DBTAEM_Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBTAEM_Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="DBTAEMDataSet.xsc">
       <DependentUpon>DBTAEMDataSet.xsd</DependentUpon>
     </None>
@@ -554,8 +549,23 @@
     <None Include="DBTAEMDataSet1.xss">
       <DependentUpon>DBTAEMDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="model\DBTAEM_Model.edmx.diagram">
-      <DependentUpon>DBTAEM_Model.edmx</DependentUpon>
+    <EntityDeploy Include="model\DBTAEMEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBTAEMEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBTAEMDataSet2.xsc">
+      <DependentUpon>DBTAEMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBTAEMDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBTAEMDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBTAEMDataSet2.xss">
+      <DependentUpon>DBTAEMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="model\DBTAEMEntities.edmx.diagram">
+      <DependentUpon>DBTAEMEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -595,12 +605,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BL\BL.csproj">
-      <Project>{dcea364d-cd30-4544-a8b6-6ba878a42aae}</Project>
-      <Name>BL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\OK.png" />
   </ItemGroup>
   <ItemGroup>
@@ -630,19 +634,21 @@
   <ItemGroup>
     <None Include="Resources\Search_16x16.png" />
     <None Include="Resources\4.jpg" />
-    <Content Include="model\DBTAEM_Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBTAEM_Model.edmx</DependentUpon>
-      <LastGenOutput>DBTAEM_Model.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="model\DBTAEM_Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBTAEM_Model.edmx</DependentUpon>
-      <LastGenOutput>DBTAEM_Model.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="model\DBTAEMEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBTAEMEntities.edmx</DependentUpon>
+      <LastGenOutput>DBTAEMEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="model\DBTAEMEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBTAEMEntities.edmx</DependentUpon>
+      <LastGenOutput>DBTAEMEntities.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

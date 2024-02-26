@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface;
 using ExchangeAndMony.pages.accountsInterface.accountsprocessInterface;
-using ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface;
+using ExchangeAndMony.pages.transfer.transferInitializatuionInterface;
 using ExchangeAndMony.pages.transfer.transferprocessInterface;
 using ExchangeAndMony.pages.sell_and_buy;
 using ExchangeAndMony.pages.file;

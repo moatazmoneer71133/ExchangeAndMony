@@ -38,7 +38,7 @@ namespace ExchangeAndMony.model
         public Nullable<System.DateTime> Entry_Date { get; set; }
         public byte[] AddUser { get; set; }
     
-        public virtual Currency Currency { get; set; }
+        public virtual Currencies Currencies { get; set; }
         public virtual Tb_DailyrestictionsHead Tb_DailyrestictionsHead { get; set; }
         public virtual Tb_Employee Tb_Employee { get; set; }
         public virtual Tb_IncomingTotals Tb_IncomingTotals { get; set; }

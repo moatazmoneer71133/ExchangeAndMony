@@ -21,7 +21,7 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
         public void myselect()
         {
 
-            da.SelectCommand = new SqlCommand("select CurrencyName,ArabicSymbol,EnglishSymbol,Date,Note from Currencise", data.conection.con);
+            da.SelectCommand = new SqlCommand("select CurrencyName,ArabicSymbol,EnglishSymbol,Date,Note from Tb_Currencise", data.conection.con);
             dt.Clear();
             da.Fill(dt);
         }
@@ -34,7 +34,7 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
                 //string CurrencyNumber;
                 //a = Interaction.InputBox("ادخل الرقم");
                 //CurrencyNumber = DGV_currency.CurrentRow.Cells[1].Value.ToString();
-                da.DeleteCommand = new SqlCommand("delete from Currencise where CurrencyNumber=" + form.txt_numCurrency.Text, data.conection.con);
+                da.DeleteCommand = new SqlCommand("delete from Tb_Currencise where CurrencyNumber=" + form.txt_numCurrency.Text, data.conection.con);
                 da.DeleteCommand.ExecuteNonQuery();
                 // myselect();
                 data.conection.con.Close();
@@ -89,7 +89,7 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
                 //if (dv.Count == 0)
                 //{
                 conection.con.Open();
-                da.InsertCommand = new SqlCommand("insert into Currencise(CurrencyName,ArabicSymbol,EnglishSymbol,Date,Note) values('" + form.txt_CurrencyName.Text + "','" + form.txt_ArabicSymbol.Text + "','" + form.txt_EnglishSymbol.Text + "','2024/12/5','" + form.txt_Note.Text + "')", conection.con);
+                da.InsertCommand = new SqlCommand("insert into Tb_Currencise(CurrencyName,ArabicSymbol,EnglishSymbol,Date,Note) values('" + form.txt_CurrencyName.Text + "','" + form.txt_ArabicSymbol.Text + "','" + form.txt_EnglishSymbol.Text + "','2024/12/5','" + form.txt_Note.Text + "')", conection.con);
                 da.InsertCommand.ExecuteNonQuery();
                 myselect();
                 conection.con.Close();
@@ -127,7 +127,7 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
                 //{
                 //into Currencise1(
                 conection.con.Open();
-                da.UpdateCommand = new SqlCommand("update Currencise set CurrencyName='" + form.txt_CurrencyName.Text  +"',ArabicSymbol='" + form.txt_ArabicSymbol.Text + "',EnglishSymbol='" + form.txt_EnglishSymbol.Text + "',Date='"+ DateTime.Now.Date.ToString("yyyy-MM-dd")+"',Note='" + form.txt_Note.Text + "' where CurrencyNumbers='" + form.txt_numCurrency.Text+"'", conection.con);
+                da.UpdateCommand = new SqlCommand("update Tb_Currencise set CurrencyName='" + form.txt_CurrencyName.Text  +"',ArabicSymbol='" + form.txt_ArabicSymbol.Text + "',EnglishSymbol='" + form.txt_EnglishSymbol.Text + "',Date='"+ DateTime.Now.Date.ToString("yyyy-MM-dd")+"',Note='" + form.txt_Note.Text + "' where CurrencyNumbers='" + form.txt_numCurrency.Text+"'", conection.con);
                 da.UpdateCommand.ExecuteNonQuery();
                 myselect();
                 conection.con.Close();

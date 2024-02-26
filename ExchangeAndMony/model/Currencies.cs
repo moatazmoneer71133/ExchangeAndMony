@@ -12,17 +12,17 @@ namespace ExchangeAndMony.model
     using System;
     using System.Collections.Generic;
     
-    public partial class Currency
+    public partial class Currencies
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Currency()
+        public Currencies()
         {
-            this.Accounts = new HashSet<Account>();
+            this.Account = new HashSet<Account>();
         }
     
         public int CommntNumber { get; set; }
         public Nullable<int> UserNumbers { get; set; }
-        public string Currency1 { get; set; }
+        public string Currency { get; set; }
         public string Source { get; set; }
         public Nullable<int> Amount { get; set; }
         public string CommntCurrency { get; set; }
@@ -31,7 +31,7 @@ namespace ExchangeAndMony.model
         public string ConstNote { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account> Accounts { get; set; }
+        public virtual ICollection<Account> Account { get; set; }
         public virtual Tb_Users Tb_Users { get; set; }
     }
 }

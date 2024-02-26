@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeGuide));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -60,11 +61,28 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.gridControl_Divert = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEmpNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmpName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserNumbers = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAccountNumberEmp = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAccountEmp = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFunctions = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalariesAccountName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmpStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRegistNote = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRegistDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbEmployeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTAEMDataSet2 = new ExchangeAndMony.DBTAEMDataSet2();
+            this.tbEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dBTAEMDataSet11BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_EmployeeTableAdapter1 = new ExchangeAndMony.DBTAEMDataSet2TableAdapters.Tb_EmployeeTableAdapter();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -72,6 +90,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_Divert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEmployeeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEmployeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet11BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -421,6 +443,7 @@
             // 
             // gridControl_Divert
             // 
+            this.gridControl_Divert.DataSource = typeof(ExchangeAndMony.model.Tb_Employee);
             this.gridControl_Divert.Location = new System.Drawing.Point(3, 407);
             this.gridControl_Divert.MainView = this.gridView1;
             this.gridControl_Divert.Name = "gridControl_Divert";
@@ -431,8 +454,129 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmpNumber,
+            this.colEmpName,
+            this.colUserNumbers,
+            this.colAccountNumberEmp,
+            this.colAccountEmp,
+            this.colFunctions,
+            this.colSalary,
+            this.colSalariesAccountName,
+            this.colEmpStatus,
+            this.colRegistNote,
+            this.colRegistDate,
+            this.colNote});
             this.gridView1.GridControl = this.gridControl_Divert;
             this.gridView1.Name = "gridView1";
+            // 
+            // colEmpNumber
+            // 
+            this.colEmpNumber.FieldName = "EmpNumber";
+            this.colEmpNumber.MinWidth = 25;
+            this.colEmpNumber.Name = "colEmpNumber";
+            this.colEmpNumber.Visible = true;
+            this.colEmpNumber.VisibleIndex = 0;
+            this.colEmpNumber.Width = 94;
+            // 
+            // colEmpName
+            // 
+            this.colEmpName.FieldName = "EmpName";
+            this.colEmpName.MinWidth = 25;
+            this.colEmpName.Name = "colEmpName";
+            this.colEmpName.Visible = true;
+            this.colEmpName.VisibleIndex = 1;
+            this.colEmpName.Width = 94;
+            // 
+            // colUserNumbers
+            // 
+            this.colUserNumbers.FieldName = "UserNumbers";
+            this.colUserNumbers.MinWidth = 25;
+            this.colUserNumbers.Name = "colUserNumbers";
+            this.colUserNumbers.Visible = true;
+            this.colUserNumbers.VisibleIndex = 2;
+            this.colUserNumbers.Width = 94;
+            // 
+            // colAccountNumberEmp
+            // 
+            this.colAccountNumberEmp.FieldName = "AccountNumberEmp";
+            this.colAccountNumberEmp.MinWidth = 25;
+            this.colAccountNumberEmp.Name = "colAccountNumberEmp";
+            this.colAccountNumberEmp.Visible = true;
+            this.colAccountNumberEmp.VisibleIndex = 3;
+            this.colAccountNumberEmp.Width = 94;
+            // 
+            // colAccountEmp
+            // 
+            this.colAccountEmp.FieldName = "AccountEmp";
+            this.colAccountEmp.MinWidth = 25;
+            this.colAccountEmp.Name = "colAccountEmp";
+            this.colAccountEmp.Visible = true;
+            this.colAccountEmp.VisibleIndex = 4;
+            this.colAccountEmp.Width = 94;
+            // 
+            // colFunctions
+            // 
+            this.colFunctions.FieldName = "Functions";
+            this.colFunctions.MinWidth = 25;
+            this.colFunctions.Name = "colFunctions";
+            this.colFunctions.Visible = true;
+            this.colFunctions.VisibleIndex = 5;
+            this.colFunctions.Width = 94;
+            // 
+            // colSalary
+            // 
+            this.colSalary.FieldName = "Salary";
+            this.colSalary.MinWidth = 25;
+            this.colSalary.Name = "colSalary";
+            this.colSalary.Visible = true;
+            this.colSalary.VisibleIndex = 6;
+            this.colSalary.Width = 94;
+            // 
+            // colSalariesAccountName
+            // 
+            this.colSalariesAccountName.FieldName = "SalariesAccountName";
+            this.colSalariesAccountName.MinWidth = 25;
+            this.colSalariesAccountName.Name = "colSalariesAccountName";
+            this.colSalariesAccountName.Visible = true;
+            this.colSalariesAccountName.VisibleIndex = 7;
+            this.colSalariesAccountName.Width = 94;
+            // 
+            // colEmpStatus
+            // 
+            this.colEmpStatus.FieldName = "EmpStatus";
+            this.colEmpStatus.MinWidth = 25;
+            this.colEmpStatus.Name = "colEmpStatus";
+            this.colEmpStatus.Visible = true;
+            this.colEmpStatus.VisibleIndex = 8;
+            this.colEmpStatus.Width = 94;
+            // 
+            // colRegistNote
+            // 
+            this.colRegistNote.FieldName = "RegistNote";
+            this.colRegistNote.MinWidth = 25;
+            this.colRegistNote.Name = "colRegistNote";
+            this.colRegistNote.Visible = true;
+            this.colRegistNote.VisibleIndex = 9;
+            this.colRegistNote.Width = 94;
+            // 
+            // colRegistDate
+            // 
+            this.colRegistDate.FieldName = "RegistDate";
+            this.colRegistDate.MinWidth = 25;
+            this.colRegistDate.Name = "colRegistDate";
+            this.colRegistDate.Visible = true;
+            this.colRegistDate.VisibleIndex = 10;
+            this.colRegistDate.Width = 94;
+            // 
+            // colNote
+            // 
+            this.colNote.FieldName = "Note";
+            this.colNote.MinWidth = 25;
+            this.colNote.Name = "colNote";
+            this.colNote.Visible = true;
+            this.colNote.VisibleIndex = 11;
+            this.colNote.Width = 94;
             // 
             // panel2
             // 
@@ -476,6 +620,24 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "دليل الموظفين";
             // 
+            // tbEmployeeBindingSource1
+            // 
+            this.tbEmployeeBindingSource1.DataMember = "Tb_Employee";
+            this.tbEmployeeBindingSource1.DataSource = this.dBTAEMDataSet2;
+            // 
+            // dBTAEMDataSet2
+            // 
+            this.dBTAEMDataSet2.DataSetName = "DBTAEMDataSet2";
+            this.dBTAEMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbEmployeeBindingSource
+            // 
+            this.tbEmployeeBindingSource.DataMember = "Tb_Employee";
+            // 
+            // tb_EmployeeTableAdapter1
+            // 
+            this.tb_EmployeeTableAdapter1.ClearBeforeFill = true;
+            // 
             // EmployeeGuide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -485,6 +647,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmployeeGuide";
             this.Text = "/*";
+            this.Load += new System.EventHandler(this.EmployeeGuide_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -495,6 +658,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEmployeeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEmployeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet11BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -537,5 +704,25 @@
         public DevExpress.XtraEditors.SimpleButton btn_add;
         public DevExpress.XtraEditors.SimpleButton btn_exit;
         private System.Windows.Forms.Label label4;
+        private DBTAEMDataSet1 dBTAEMDataSet1;
+        private System.Windows.Forms.BindingSource tbEmployeeBindingSource;
+        private DBTAEMDataSet1TableAdapters.Tb_EmployeeTableAdapter tb_EmployeeTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmpNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmpName;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserNumbers;
+        private DevExpress.XtraGrid.Columns.GridColumn colAccountNumberEmp;
+        private DevExpress.XtraGrid.Columns.GridColumn colAccountEmp;
+        private DevExpress.XtraGrid.Columns.GridColumn colFunctions;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalary;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalariesAccountName;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmpStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colRegistNote;
+        private DevExpress.XtraGrid.Columns.GridColumn colRegistDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colNote;
+        private System.Windows.Forms.BindingSource dBTAEMDataSet11BindingSource;
+        private DBTAEMDataSet1 dBTAEMDataSet11;
+        private DBTAEMDataSet2 dBTAEMDataSet2;
+        private System.Windows.Forms.BindingSource tbEmployeeBindingSource1;
+        private DBTAEMDataSet2TableAdapters.Tb_EmployeeTableAdapter tb_EmployeeTableAdapter1;
     }
 }

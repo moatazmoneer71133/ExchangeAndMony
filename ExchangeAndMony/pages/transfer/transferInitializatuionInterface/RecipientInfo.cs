@@ -12,7 +12,7 @@ using ExchangeAndMony.pages;
 
 
 
-namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface
+namespace ExchangeAndMony.pages.transfer.transferInitializatuionInterface
 {
     public partial class RecipientInfo : DevExpress.XtraEditors.XtraForm
     {
@@ -40,6 +40,11 @@ namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterfa
             ImageCard imageCard = new ImageCard();
             imageCard.Text = "بطاقة مستلم";
             imageCard.Show();
+        }
+
+        private void Btn_add_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

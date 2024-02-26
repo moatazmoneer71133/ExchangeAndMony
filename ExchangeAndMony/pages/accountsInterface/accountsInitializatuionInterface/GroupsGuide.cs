@@ -12,7 +12,7 @@ using ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface;
 using ExchangeAndMony.BL.accountsClasses.accountsInitializatuionClasses;
 using ExchangeAndMony.model;
 using ExchangeAndMony.BL;
-using ExchangeAndMony.pages.accountsInterface.Classes;
+//using ExchangeAndMony.pages.accountsInterface.Classes;
 using System.Data.SqlClient;
 
 namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface
@@ -24,8 +24,9 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         DBTAEMEntities db;
         Tb_Groups add_Group;
         Class_GroupsGuide class_GroupsGuide = new Class_GroupsGuide();
+        //Languages lang = new Languages();
         Languages lang = new Languages();
-        DataTable stor = new DataTable();
+        //DataTable stor = new DataTable();
 
         public GroupsGuide()
         {
@@ -70,10 +71,10 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         private void DataGridView_groups_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            id_group = Convert.ToInt32(dataGridView_groups.CurrentRow.Cells[0].Value);
-            txt_groupName.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[1].Value);
-            txt_groupDescription.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[4].Value);
-            txt_groupNumber.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[0].Value);
+            //id_group = Convert.ToInt32(dataGridView_groups.CurrentRow.Cells[0].Value);
+            //txt_groupName.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[1].Value);
+            //txt_groupDescription.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[4].Value);
+            //txt_groupNumber.Text = Convert.ToString(dataGridView_groups.CurrentRow.Cells[0].Value);
         }
 
         private void Txt_groupName_Enter(object sender, EventArgs e)
@@ -120,6 +121,10 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
         private void GroupsGuide_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dBTAEMDataSet2.Tb_Groups' table. You can move, or remove it, as needed.
+            this.tb_GroupsTableAdapter1.Fill(this.dBTAEMDataSet2.Tb_Groups);
+            // TODO: This line of code loads data into the 'dBTAEMDataSet1.Tb_Groups' table. You can move, or remove it, as needed.
+            this.tb_GroupsTableAdapter.Fill(this.dBTAEMDataSet1.Tb_Groups);
             picture_Search.Image = Properties.Resources.Search_16x16;
         }
 
@@ -131,6 +136,11 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         }
 
         private void Picture_Search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_groupName_TextChanged(object sender, EventArgs e)
         {
 
         }

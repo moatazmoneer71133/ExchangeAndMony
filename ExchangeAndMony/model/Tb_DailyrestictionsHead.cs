@@ -17,7 +17,7 @@ namespace ExchangeAndMony.model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tb_DailyrestictionsHead()
         {
-            this.Accounts = new HashSet<Account>();
+            this.Account = new HashSet<Account>();
             this.Tb_DailyRestictionsDitales = new HashSet<Tb_DailyRestictionsDitales>();
         }
     
@@ -34,7 +34,7 @@ namespace ExchangeAndMony.model
         public string Statements { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account> Accounts { get; set; }
+        public virtual ICollection<Account> Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tb_DailyRestictionsDitales> Tb_DailyRestictionsDitales { get; set; }
     }

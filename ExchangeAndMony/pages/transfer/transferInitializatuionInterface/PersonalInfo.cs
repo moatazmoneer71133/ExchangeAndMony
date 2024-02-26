@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 using ExchangeAndMony.pages;
 
 
-namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface
+namespace ExchangeAndMony.pages.transfer.transferInitializatuionInterface
 {
 
     
@@ -41,6 +41,11 @@ namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterfa
             ImageCard imageCard = new ImageCard();
             imageCard.Text = "معلومات شخصية";
             imageCard.Show();
+        }
+
+        private void Btn_add_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

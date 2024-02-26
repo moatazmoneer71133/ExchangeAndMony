@@ -26,5 +26,10 @@ namespace ExchangeAndMony.pages.transfer.transferprocessInterface
         {
 
         }
+
+        private void Btn_exit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

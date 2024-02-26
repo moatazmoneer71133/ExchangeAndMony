@@ -58,15 +58,7 @@
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
             this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl_Divert = new DevExpress.XtraGrid.GridControl();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBTAEMDataSet1 = new ExchangeAndMony.DBTAEMDataSet1();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colAcc_Aname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTheDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEditDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNumOFEditAcc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PictureBoxMessage = new System.Windows.Forms.PictureBox();
             this.lbl_Message = new System.Windows.Forms.Label();
@@ -76,14 +68,10 @@
             this.timer_message_seccess = new System.Windows.Forms.Timer(this.components);
             this.dBTAEMDataSet = new ExchangeAndMony.DBTAEMDataSet();
             this.dBTAEMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountTableAdapter = new ExchangeAndMony.DBTAEMDataSet1TableAdapters.AccountTableAdapter();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Divert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMessage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet)).BeginInit();
@@ -94,7 +82,6 @@
             // 
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.gridControl_Divert);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(6, 4);
             this.panel1.Name = "panel1";
@@ -431,89 +418,9 @@
             this.btn_exit.Text = "خروج";
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // gridControl_Divert
-            // 
-            this.gridControl_Divert.DataSource = this.accountBindingSource;
-            this.gridControl_Divert.Location = new System.Drawing.Point(3, 524);
-            this.gridControl_Divert.MainView = this.gridView1;
-            this.gridControl_Divert.Name = "gridControl_Divert";
-            this.gridControl_Divert.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl_Divert.Size = new System.Drawing.Size(1302, 237);
-            this.gridControl_Divert.TabIndex = 5;
-            this.gridControl_Divert.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
             // accountBindingSource
             // 
             this.accountBindingSource.DataMember = "Account";
-            this.accountBindingSource.DataSource = this.dBTAEMDataSet1;
-            // 
-            // dBTAEMDataSet1
-            // 
-            this.dBTAEMDataSet1.DataSetName = "DBTAEMDataSet1";
-            this.dBTAEMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colAcc_Aname,
-            this.colUserName,
-            this.colTheDate,
-            this.colEditDate,
-            this.colNumOFEditAcc});
-            this.gridView1.GridControl = this.gridControl_Divert;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // colAcc_Aname
-            // 
-            this.colAcc_Aname.Caption = "اسم الحساب";
-            this.colAcc_Aname.FieldName = "Acc_Aname";
-            this.colAcc_Aname.MinWidth = 25;
-            this.colAcc_Aname.Name = "colAcc_Aname";
-            this.colAcc_Aname.Visible = true;
-            this.colAcc_Aname.VisibleIndex = 0;
-            this.colAcc_Aname.Width = 94;
-            // 
-            // colUserName
-            // 
-            this.colUserName.Caption = "اسم المستخدم";
-            this.colUserName.FieldName = "UserName";
-            this.colUserName.MinWidth = 25;
-            this.colUserName.Name = "colUserName";
-            this.colUserName.Visible = true;
-            this.colUserName.VisibleIndex = 1;
-            this.colUserName.Width = 94;
-            // 
-            // colTheDate
-            // 
-            this.colTheDate.Caption = "التاريخ";
-            this.colTheDate.FieldName = "TheDate";
-            this.colTheDate.MinWidth = 25;
-            this.colTheDate.Name = "colTheDate";
-            this.colTheDate.Visible = true;
-            this.colTheDate.VisibleIndex = 2;
-            this.colTheDate.Width = 94;
-            // 
-            // colEditDate
-            // 
-            this.colEditDate.Caption = "أخر تعديل";
-            this.colEditDate.FieldName = "EditDate";
-            this.colEditDate.MinWidth = 25;
-            this.colEditDate.Name = "colEditDate";
-            this.colEditDate.Visible = true;
-            this.colEditDate.VisibleIndex = 3;
-            this.colEditDate.Width = 94;
-            // 
-            // colNumOFEditAcc
-            // 
-            this.colNumOFEditAcc.Caption = "عدد مرات التعديل";
-            this.colNumOFEditAcc.FieldName = "NumOFEditAcc";
-            this.colNumOFEditAcc.MinWidth = 25;
-            this.colNumOFEditAcc.Name = "colNumOFEditAcc";
-            this.colNumOFEditAcc.Visible = true;
-            this.colNumOFEditAcc.VisibleIndex = 4;
-            this.colNumOFEditAcc.Width = 94;
             // 
             // panel2
             // 
@@ -591,10 +498,6 @@
             this.dBTAEMDataSetBindingSource.DataSource = this.dBTAEMDataSet;
             this.dBTAEMDataSetBindingSource.Position = 0;
             // 
-            // accountTableAdapter
-            // 
-            this.accountTableAdapter.ClearBeforeFill = true;
-            // 
             // AccountsGuide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -609,10 +512,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Divert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMessage)).EndInit();
@@ -627,8 +527,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker date_Acc;
         private System.Windows.Forms.Label label2;
-        public DevExpress.XtraGrid.GridControl gridControl_Divert;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.GroupBox groupBox3;
         public DevExpress.XtraEditors.SimpleButton btn_exit;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -665,10 +563,5 @@
         private DBTAEMDataSet1 dBTAEMDataSet1;
         private System.Windows.Forms.BindingSource accountBindingSource;
         private DBTAEMDataSet1TableAdapters.AccountTableAdapter accountTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colAcc_Aname;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserName;
-        private DevExpress.XtraGrid.Columns.GridColumn colTheDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colEditDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colNumOFEditAcc;
     }
 }

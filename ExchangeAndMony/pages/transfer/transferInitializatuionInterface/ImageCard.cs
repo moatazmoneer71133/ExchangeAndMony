@@ -9,13 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface
+namespace ExchangeAndMony.pages.transfer.transferInitializatuionInterface
 {
     public partial class ImageCard : DevExpress.XtraEditors.XtraForm
     {
         public ImageCard()
         {
             InitializeComponent();
+        }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

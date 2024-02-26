@@ -274,7 +274,7 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
         }
 
 
-        // Show Account details
+        // Show Tb_Currencise details
         public void Show_Account_Details(AccountsGuide xx)
         {
             try
@@ -325,7 +325,7 @@ namespace ExchangeAndMony.pages.accountsInterface.Classes
 
 
 
-        // Update Account data
+        // Update Tb_Currencise data
         public void Edit_In_AccountsTbl(AccountsGuide xx)
         {
             try

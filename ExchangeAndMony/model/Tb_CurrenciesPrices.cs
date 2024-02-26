@@ -18,17 +18,17 @@ namespace ExchangeAndMony.model
         public Nullable<int> CurrencyNumber { get; set; }
         public string TtranferFrom { get; set; }
         public string TtranferTo { get; set; }
-        public Nullable<int> TtranferPrice { get; set; }
-        public Nullable<int> PurchPrice { get; set; }
-        public Nullable<int> SellingPrice { get; set; }
-        public Nullable<int> LowPrice { get; set; }
-        public Nullable<int> HeghtPrice { get; set; }
-        public Nullable<int> LowPricePay { get; set; }
-        public Nullable<int> LowPriceSelling { get; set; }
-        public Nullable<int> HeghtPricePay { get; set; }
-        public Nullable<int> HeghtPriceSelling { get; set; }
+        public Nullable<decimal> TtranferPrice { get; set; }
+        public Nullable<decimal> PurchasePrice { get; set; }
+        public Nullable<decimal> SellingPrice { get; set; }
+        public Nullable<decimal> LowPrice { get; set; }
+        public Nullable<decimal> HighestPrice { get; set; }
+        public Nullable<decimal> LowPricePurchasing { get; set; }
+        public Nullable<decimal> LowPriceSelling { get; set; }
+        public Nullable<decimal> HighestPricePurchasing { get; set; }
+        public Nullable<decimal> HighestPriceSelling { get; set; }
         public string Note { get; set; }
     
-        public virtual Currencise Currencise { get; set; }
+        public virtual Tb_Currencise Tb_Currencise { get; set; }
     }
 }

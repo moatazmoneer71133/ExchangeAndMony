@@ -12,10 +12,10 @@ namespace ExchangeAndMony.model
     using System;
     using System.Collections.Generic;
     
-    public partial class Currencise
+    public partial class Tb_Currencise
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Currencise()
+        public Tb_Currencise()
         {
             this.Tb_CurrenciesPrices = new HashSet<Tb_CurrenciesPrices>();
             this.Tb_Transfar = new HashSet<Tb_Transfar>();

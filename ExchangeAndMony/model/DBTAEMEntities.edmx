@@ -47,20 +47,6 @@
           <Property Name="DocumentType" Type="nvarchar" MaxLength="30" />
           <Property Name="ConstNote" Type="nvarchar" MaxLength="60" />
         </EntityType>
-        <EntityType Name="Currencise">
-          <Key>
-            <PropertyRef Name="CurrencyNumbers" />
-          </Key>
-          <Property Name="CurrencyNumbers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UserNumbers" Type="int" />
-          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
-          <Property Name="CurrencyName" Type="nvarchar" MaxLength="30" />
-          <Property Name="ArabicSymbol" Type="nvarchar" MaxLength="30" />
-          <Property Name="EnglishSymbol" Type="nvarchar" MaxLength="50" />
-          <Property Name="ForeignSymbol" Type="nvarchar" MaxLength="30" />
-          <Property Name="Date" Type="date" />
-          <Property Name="Note" Type="nvarchar" MaxLength="60" />
-        </EntityType>
         <EntityType Name="Currencise1">
           <Key>
             <PropertyRef Name="CurrencyNumber" />
@@ -178,15 +164,29 @@
           <Property Name="CurrencyNumber" Type="int" />
           <Property Name="TtranferFrom" Type="nvarchar" MaxLength="30" />
           <Property Name="TtranferTo" Type="nvarchar" MaxLength="30" />
-          <Property Name="TtranferPrice" Type="int" />
-          <Property Name="PurchPrice" Type="int" />
-          <Property Name="SellingPrice" Type="int" />
-          <Property Name="LowPrice" Type="int" />
-          <Property Name="HeghtPrice" Type="int" />
-          <Property Name="LowPricePay" Type="int" />
-          <Property Name="LowPriceSelling" Type="int" />
-          <Property Name="HeghtPricePay" Type="int" />
-          <Property Name="HeghtPriceSelling" Type="int" />
+          <Property Name="TtranferPrice" Type="money" />
+          <Property Name="PurchasePrice" Type="money" />
+          <Property Name="SellingPrice" Type="money" />
+          <Property Name="LowPrice" Type="money" />
+          <Property Name="HighestPrice" Type="money" />
+          <Property Name="LowPricePurchasing" Type="money" />
+          <Property Name="LowPriceSelling" Type="money" />
+          <Property Name="HighestPricePurchasing" Type="money" />
+          <Property Name="HighestPriceSelling" Type="money" />
+          <Property Name="Note" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Tb_Currencise">
+          <Key>
+            <PropertyRef Name="CurrencyNumbers" />
+          </Key>
+          <Property Name="CurrencyNumbers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserNumbers" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
+          <Property Name="CurrencyName" Type="nvarchar" MaxLength="30" />
+          <Property Name="ArabicSymbol" Type="nvarchar" MaxLength="30" />
+          <Property Name="EnglishSymbol" Type="nvarchar" MaxLength="50" />
+          <Property Name="ForeignSymbol" Type="nvarchar" MaxLength="30" />
+          <Property Name="Date" Type="date" />
           <Property Name="Note" Type="nvarchar" MaxLength="60" />
         </EntityType>
         <EntityType Name="Tb_CustomerExchangeReceiptBonds">
@@ -644,10 +644,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Currencie__Curre__2F10007B">
-          <End Role="Currencise" Type="Self.Currencise" Multiplicity="0..1" />
+          <End Role="Tb_Currencise" Type="Self.Tb_Currencise" Multiplicity="0..1" />
           <End Role="Tb_CurrenciesPrices" Type="Self.Tb_CurrenciesPrices" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Currencise">
+            <Principal Role="Tb_Currencise">
               <PropertyRef Name="CurrencyNumbers" />
             </Principal>
             <Dependent Role="Tb_CurrenciesPrices">
@@ -669,12 +669,12 @@
         </Association>
         <Association Name="FK__Currencis__UserN__1B0907CE">
           <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
-          <End Role="Currencise" Type="Self.Currencise" Multiplicity="*" />
+          <End Role="Tb_Currencise" Type="Self.Tb_Currencise" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tb_Users">
               <PropertyRef Name="UserNumber" />
             </Principal>
-            <Dependent Role="Currencise">
+            <Dependent Role="Tb_Currencise">
               <PropertyRef Name="UserNumbers" />
             </Dependent>
           </ReferentialConstraint>
@@ -860,10 +860,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Transfar__Curren__5EBF139D">
-          <End Role="Currencise" Type="Self.Currencise" Multiplicity="0..1" />
+          <End Role="Tb_Currencise" Type="Self.Tb_Currencise" Multiplicity="0..1" />
           <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Currencise">
+            <Principal Role="Tb_Currencise">
               <PropertyRef Name="CurrencyNumbers" />
             </Principal>
             <Dependent Role="Tb_Transfar">
@@ -931,41 +931,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DBTAEMModelStoreContainer">
           <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Currencies" EntityType="Self.Currencies" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Currencise" EntityType="Self.Currencise" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Currencise1" EntityType="Self.Currencise1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tb_AccountStop" EntityType="Self.Tb_AccountStop" Schema="dbo" store:Type="Tables" />
@@ -975,6 +943,7 @@
           <EntitySet Name="Tb_ConcelTransfer" EntityType="Self.Tb_ConcelTransfer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tb_ConfirmedTransfer" EntityType="Self.Tb_ConfirmedTransfer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tb_CurrenciesPrices" EntityType="Self.Tb_CurrenciesPrices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Currencise" EntityType="Self.Tb_Currencise" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tb_CustomerExchangeReceiptBonds" EntityType="Self.Tb_CustomerExchangeReceiptBonds" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tb_DailyRestictionsDitales" EntityType="Self.Tb_DailyRestictionsDitales" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tb_DailyrestictionsHead" EntityType="Self.Tb_DailyrestictionsHead" Schema="dbo" store:Type="Tables" />
@@ -1042,7 +1011,7 @@
             <End Role="Tb_ConfirmedTransfer" EntitySet="Tb_ConfirmedTransfer" />
           </AssociationSet>
           <AssociationSet Name="FK__Currencie__Curre__2F10007B" Association="Self.FK__Currencie__Curre__2F10007B">
-            <End Role="Currencise" EntitySet="Currencise" />
+            <End Role="Tb_Currencise" EntitySet="Tb_Currencise" />
             <End Role="Tb_CurrenciesPrices" EntitySet="Tb_CurrenciesPrices" />
           </AssociationSet>
           <AssociationSet Name="FK__Currencie__UserN__4E88ABD4" Association="Self.FK__Currencie__UserN__4E88ABD4">
@@ -1051,7 +1020,7 @@
           </AssociationSet>
           <AssociationSet Name="FK__Currencis__UserN__1B0907CE" Association="Self.FK__Currencis__UserN__1B0907CE">
             <End Role="Tb_Users" EntitySet="Tb_Users" />
-            <End Role="Currencise" EntitySet="Currencise" />
+            <End Role="Tb_Currencise" EntitySet="Tb_Currencise" />
           </AssociationSet>
           <AssociationSet Name="FK__CustomerE__UserN__182C9B23" Association="Self.FK__CustomerE__UserN__182C9B23">
             <End Role="Tb_Users" EntitySet="Tb_Users" />
@@ -1114,7 +1083,7 @@
             <End Role="Tb_SimpleRegistBond" EntitySet="Tb_SimpleRegistBond" />
           </AssociationSet>
           <AssociationSet Name="FK__Transfar__Curren__5EBF139D" Association="Self.FK__Transfar__Curren__5EBF139D">
-            <End Role="Currencise" EntitySet="Currencise" />
+            <End Role="Tb_Currencise" EntitySet="Tb_Currencise" />
             <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
           </AssociationSet>
           <AssociationSet Name="FK__Transfar__IDNunb__5DCAEF64" Association="Self.FK__Transfar__IDNunb__5DCAEF64">
@@ -1170,45 +1139,28 @@
           <Property Name="NumOFEditAcc" Type="Byte" />
           <Property Name="Entry_Date" Type="DateTime" Precision="0" />
           <Property Name="AddUser" Type="Binary" MaxLength="50" FixedLength="false" />
-          <NavigationProperty Name="Currency" Relationship="Self.FK__Account__ConnNum__68487DD7" FromRole="Account" ToRole="Currencies" />
+          <NavigationProperty Name="Currencies" Relationship="Self.FK__Account__ConnNum__68487DD7" FromRole="Account" ToRole="Currencies" />
           <NavigationProperty Name="Tb_DailyrestictionsHead" Relationship="Self.FK__Account__ConstNu__6477ECF3" FromRole="Account" ToRole="Tb_DailyrestictionsHead" />
           <NavigationProperty Name="Tb_Employee" Relationship="Self.FK__Account__EmpNumb__6754599E" FromRole="Account" ToRole="Tb_Employee" />
           <NavigationProperty Name="Tb_IncomingTotals" Relationship="Self.FK__Account__Stateme__656C112C" FromRole="Account" ToRole="Tb_IncomingTotals" />
           <NavigationProperty Name="Tb_Outgoing" Relationship="Self.FK__Account__Stateme__66603565" FromRole="Account" ToRole="Tb_Outgoing" />
           <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Account__UserNum__6383C8BA" FromRole="Account" ToRole="Tb_Users" />
         </EntityType>
-        <EntityType Name="Currency">
+        <EntityType Name="Currencies">
           <Key>
             <PropertyRef Name="CommntNumber" />
           </Key>
           <Property Name="CommntNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserNumbers" Type="Int32" />
-          <Property Name="Currency1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Currency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Source" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Amount" Type="Int32" />
           <Property Name="CommntCurrency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="DestinationCurrency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="DocumentType" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="ConstNote" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__ConnNum__68487DD7" FromRole="Currencies" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Account__ConnNum__68487DD7" FromRole="Currencies" ToRole="Account" />
           <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Currencie__UserN__4E88ABD4" FromRole="Currencies" ToRole="Tb_Users" />
-        </EntityType>
-        <EntityType Name="Currencise">
-          <Key>
-            <PropertyRef Name="CurrencyNumbers" />
-          </Key>
-          <Property Name="CurrencyNumbers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserNumbers" Type="Int32" />
-          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="CurrencyName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="ArabicSymbol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="EnglishSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ForeignSymbol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
-          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Tb_CurrenciesPrices" Relationship="Self.FK__Currencie__Curre__2F10007B" FromRole="Currencise" ToRole="Tb_CurrenciesPrices" />
-          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Currencis__UserN__1B0907CE" FromRole="Currencise" ToRole="Tb_Users" />
-          <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__Curren__5EBF139D" FromRole="Currencise" ToRole="Tb_Transfar" />
         </EntityType>
         <EntityType Name="Currencise1">
           <Key>
@@ -1223,7 +1175,7 @@
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="sysdiagram">
+        <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
@@ -1333,17 +1285,34 @@
           <Property Name="CurrencyNumber" Type="Int32" />
           <Property Name="TtranferFrom" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="TtranferTo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="TtranferPrice" Type="Int32" />
-          <Property Name="PurchPrice" Type="Int32" />
-          <Property Name="SellingPrice" Type="Int32" />
-          <Property Name="LowPrice" Type="Int32" />
-          <Property Name="HeghtPrice" Type="Int32" />
-          <Property Name="LowPricePay" Type="Int32" />
-          <Property Name="LowPriceSelling" Type="Int32" />
-          <Property Name="HeghtPricePay" Type="Int32" />
-          <Property Name="HeghtPriceSelling" Type="Int32" />
+          <Property Name="TtranferPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SellingPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="LowPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="HighestPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="LowPricePurchasing" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="LowPriceSelling" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="HighestPricePurchasing" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="HighestPriceSelling" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Currencise" Relationship="Self.FK__Currencie__Curre__2F10007B" FromRole="Tb_CurrenciesPrices" ToRole="Currencise" />
+          <NavigationProperty Name="Tb_Currencise" Relationship="Self.FK__Currencie__Curre__2F10007B" FromRole="Tb_CurrenciesPrices" ToRole="Tb_Currencise" />
+        </EntityType>
+        <EntityType Name="Tb_Currencise">
+          <Key>
+            <PropertyRef Name="CurrencyNumbers" />
+          </Key>
+          <Property Name="CurrencyNumbers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserNumbers" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ArabicSymbol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EnglishSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ForeignSymbol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tb_CurrenciesPrices" Relationship="Self.FK__Currencie__Curre__2F10007B" FromRole="Tb_Currencise" ToRole="Tb_CurrenciesPrices" />
+          <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Currencis__UserN__1B0907CE" FromRole="Tb_Currencise" ToRole="Tb_Users" />
+          <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__Curren__5EBF139D" FromRole="Tb_Currencise" ToRole="Tb_Transfar" />
         </EntityType>
         <EntityType Name="Tb_CustomerExchangeReceiptBonds">
           <Key>
@@ -1401,7 +1370,7 @@
           <Property Name="GroupAmountMadin" Type="Int32" />
           <Property Name="GroupAmountDain" Type="Int32" />
           <Property Name="Statements" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__ConstNu__6477ECF3" FromRole="Tb_DailyrestictionsHead" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Account__ConstNu__6477ECF3" FromRole="Tb_DailyrestictionsHead" ToRole="Account" />
           <NavigationProperty Name="Tb_DailyRestictionsDitales" Relationship="Self.FK__DailyRest__Const__534D60F1" FromRole="Tb_DailyrestictionsHead" ToRole="Tb_DailyRestictionsDitales" />
         </EntityType>
         <EntityType Name="Tb_DeportationTransfar">
@@ -1455,7 +1424,7 @@
           <Property Name="RegistNote" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="RegistDate" Type="DateTime" Precision="0" />
           <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__EmpNumb__6754599E" FromRole="Tb_Employee" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Account__EmpNumb__6754599E" FromRole="Tb_Employee" ToRole="Account" />
           <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Employee__UserNu__29572725" FromRole="Tb_Employee" ToRole="Tb_Users" />
         </EntityType>
         <EntityType Name="Tb_Entities">
@@ -1497,7 +1466,7 @@
           <Property Name="TheDate" Type="DateTime" Precision="0" />
           <Property Name="TransfarNumber" Type="Int32" />
           <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__Stateme__656C112C" FromRole="Tb_IncomingTotals" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Account__Stateme__656C112C" FromRole="Tb_IncomingTotals" ToRole="Account" />
           <NavigationProperty Name="Tb_Users" Relationship="Self.FK__IncomingT__UserN__37A5467C" FromRole="Tb_IncomingTotals" ToRole="Tb_Users" />
           <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__Statem__5BE2A6F2" FromRole="Tb_IncomingTotals" ToRole="Tb_Transfar" />
         </EntityType>
@@ -1541,7 +1510,7 @@
           <Property Name="TheDate" Type="DateTime" Precision="0" />
           <Property Name="TransfarNumber" Type="Int32" />
           <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__Stateme__66603565" FromRole="Tb_Outgoing" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Account__Stateme__66603565" FromRole="Tb_Outgoing" ToRole="Account" />
           <NavigationProperty Name="Tb_Users" Relationship="Self.FK__Outgoing__UserNu__3A81B327" FromRole="Tb_Outgoing" ToRole="Tb_Users" />
           <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__Statem__5CD6CB2B" FromRole="Tb_Outgoing" ToRole="Tb_Transfar" />
         </EntityType>
@@ -1666,7 +1635,7 @@
           <Property Name="AgentComm" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="ReceiptCurrencyWared" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Currencise" Relationship="Self.FK__Transfar__Curren__5EBF139D" FromRole="Tb_Transfar" ToRole="Currencise" />
+          <NavigationProperty Name="Tb_Currencise" Relationship="Self.FK__Transfar__Curren__5EBF139D" FromRole="Tb_Transfar" ToRole="Tb_Currencise" />
           <NavigationProperty Name="Tb_DeportationTransfar" Relationship="Self.FK__Transfar__Number__60A75C0F" FromRole="Tb_Transfar" ToRole="Tb_DeportationTransfar" />
           <NavigationProperty Name="Tb_IncomingTotals" Relationship="Self.FK__Transfar__Statem__5BE2A6F2" FromRole="Tb_Transfar" ToRole="Tb_IncomingTotals" />
           <NavigationProperty Name="Tb_Outgoing" Relationship="Self.FK__Transfar__Statem__5CD6CB2B" FromRole="Tb_Transfar" ToRole="Tb_Outgoing" />
@@ -1684,15 +1653,15 @@
           <Property Name="UserGroup" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="ChangePassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__UserNum__6383C8BA" FromRole="Tb_Users" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Account__UserNum__6383C8BA" FromRole="Tb_Users" ToRole="Account" />
           <NavigationProperty Name="Currencies" Relationship="Self.FK__Currencie__UserN__4E88ABD4" FromRole="Tb_Users" ToRole="Currencies" />
-          <NavigationProperty Name="Currencises" Relationship="Self.FK__Currencis__UserN__1B0907CE" FromRole="Tb_Users" ToRole="Currencise" />
           <NavigationProperty Name="Tb_AccountStop" Relationship="Self.FK__AccountSt__UserN__45F365D3" FromRole="Tb_Users" ToRole="Tb_AccountStop" />
           <NavigationProperty Name="Tb_Blacklist" Relationship="Self.FK__Blacklist__UserN__403A8C7D" FromRole="Tb_Users" ToRole="Tb_Blacklist" />
           <NavigationProperty Name="Tb_Box" Relationship="Self.FK__Box__UserNumbers__3D5E1FD2" FromRole="Tb_Users" ToRole="Tb_Box" />
           <NavigationProperty Name="Tb_BuyingSelling" Relationship="Self.FK__BuyingSel__UserN__15502E78" FromRole="Tb_Users" ToRole="Tb_BuyingSelling" />
           <NavigationProperty Name="Tb_ConcelTransfer" Relationship="Self.FK__ConcelTra__UserN__59063A47" FromRole="Tb_Users" ToRole="Tb_ConcelTransfer" />
           <NavigationProperty Name="Tb_ConfirmedTransfer" Relationship="Self.FK__Confirmed__UserN__4BAC3F29" FromRole="Tb_Users" ToRole="Tb_ConfirmedTransfer" />
+          <NavigationProperty Name="Tb_Currencise" Relationship="Self.FK__Currencis__UserN__1B0907CE" FromRole="Tb_Users" ToRole="Tb_Currencise" />
           <NavigationProperty Name="Tb_CustomerExchangeReceiptBonds" Relationship="Self.FK__CustomerE__UserN__182C9B23" FromRole="Tb_Users" ToRole="Tb_CustomerExchangeReceiptBonds" />
           <NavigationProperty Name="Tb_DeportationTransfar" Relationship="Self.FK__Deportati__UserN__4316F928" FromRole="Tb_Users" ToRole="Tb_DeportationTransfar" />
           <NavigationProperty Name="Tb_DoubleRestictions" Relationship="Self.FK__DoubleRes__UserN__48CFD27E" FromRole="Tb_Users" ToRole="Tb_DoubleRestictions" />
@@ -1710,7 +1679,7 @@
           <NavigationProperty Name="Tb_Transfar" Relationship="Self.FK__Transfar__UserNu__5FB337D6" FromRole="Tb_Users" ToRole="Tb_Transfar" />
         </EntityType>
         <Association Name="FK__Account__ConnNum__68487DD7">
-          <End Role="Currencies" Type="Self.Currency" Multiplicity="0..1" />
+          <End Role="Currencies" Type="Self.Currencies" Multiplicity="0..1" />
           <End Role="Account" Type="Self.Account" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Currencies">
@@ -1783,49 +1752,13 @@
         </Association>
         <Association Name="FK__Currencie__UserN__4E88ABD4">
           <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
-          <End Role="Currencies" Type="Self.Currency" Multiplicity="*" />
+          <End Role="Currencies" Type="Self.Currencies" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tb_Users">
               <PropertyRef Name="UserNumber" />
             </Principal>
             <Dependent Role="Currencies">
               <PropertyRef Name="UserNumbers" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Currencie__Curre__2F10007B">
-          <End Role="Currencise" Type="Self.Currencise" Multiplicity="0..1" />
-          <End Role="Tb_CurrenciesPrices" Type="Self.Tb_CurrenciesPrices" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Currencise">
-              <PropertyRef Name="CurrencyNumbers" />
-            </Principal>
-            <Dependent Role="Tb_CurrenciesPrices">
-              <PropertyRef Name="CurrencyNumber" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Currencis__UserN__1B0907CE">
-          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
-          <End Role="Currencise" Type="Self.Currencise" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Tb_Users">
-              <PropertyRef Name="UserNumber" />
-            </Principal>
-            <Dependent Role="Currencise">
-              <PropertyRef Name="UserNumbers" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Transfar__Curren__5EBF139D">
-          <End Role="Currencise" Type="Self.Currencise" Multiplicity="0..1" />
-          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Currencise">
-              <PropertyRef Name="CurrencyNumbers" />
-            </Principal>
-            <Dependent Role="Tb_Transfar">
-              <PropertyRef Name="CurrencyNumber" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1898,6 +1831,42 @@
             </Principal>
             <Dependent Role="Tb_ConfirmedTransfer">
               <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Currencie__Curre__2F10007B">
+          <End Role="Tb_Currencise" Type="Self.Tb_Currencise" Multiplicity="0..1" />
+          <End Role="Tb_CurrenciesPrices" Type="Self.Tb_CurrenciesPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Currencise">
+              <PropertyRef Name="CurrencyNumbers" />
+            </Principal>
+            <Dependent Role="Tb_CurrenciesPrices">
+              <PropertyRef Name="CurrencyNumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Currencis__UserN__1B0907CE">
+          <End Role="Tb_Users" Type="Self.Tb_Users" Multiplicity="0..1" />
+          <End Role="Tb_Currencise" Type="Self.Tb_Currencise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Users">
+              <PropertyRef Name="UserNumber" />
+            </Principal>
+            <Dependent Role="Tb_Currencise">
+              <PropertyRef Name="UserNumbers" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transfar__Curren__5EBF139D">
+          <End Role="Tb_Currencise" Type="Self.Tb_Currencise" Multiplicity="0..1" />
+          <End Role="Tb_Transfar" Type="Self.Tb_Transfar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Currencise">
+              <PropertyRef Name="CurrencyNumbers" />
+            </Principal>
+            <Dependent Role="Tb_Transfar">
+              <PropertyRef Name="CurrencyNumber" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2142,11 +2111,10 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DBTAEMEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Accounts" EntityType="Self.Account" />
-          <EntitySet Name="Currencies" EntityType="Self.Currency" />
-          <EntitySet Name="Currencises" EntityType="Self.Currencise" />
+          <EntitySet Name="Account" EntityType="Self.Account" />
+          <EntitySet Name="Currencies" EntityType="Self.Currencies" />
           <EntitySet Name="Currencise1" EntityType="Self.Currencise1" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Tb_AccountStop" EntityType="Self.Tb_AccountStop" />
           <EntitySet Name="Tb_Blacklist" EntityType="Self.Tb_Blacklist" />
           <EntitySet Name="Tb_Box" EntityType="Self.Tb_Box" />
@@ -2154,6 +2122,7 @@
           <EntitySet Name="Tb_ConcelTransfer" EntityType="Self.Tb_ConcelTransfer" />
           <EntitySet Name="Tb_ConfirmedTransfer" EntityType="Self.Tb_ConfirmedTransfer" />
           <EntitySet Name="Tb_CurrenciesPrices" EntityType="Self.Tb_CurrenciesPrices" />
+          <EntitySet Name="Tb_Currencise" EntityType="Self.Tb_Currencise" />
           <EntitySet Name="Tb_CustomerExchangeReceiptBonds" EntityType="Self.Tb_CustomerExchangeReceiptBonds" />
           <EntitySet Name="Tb_DailyRestictionsDitales" EntityType="Self.Tb_DailyRestictionsDitales" />
           <EntitySet Name="Tb_DailyrestictionsHead" EntityType="Self.Tb_DailyrestictionsHead" />
@@ -2174,43 +2143,31 @@
           <EntitySet Name="Tb_Users" EntityType="Self.Tb_Users" />
           <AssociationSet Name="FK__Account__ConnNum__68487DD7" Association="Self.FK__Account__ConnNum__68487DD7">
             <End Role="Currencies" EntitySet="Currencies" />
-            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Account" EntitySet="Account" />
           </AssociationSet>
           <AssociationSet Name="FK__Account__ConstNu__6477ECF3" Association="Self.FK__Account__ConstNu__6477ECF3">
             <End Role="Tb_DailyrestictionsHead" EntitySet="Tb_DailyrestictionsHead" />
-            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Account" EntitySet="Account" />
           </AssociationSet>
           <AssociationSet Name="FK__Account__EmpNumb__6754599E" Association="Self.FK__Account__EmpNumb__6754599E">
             <End Role="Tb_Employee" EntitySet="Tb_Employee" />
-            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Account" EntitySet="Account" />
           </AssociationSet>
           <AssociationSet Name="FK__Account__Stateme__656C112C" Association="Self.FK__Account__Stateme__656C112C">
             <End Role="Tb_IncomingTotals" EntitySet="Tb_IncomingTotals" />
-            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Account" EntitySet="Account" />
           </AssociationSet>
           <AssociationSet Name="FK__Account__Stateme__66603565" Association="Self.FK__Account__Stateme__66603565">
             <End Role="Tb_Outgoing" EntitySet="Tb_Outgoing" />
-            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Account" EntitySet="Account" />
           </AssociationSet>
           <AssociationSet Name="FK__Account__UserNum__6383C8BA" Association="Self.FK__Account__UserNum__6383C8BA">
             <End Role="Tb_Users" EntitySet="Tb_Users" />
-            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Account" EntitySet="Account" />
           </AssociationSet>
           <AssociationSet Name="FK__Currencie__UserN__4E88ABD4" Association="Self.FK__Currencie__UserN__4E88ABD4">
             <End Role="Tb_Users" EntitySet="Tb_Users" />
             <End Role="Currencies" EntitySet="Currencies" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Currencie__Curre__2F10007B" Association="Self.FK__Currencie__Curre__2F10007B">
-            <End Role="Currencise" EntitySet="Currencises" />
-            <End Role="Tb_CurrenciesPrices" EntitySet="Tb_CurrenciesPrices" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Currencis__UserN__1B0907CE" Association="Self.FK__Currencis__UserN__1B0907CE">
-            <End Role="Tb_Users" EntitySet="Tb_Users" />
-            <End Role="Currencise" EntitySet="Currencises" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Transfar__Curren__5EBF139D" Association="Self.FK__Transfar__Curren__5EBF139D">
-            <End Role="Currencise" EntitySet="Currencises" />
-            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
           </AssociationSet>
           <AssociationSet Name="FK__AccountSt__UserN__45F365D3" Association="Self.FK__AccountSt__UserN__45F365D3">
             <End Role="Tb_Users" EntitySet="Tb_Users" />
@@ -2235,6 +2192,18 @@
           <AssociationSet Name="FK__Confirmed__UserN__4BAC3F29" Association="Self.FK__Confirmed__UserN__4BAC3F29">
             <End Role="Tb_Users" EntitySet="Tb_Users" />
             <End Role="Tb_ConfirmedTransfer" EntitySet="Tb_ConfirmedTransfer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Currencie__Curre__2F10007B" Association="Self.FK__Currencie__Curre__2F10007B">
+            <End Role="Tb_Currencise" EntitySet="Tb_Currencise" />
+            <End Role="Tb_CurrenciesPrices" EntitySet="Tb_CurrenciesPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Currencis__UserN__1B0907CE" Association="Self.FK__Currencis__UserN__1B0907CE">
+            <End Role="Tb_Users" EntitySet="Tb_Users" />
+            <End Role="Tb_Currencise" EntitySet="Tb_Currencise" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transfar__Curren__5EBF139D" Association="Self.FK__Transfar__Curren__5EBF139D">
+            <End Role="Tb_Currencise" EntitySet="Tb_Currencise" />
+            <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
           </AssociationSet>
           <AssociationSet Name="FK__CustomerE__UserN__182C9B23" Association="Self.FK__CustomerE__UserN__182C9B23">
             <End Role="Tb_Users" EntitySet="Tb_Users" />
@@ -2316,55 +2285,14 @@
             <End Role="Tb_Users" EntitySet="Tb_Users" />
             <End Role="Tb_Transfar" EntitySet="Tb_Transfar" />
           </AssociationSet>
-          <FunctionImport Name="sp_alterdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_creatediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_dropdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DBTAEMModel.sp_helpdiagramdefinition_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DBTAEMModel.sp_helpdiagrams_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_renamediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="new_diagramname" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
-        <ComplexType Name="sp_helpdiagramdefinition_Result">
-          <Property Type="Int32" Name="version" Nullable="true" />
-          <Property Type="Binary" Name="definition" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagrams_Result">
-          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-          <Property Type="Int32" Name="OwnerID" Nullable="false" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DBTAEMModelStoreContainer" CdmEntityContainer="DBTAEMEntities">
-          <EntitySetMapping Name="Accounts">
+          <EntitySetMapping Name="Account">
             <EntityTypeMapping TypeName="DBTAEMModel.Account">
               <MappingFragment StoreEntitySet="Account">
                 <ScalarProperty Name="ACCID" ColumnName="ACCID" />
@@ -2394,32 +2322,17 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Currencies">
-            <EntityTypeMapping TypeName="DBTAEMModel.Currency">
+            <EntityTypeMapping TypeName="DBTAEMModel.Currencies">
               <MappingFragment StoreEntitySet="Currencies">
                 <ScalarProperty Name="CommntNumber" ColumnName="CommntNumber" />
                 <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
-                <ScalarProperty Name="Currency1" ColumnName="Currency" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
                 <ScalarProperty Name="Source" ColumnName="Source" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="CommntCurrency" ColumnName="CommntCurrency" />
                 <ScalarProperty Name="DestinationCurrency" ColumnName="DestinationCurrency" />
                 <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
                 <ScalarProperty Name="ConstNote" ColumnName="ConstNote" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Currencises">
-            <EntityTypeMapping TypeName="DBTAEMModel.Currencise">
-              <MappingFragment StoreEntitySet="Currencise">
-                <ScalarProperty Name="CurrencyNumbers" ColumnName="CurrencyNumbers" />
-                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
-                <ScalarProperty Name="ArabicSymbol" ColumnName="ArabicSymbol" />
-                <ScalarProperty Name="EnglishSymbol" ColumnName="EnglishSymbol" />
-                <ScalarProperty Name="ForeignSymbol" ColumnName="ForeignSymbol" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2438,7 +2351,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DBTAEMModel.sysdiagram">
+            <EntityTypeMapping TypeName="DBTAEMModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -2548,14 +2461,29 @@
                 <ScalarProperty Name="TtranferFrom" ColumnName="TtranferFrom" />
                 <ScalarProperty Name="TtranferTo" ColumnName="TtranferTo" />
                 <ScalarProperty Name="TtranferPrice" ColumnName="TtranferPrice" />
-                <ScalarProperty Name="PurchPrice" ColumnName="PurchPrice" />
+                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
                 <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
                 <ScalarProperty Name="LowPrice" ColumnName="LowPrice" />
-                <ScalarProperty Name="HeghtPrice" ColumnName="HeghtPrice" />
-                <ScalarProperty Name="LowPricePay" ColumnName="LowPricePay" />
+                <ScalarProperty Name="HighestPrice" ColumnName="HighestPrice" />
+                <ScalarProperty Name="LowPricePurchasing" ColumnName="LowPricePurchasing" />
                 <ScalarProperty Name="LowPriceSelling" ColumnName="LowPriceSelling" />
-                <ScalarProperty Name="HeghtPricePay" ColumnName="HeghtPricePay" />
-                <ScalarProperty Name="HeghtPriceSelling" ColumnName="HeghtPriceSelling" />
+                <ScalarProperty Name="HighestPricePurchasing" ColumnName="HighestPricePurchasing" />
+                <ScalarProperty Name="HighestPriceSelling" ColumnName="HighestPriceSelling" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Currencise">
+            <EntityTypeMapping TypeName="DBTAEMModel.Tb_Currencise">
+              <MappingFragment StoreEntitySet="Tb_Currencise">
+                <ScalarProperty Name="CurrencyNumbers" ColumnName="CurrencyNumbers" />
+                <ScalarProperty Name="UserNumbers" ColumnName="UserNumbers" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+                <ScalarProperty Name="ArabicSymbol" ColumnName="ArabicSymbol" />
+                <ScalarProperty Name="EnglishSymbol" ColumnName="EnglishSymbol" />
+                <ScalarProperty Name="ForeignSymbol" ColumnName="ForeignSymbol" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -2888,30 +2816,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DBTAEMModel.Store.sp_alterdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DBTAEMModel.Store.sp_creatediagram" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DBTAEMModel.Store.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DBTAEMModel.Store.sp_helpdiagramdefinition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DBTAEMModel.sp_helpdiagramdefinition_Result">
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DBTAEMModel.Store.sp_helpdiagrams">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DBTAEMModel.sp_helpdiagrams_Result">
-                <ScalarProperty Name="Database" ColumnName="Database" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DBTAEMModel.Store.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DBTAEMModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -2926,7 +2830,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

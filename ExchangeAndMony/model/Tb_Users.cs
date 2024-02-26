@@ -17,15 +17,15 @@ namespace ExchangeAndMony.model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tb_Users()
         {
-            this.Accounts = new HashSet<Account>();
-            this.Currencies = new HashSet<Currency>();
-            this.Currencises = new HashSet<Currencise>();
+            this.Account = new HashSet<Account>();
+            this.Currencies = new HashSet<Currencies>();
             this.Tb_AccountStop = new HashSet<Tb_AccountStop>();
             this.Tb_Blacklist = new HashSet<Tb_Blacklist>();
             this.Tb_Box = new HashSet<Tb_Box>();
             this.Tb_BuyingSelling = new HashSet<Tb_BuyingSelling>();
             this.Tb_ConcelTransfer = new HashSet<Tb_ConcelTransfer>();
             this.Tb_ConfirmedTransfer = new HashSet<Tb_ConfirmedTransfer>();
+            this.Tb_Currencise = new HashSet<Tb_Currencise>();
             this.Tb_CustomerExchangeReceiptBonds = new HashSet<Tb_CustomerExchangeReceiptBonds>();
             this.Tb_DeportationTransfar = new HashSet<Tb_DeportationTransfar>();
             this.Tb_DoubleRestictions = new HashSet<Tb_DoubleRestictions>();
@@ -52,11 +52,9 @@ namespace ExchangeAndMony.model
         public string Note { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account> Accounts { get; set; }
+        public virtual ICollection<Account> Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Currency> Currencies { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Currencise> Currencises { get; set; }
+        public virtual ICollection<Currencies> Currencies { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tb_AccountStop> Tb_AccountStop { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -69,6 +67,8 @@ namespace ExchangeAndMony.model
         public virtual ICollection<Tb_ConcelTransfer> Tb_ConcelTransfer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tb_ConfirmedTransfer> Tb_ConfirmedTransfer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tb_Currencise> Tb_Currencise { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tb_CustomerExchangeReceiptBonds> Tb_CustomerExchangeReceiptBonds { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

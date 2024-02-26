@@ -12,7 +12,7 @@ using ExchangeAndMony.pages;
 using ExchangeAndMony.model;
 
 
-namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface
+namespace ExchangeAndMony.pages.transfer.transferInitializatuionInterface
 {
     public partial class GovernorateGuide : DevExpress.XtraEditors.XtraForm
     {
@@ -171,6 +171,91 @@ namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterfa
             {
                 MessageBox.Show("لايمكن التعديل");
             }
+        }
+
+        private void Btn_print_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView_governorate_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Btn_exit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Text_number_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Text_governorata_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Text_note_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

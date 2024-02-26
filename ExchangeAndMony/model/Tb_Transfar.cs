@@ -48,7 +48,7 @@ namespace ExchangeAndMony.model
         public string ReceiptCurrencyWared { get; set; }
         public string Note { get; set; }
     
-        public virtual Currencise Currencise { get; set; }
+        public virtual Tb_Currencise Tb_Currencise { get; set; }
         public virtual Tb_DeportationTransfar Tb_DeportationTransfar { get; set; }
         public virtual Tb_IncomingTotals Tb_IncomingTotals { get; set; }
         public virtual Tb_Outgoing Tb_Outgoing { get; set; }

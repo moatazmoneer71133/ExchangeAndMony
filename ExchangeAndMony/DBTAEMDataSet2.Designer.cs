@@ -20,9 +20,9 @@ namespace ExchangeAndMony {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DBTAEMDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DBTAEMDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DBTAEMDataSet1 : global::System.Data.DataSet {
+    public partial class DBTAEMDataSet2 : global::System.Data.DataSet {
         
         private AccountDataTable tableAccount;
         
@@ -158,7 +158,7 @@ namespace ExchangeAndMony {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DBTAEMDataSet1() {
+        public DBTAEMDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -169,7 +169,7 @@ namespace ExchangeAndMony {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DBTAEMDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DBTAEMDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -619,7 +619,7 @@ namespace ExchangeAndMony {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DBTAEMDataSet1 cln = ((DBTAEMDataSet1)(base.Clone()));
+            DBTAEMDataSet2 cln = ((DBTAEMDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -979,9 +979,9 @@ namespace ExchangeAndMony {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DBTAEMDataSet1";
+            this.DataSetName = "DBTAEMDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DBTAEMDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/DBTAEMDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAccount = new AccountDataTable();
@@ -1373,7 +1373,7 @@ namespace ExchangeAndMony {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+            DBTAEMDataSet2 ds = new DBTAEMDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -2056,7 +2056,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2439,7 +2439,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2804,7 +2804,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3143,7 +3143,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3541,7 +3541,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3924,7 +3924,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4394,7 +4394,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4759,7 +4759,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5125,7 +5125,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5575,7 +5575,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5958,7 +5958,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6473,7 +6473,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6896,7 +6896,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -7302,7 +7302,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -7670,7 +7670,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -8124,7 +8124,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -8549,7 +8549,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -8947,7 +8947,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -9285,7 +9285,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -9637,7 +9637,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -10003,7 +10003,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -10384,7 +10384,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -10736,7 +10736,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -11253,7 +11253,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -11620,7 +11620,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -12106,7 +12106,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -12635,7 +12635,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -13417,7 +13417,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -13768,7 +13768,7 @@ namespace ExchangeAndMony {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBTAEMDataSet1 ds = new DBTAEMDataSet1();
+                DBTAEMDataSet2 ds = new DBTAEMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -25044,7 +25044,7 @@ namespace ExchangeAndMony {
         }
     }
 }
-namespace ExchangeAndMony.DBTAEMDataSet1TableAdapters {
+namespace ExchangeAndMony.DBTAEMDataSet2TableAdapters {
     
     
     /// <summary>
@@ -25430,7 +25430,7 @@ SELECT ACCID, Acc_Num, Acc_Parent_Num, Acc_Aname, UserNumbers, UserName, ConstNu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.AccountDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.AccountDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -25443,9 +25443,9 @@ SELECT ACCID, Acc_Num, Acc_Parent_Num, Acc_Aname, UserNumbers, UserName, ConstNu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.AccountDataTable GetData() {
+        public virtual DBTAEMDataSet2.AccountDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.AccountDataTable dataTable = new DBTAEMDataSet1.AccountDataTable();
+            DBTAEMDataSet2.AccountDataTable dataTable = new DBTAEMDataSet2.AccountDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -25453,14 +25453,14 @@ SELECT ACCID, Acc_Num, Acc_Parent_Num, Acc_Aname, UserNumbers, UserName, ConstNu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.AccountDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.AccountDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Account");
         }
         
@@ -26528,7 +26528,7 @@ SELECT CommntNumber, UserNumbers, Currency, Source, Amount, CommntCurrency, Dest
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.CurrenciesDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.CurrenciesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -26541,9 +26541,9 @@ SELECT CommntNumber, UserNumbers, Currency, Source, Amount, CommntCurrency, Dest
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.CurrenciesDataTable GetData() {
+        public virtual DBTAEMDataSet2.CurrenciesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.CurrenciesDataTable dataTable = new DBTAEMDataSet1.CurrenciesDataTable();
+            DBTAEMDataSet2.CurrenciesDataTable dataTable = new DBTAEMDataSet2.CurrenciesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -26551,14 +26551,14 @@ SELECT CommntNumber, UserNumbers, Currency, Source, Amount, CommntCurrency, Dest
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.CurrenciesDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.CurrenciesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Currencies");
         }
         
@@ -27124,7 +27124,7 @@ SELECT CurrencyNumber, UserNumber, UserName, CurrencyName, ArabicSymbol, English
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Currencise1DataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Currencise1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -27137,9 +27137,9 @@ SELECT CurrencyNumber, UserNumber, UserName, CurrencyName, ArabicSymbol, English
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Currencise1DataTable GetData() {
+        public virtual DBTAEMDataSet2.Currencise1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Currencise1DataTable dataTable = new DBTAEMDataSet1.Currencise1DataTable();
+            DBTAEMDataSet2.Currencise1DataTable dataTable = new DBTAEMDataSet2.Currencise1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -27147,14 +27147,14 @@ SELECT CurrencyNumber, UserNumber, UserName, CurrencyName, ArabicSymbol, English
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Currencise1DataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Currencise1DataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Currencise1");
         }
         
@@ -27659,7 +27659,7 @@ SELECT AccountNumber, AccountName, UserNumbers, ReasonStop, Currency, Note FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_AccountStopDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_AccountStopDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -27672,9 +27672,9 @@ SELECT AccountNumber, AccountName, UserNumbers, ReasonStop, Currency, Note FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_AccountStopDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_AccountStopDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_AccountStopDataTable dataTable = new DBTAEMDataSet1.Tb_AccountStopDataTable();
+            DBTAEMDataSet2.Tb_AccountStopDataTable dataTable = new DBTAEMDataSet2.Tb_AccountStopDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -27682,14 +27682,14 @@ SELECT AccountNumber, AccountName, UserNumbers, ReasonStop, Currency, Note FROM 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_AccountStopDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_AccountStopDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_AccountStop");
         }
         
@@ -28150,7 +28150,7 @@ SELECT Numbers, UserNumbers, Name, Nationality, Source, Types, Gender, Reason, T
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_BlacklistDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_BlacklistDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -28163,9 +28163,9 @@ SELECT Numbers, UserNumbers, Name, Nationality, Source, Types, Gender, Reason, T
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_BlacklistDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_BlacklistDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_BlacklistDataTable dataTable = new DBTAEMDataSet1.Tb_BlacklistDataTable();
+            DBTAEMDataSet2.Tb_BlacklistDataTable dataTable = new DBTAEMDataSet2.Tb_BlacklistDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -28173,14 +28173,14 @@ SELECT Numbers, UserNumbers, Name, Nationality, Source, Types, Gender, Reason, T
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_BlacklistDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_BlacklistDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Blacklist");
         }
         
@@ -28785,7 +28785,7 @@ SELECT [Document], BosNumber, BoxName, UserNumbers, UserName, AccountUser, Inser
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_BoxDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_BoxDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -28798,9 +28798,9 @@ SELECT [Document], BosNumber, BoxName, UserNumbers, UserName, AccountUser, Inser
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_BoxDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_BoxDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_BoxDataTable dataTable = new DBTAEMDataSet1.Tb_BoxDataTable();
+            DBTAEMDataSet2.Tb_BoxDataTable dataTable = new DBTAEMDataSet2.Tb_BoxDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -28808,14 +28808,14 @@ SELECT [Document], BosNumber, BoxName, UserNumbers, UserName, AccountUser, Inser
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_BoxDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_BoxDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Box");
         }
         
@@ -29454,7 +29454,7 @@ SELECT BondNumber, Amount, Currency, UserNumbers, AmountCcount, AmountPay, Price
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_BuyingSellingDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_BuyingSellingDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -29467,9 +29467,9 @@ SELECT BondNumber, Amount, Currency, UserNumbers, AmountCcount, AmountPay, Price
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_BuyingSellingDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_BuyingSellingDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_BuyingSellingDataTable dataTable = new DBTAEMDataSet1.Tb_BuyingSellingDataTable();
+            DBTAEMDataSet2.Tb_BuyingSellingDataTable dataTable = new DBTAEMDataSet2.Tb_BuyingSellingDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -29477,14 +29477,14 @@ SELECT BondNumber, Amount, Currency, UserNumbers, AmountCcount, AmountPay, Price
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_BuyingSellingDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_BuyingSellingDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_BuyingSelling");
         }
         
@@ -30242,7 +30242,7 @@ SELECT Numbers, UserNumbers, Agent, TransfarNumber, TransfarAmount, GlobleNumber
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_ConcelTransferDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_ConcelTransferDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -30255,9 +30255,9 @@ SELECT Numbers, UserNumbers, Agent, TransfarNumber, TransfarAmount, GlobleNumber
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_ConcelTransferDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_ConcelTransferDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_ConcelTransferDataTable dataTable = new DBTAEMDataSet1.Tb_ConcelTransferDataTable();
+            DBTAEMDataSet2.Tb_ConcelTransferDataTable dataTable = new DBTAEMDataSet2.Tb_ConcelTransferDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -30265,14 +30265,14 @@ SELECT Numbers, UserNumbers, Agent, TransfarNumber, TransfarAmount, GlobleNumber
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_ConcelTransferDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_ConcelTransferDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_ConcelTransfer");
         }
         
@@ -30791,7 +30791,7 @@ SELECT BondNumber, UserNumbers, ExchangeAmount, ExchangeCurrency, SenderName, Re
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_ConfirmedTransferDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_ConfirmedTransferDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -30804,9 +30804,9 @@ SELECT BondNumber, UserNumbers, ExchangeAmount, ExchangeCurrency, SenderName, Re
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_ConfirmedTransferDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_ConfirmedTransferDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_ConfirmedTransferDataTable dataTable = new DBTAEMDataSet1.Tb_ConfirmedTransferDataTable();
+            DBTAEMDataSet2.Tb_ConfirmedTransferDataTable dataTable = new DBTAEMDataSet2.Tb_ConfirmedTransferDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -30814,14 +30814,14 @@ SELECT BondNumber, UserNumbers, ExchangeAmount, ExchangeCurrency, SenderName, Re
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_ConfirmedTransferDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_ConfirmedTransferDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_ConfirmedTransfer");
         }
         
@@ -31430,7 +31430,7 @@ SELECT CurrencyPriceNumber, CurrencyNumber, TtranferFrom, TtranferTo, TtranferPr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_CurrenciesPricesDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_CurrenciesPricesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -31443,9 +31443,9 @@ SELECT CurrencyPriceNumber, CurrencyNumber, TtranferFrom, TtranferTo, TtranferPr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_CurrenciesPricesDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_CurrenciesPricesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_CurrenciesPricesDataTable dataTable = new DBTAEMDataSet1.Tb_CurrenciesPricesDataTable();
+            DBTAEMDataSet2.Tb_CurrenciesPricesDataTable dataTable = new DBTAEMDataSet2.Tb_CurrenciesPricesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -31453,14 +31453,14 @@ SELECT CurrencyPriceNumber, CurrencyNumber, TtranferFrom, TtranferTo, TtranferPr
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_CurrenciesPricesDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_CurrenciesPricesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_CurrenciesPrices");
         }
         
@@ -32193,7 +32193,7 @@ SELECT CurrencyNumbers, UserNumbers, UserName, CurrencyName, ArabicSymbol, Engli
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_CurrenciseDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_CurrenciseDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -32206,9 +32206,9 @@ SELECT CurrencyNumbers, UserNumbers, UserName, CurrencyName, ArabicSymbol, Engli
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_CurrenciseDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_CurrenciseDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_CurrenciseDataTable dataTable = new DBTAEMDataSet1.Tb_CurrenciseDataTable();
+            DBTAEMDataSet2.Tb_CurrenciseDataTable dataTable = new DBTAEMDataSet2.Tb_CurrenciseDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -32216,14 +32216,14 @@ SELECT CurrencyNumbers, UserNumbers, UserName, CurrencyName, ArabicSymbol, Engli
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_CurrenciseDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_CurrenciseDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Currencise");
         }
         
@@ -32901,7 +32901,7 @@ SELECT BondNumber, UserNumbers, ExchangeMethod, Amount, Currency, MethodExchange
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_CustomerExchangeReceiptBondsDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_CustomerExchangeReceiptBondsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -32914,9 +32914,9 @@ SELECT BondNumber, UserNumbers, ExchangeMethod, Amount, Currency, MethodExchange
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_CustomerExchangeReceiptBondsDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_CustomerExchangeReceiptBondsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_CustomerExchangeReceiptBondsDataTable dataTable = new DBTAEMDataSet1.Tb_CustomerExchangeReceiptBondsDataTable();
+            DBTAEMDataSet2.Tb_CustomerExchangeReceiptBondsDataTable dataTable = new DBTAEMDataSet2.Tb_CustomerExchangeReceiptBondsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -32924,14 +32924,14 @@ SELECT BondNumber, UserNumbers, ExchangeMethod, Amount, Currency, MethodExchange
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_CustomerExchangeReceiptBondsDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_CustomerExchangeReceiptBondsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_CustomerExchangeReceiptBonds");
         }
         
@@ -33835,7 +33835,7 @@ SELECT Numbers, ConstNumbers, ConstDate, Currency, AccountNameMadin, AccountName
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_DailyRestictionsDitalesDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_DailyRestictionsDitalesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -33848,9 +33848,9 @@ SELECT Numbers, ConstNumbers, ConstDate, Currency, AccountNameMadin, AccountName
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_DailyRestictionsDitalesDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_DailyRestictionsDitalesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_DailyRestictionsDitalesDataTable dataTable = new DBTAEMDataSet1.Tb_DailyRestictionsDitalesDataTable();
+            DBTAEMDataSet2.Tb_DailyRestictionsDitalesDataTable dataTable = new DBTAEMDataSet2.Tb_DailyRestictionsDitalesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -33858,14 +33858,14 @@ SELECT Numbers, ConstNumbers, ConstDate, Currency, AccountNameMadin, AccountName
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_DailyRestictionsDitalesDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_DailyRestictionsDitalesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_DailyRestictionsDitales");
         }
         
@@ -34568,7 +34568,7 @@ SELECT ConstNumber, ConstDate, Currency, AccountNameMadin, AccountNameDain, Acco
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_DailyrestictionsHeadDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_DailyrestictionsHeadDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -34581,9 +34581,9 @@ SELECT ConstNumber, ConstDate, Currency, AccountNameMadin, AccountNameDain, Acco
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_DailyrestictionsHeadDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_DailyrestictionsHeadDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_DailyrestictionsHeadDataTable dataTable = new DBTAEMDataSet1.Tb_DailyrestictionsHeadDataTable();
+            DBTAEMDataSet2.Tb_DailyrestictionsHeadDataTable dataTable = new DBTAEMDataSet2.Tb_DailyrestictionsHeadDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -34591,14 +34591,14 @@ SELECT ConstNumber, ConstDate, Currency, AccountNameMadin, AccountNameDain, Acco
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_DailyrestictionsHeadDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_DailyrestictionsHeadDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_DailyrestictionsHead");
         }
         
@@ -35228,7 +35228,7 @@ SELECT MethodNumber, UserNumbers, UserName, Side, DeportationWarid, DeportationS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_DeportationTransfarDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_DeportationTransfarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -35241,9 +35241,9 @@ SELECT MethodNumber, UserNumbers, UserName, Side, DeportationWarid, DeportationS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_DeportationTransfarDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_DeportationTransfarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_DeportationTransfarDataTable dataTable = new DBTAEMDataSet1.Tb_DeportationTransfarDataTable();
+            DBTAEMDataSet2.Tb_DeportationTransfarDataTable dataTable = new DBTAEMDataSet2.Tb_DeportationTransfarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -35251,14 +35251,14 @@ SELECT MethodNumber, UserNumbers, UserName, Side, DeportationWarid, DeportationS
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_DeportationTransfarDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_DeportationTransfarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_DeportationTransfar");
         }
         
@@ -35842,7 +35842,7 @@ SELECT ConstNumber, UserNumbers, UserName, ConstType, ConstStatus, Currency, Amo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_DoubleRestictionsDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_DoubleRestictionsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -35855,9 +35855,9 @@ SELECT ConstNumber, UserNumbers, UserName, ConstType, ConstStatus, Currency, Amo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_DoubleRestictionsDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_DoubleRestictionsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_DoubleRestictionsDataTable dataTable = new DBTAEMDataSet1.Tb_DoubleRestictionsDataTable();
+            DBTAEMDataSet2.Tb_DoubleRestictionsDataTable dataTable = new DBTAEMDataSet2.Tb_DoubleRestictionsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -35865,14 +35865,14 @@ SELECT ConstNumber, UserNumbers, UserName, ConstType, ConstStatus, Currency, Amo
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_DoubleRestictionsDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_DoubleRestictionsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_DoubleRestictions");
         }
         
@@ -36646,7 +36646,7 @@ SELECT EmpNumber, EmpName, UserNumbers, AccountNumberEmp, AccountEmp, Functions,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_EmployeeDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_EmployeeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -36659,9 +36659,9 @@ SELECT EmpNumber, EmpName, UserNumbers, AccountNumberEmp, AccountEmp, Functions,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_EmployeeDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_EmployeeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_EmployeeDataTable dataTable = new DBTAEMDataSet1.Tb_EmployeeDataTable();
+            DBTAEMDataSet2.Tb_EmployeeDataTable dataTable = new DBTAEMDataSet2.Tb_EmployeeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -36669,14 +36669,14 @@ SELECT EmpNumber, EmpName, UserNumbers, AccountNumberEmp, AccountEmp, Functions,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_EmployeeDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_EmployeeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Employee");
         }
         
@@ -37352,7 +37352,7 @@ SELECT EntitiesNumber, UserNumbers, Side, Description, Agent, Address, InsertDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_EntitiesDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_EntitiesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -37365,9 +37365,9 @@ SELECT EntitiesNumber, UserNumbers, Side, Description, Agent, Address, InsertDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_EntitiesDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_EntitiesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_EntitiesDataTable dataTable = new DBTAEMDataSet1.Tb_EntitiesDataTable();
+            DBTAEMDataSet2.Tb_EntitiesDataTable dataTable = new DBTAEMDataSet2.Tb_EntitiesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -37375,14 +37375,14 @@ SELECT EntitiesNumber, UserNumbers, Side, Description, Agent, Address, InsertDat
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_EntitiesDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_EntitiesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Entities");
         }
         
@@ -37966,7 +37966,7 @@ SELECT GroupNumber, GroupName, UserNumbers, UserName, TheDate, Note FROM Tb_Grou
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_GroupsDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_GroupsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -37979,9 +37979,9 @@ SELECT GroupNumber, GroupName, UserNumbers, UserName, TheDate, Note FROM Tb_Grou
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_GroupsDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_GroupsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_GroupsDataTable dataTable = new DBTAEMDataSet1.Tb_GroupsDataTable();
+            DBTAEMDataSet2.Tb_GroupsDataTable dataTable = new DBTAEMDataSet2.Tb_GroupsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -37989,14 +37989,14 @@ SELECT GroupNumber, GroupName, UserNumbers, UserName, TheDate, Note FROM Tb_Grou
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_GroupsDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_GroupsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Groups");
         }
         
@@ -38436,7 +38436,7 @@ SELECT RevealNumber, UserNumbers, UserName, Side, TheDate, TransfarNumber, Note 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_IncomingTotalsDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_IncomingTotalsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -38449,9 +38449,9 @@ SELECT RevealNumber, UserNumbers, UserName, Side, TheDate, TransfarNumber, Note 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_IncomingTotalsDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_IncomingTotalsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_IncomingTotalsDataTable dataTable = new DBTAEMDataSet1.Tb_IncomingTotalsDataTable();
+            DBTAEMDataSet2.Tb_IncomingTotalsDataTable dataTable = new DBTAEMDataSet2.Tb_IncomingTotalsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -38459,14 +38459,14 @@ SELECT RevealNumber, UserNumbers, UserName, Side, TheDate, TransfarNumber, Note 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_IncomingTotalsDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_IncomingTotalsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_IncomingTotals");
         }
         
@@ -38941,7 +38941,7 @@ SELECT BoxNumber, Box, UserNumbers, Currency, SystemBalance, InventoryBalance, D
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_InventoryBoxDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_InventoryBoxDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -38954,9 +38954,9 @@ SELECT BoxNumber, Box, UserNumbers, Currency, SystemBalance, InventoryBalance, D
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_InventoryBoxDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_InventoryBoxDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_InventoryBoxDataTable dataTable = new DBTAEMDataSet1.Tb_InventoryBoxDataTable();
+            DBTAEMDataSet2.Tb_InventoryBoxDataTable dataTable = new DBTAEMDataSet2.Tb_InventoryBoxDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -38964,14 +38964,14 @@ SELECT BoxNumber, Box, UserNumbers, Currency, SystemBalance, InventoryBalance, D
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_InventoryBoxDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_InventoryBoxDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_InventoryBox");
         }
         
@@ -39497,7 +39497,7 @@ SELECT AccountNumber, UserNumbers, UserName, Account, Currency, MatchingBalance,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_MatchingAccountsDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_MatchingAccountsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -39510,9 +39510,9 @@ SELECT AccountNumber, UserNumbers, UserName, Account, Currency, MatchingBalance,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_MatchingAccountsDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_MatchingAccountsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_MatchingAccountsDataTable dataTable = new DBTAEMDataSet1.Tb_MatchingAccountsDataTable();
+            DBTAEMDataSet2.Tb_MatchingAccountsDataTable dataTable = new DBTAEMDataSet2.Tb_MatchingAccountsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -39520,14 +39520,14 @@ SELECT AccountNumber, UserNumbers, UserName, Account, Currency, MatchingBalance,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_MatchingAccountsDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_MatchingAccountsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_MatchingAccounts");
         }
         
@@ -40086,7 +40086,7 @@ SELECT RevealNumber, UserNumbers, UserName, Side, TheDate, TransfarNumber, Note 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_OutgoingDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_OutgoingDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -40099,9 +40099,9 @@ SELECT RevealNumber, UserNumbers, UserName, Side, TheDate, TransfarNumber, Note 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_OutgoingDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_OutgoingDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_OutgoingDataTable dataTable = new DBTAEMDataSet1.Tb_OutgoingDataTable();
+            DBTAEMDataSet2.Tb_OutgoingDataTable dataTable = new DBTAEMDataSet2.Tb_OutgoingDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -40109,14 +40109,14 @@ SELECT RevealNumber, UserNumbers, UserName, Side, TheDate, TransfarNumber, Note 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_OutgoingDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_OutgoingDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Outgoing");
         }
         
@@ -40680,7 +40680,7 @@ SELECT Numbers, UserNumbers, Name, Phone, Address, Email, Nationality, SigntureI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_PersonalInformationDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_PersonalInformationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -40693,9 +40693,9 @@ SELECT Numbers, UserNumbers, Name, Phone, Address, Email, Nationality, SigntureI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_PersonalInformationDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_PersonalInformationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_PersonalInformationDataTable dataTable = new DBTAEMDataSet1.Tb_PersonalInformationDataTable();
+            DBTAEMDataSet2.Tb_PersonalInformationDataTable dataTable = new DBTAEMDataSet2.Tb_PersonalInformationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -40703,14 +40703,14 @@ SELECT Numbers, UserNumbers, Name, Phone, Address, Email, Nationality, SigntureI
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_PersonalInformationDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_PersonalInformationDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_PersonalInformation");
         }
         
@@ -41565,7 +41565,7 @@ SELECT AccountNumber, AccountName, UserNumbers, UserName, Amount, InsertDate, La
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_RoofingAccountsDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_RoofingAccountsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -41578,9 +41578,9 @@ SELECT AccountNumber, AccountName, UserNumbers, UserName, Amount, InsertDate, La
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_RoofingAccountsDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_RoofingAccountsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_RoofingAccountsDataTable dataTable = new DBTAEMDataSet1.Tb_RoofingAccountsDataTable();
+            DBTAEMDataSet2.Tb_RoofingAccountsDataTable dataTable = new DBTAEMDataSet2.Tb_RoofingAccountsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -41588,14 +41588,14 @@ SELECT AccountNumber, AccountName, UserNumbers, UserName, Amount, InsertDate, La
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_RoofingAccountsDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_RoofingAccountsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_RoofingAccounts");
         }
         
@@ -42195,7 +42195,7 @@ SELECT Numbers, UserNumbers, Name, Phone, Address, Email, Nationality, SigntureI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_RwcipientCardDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_RwcipientCardDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -42208,9 +42208,9 @@ SELECT Numbers, UserNumbers, Name, Phone, Address, Email, Nationality, SigntureI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_RwcipientCardDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_RwcipientCardDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_RwcipientCardDataTable dataTable = new DBTAEMDataSet1.Tb_RwcipientCardDataTable();
+            DBTAEMDataSet2.Tb_RwcipientCardDataTable dataTable = new DBTAEMDataSet2.Tb_RwcipientCardDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -42218,14 +42218,14 @@ SELECT Numbers, UserNumbers, Name, Phone, Address, Email, Nationality, SigntureI
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_RwcipientCardDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_RwcipientCardDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_RwcipientCard");
         }
         
@@ -43154,7 +43154,7 @@ SELECT BondNumber, Amount, UserNumbers, FromAccount, ToAccount, Currency, Amount
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_SimpleRegistBondDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_SimpleRegistBondDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -43167,9 +43167,9 @@ SELECT BondNumber, Amount, UserNumbers, FromAccount, ToAccount, Currency, Amount
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_SimpleRegistBondDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_SimpleRegistBondDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_SimpleRegistBondDataTable dataTable = new DBTAEMDataSet1.Tb_SimpleRegistBondDataTable();
+            DBTAEMDataSet2.Tb_SimpleRegistBondDataTable dataTable = new DBTAEMDataSet2.Tb_SimpleRegistBondDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -43177,14 +43177,14 @@ SELECT BondNumber, Amount, UserNumbers, FromAccount, ToAccount, Currency, Amount
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_SimpleRegistBondDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_SimpleRegistBondDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_SimpleRegistBond");
         }
         
@@ -44361,7 +44361,7 @@ SELECT BondNumber, Amount, UserNumbers, FromAccount, ToAccount, Currency, Amount
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_TransfarDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_TransfarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -44374,9 +44374,9 @@ SELECT BondNumber, Amount, UserNumbers, FromAccount, ToAccount, Currency, Amount
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_TransfarDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_TransfarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_TransfarDataTable dataTable = new DBTAEMDataSet1.Tb_TransfarDataTable();
+            DBTAEMDataSet2.Tb_TransfarDataTable dataTable = new DBTAEMDataSet2.Tb_TransfarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -44384,14 +44384,14 @@ SELECT BondNumber, Amount, UserNumbers, FromAccount, ToAccount, Currency, Amount
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_TransfarDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_TransfarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Transfar");
         }
         
@@ -45775,7 +45775,7 @@ SELECT UserNumber, UserName, UserStatus, TheDate, UserGroup, ChangePassword, Not
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBTAEMDataSet1.Tb_UsersDataTable dataTable) {
+        public virtual int Fill(DBTAEMDataSet2.Tb_UsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -45788,9 +45788,9 @@ SELECT UserNumber, UserName, UserStatus, TheDate, UserGroup, ChangePassword, Not
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBTAEMDataSet1.Tb_UsersDataTable GetData() {
+        public virtual DBTAEMDataSet2.Tb_UsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBTAEMDataSet1.Tb_UsersDataTable dataTable = new DBTAEMDataSet1.Tb_UsersDataTable();
+            DBTAEMDataSet2.Tb_UsersDataTable dataTable = new DBTAEMDataSet2.Tb_UsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -45798,14 +45798,14 @@ SELECT UserNumber, UserName, UserStatus, TheDate, UserGroup, ChangePassword, Not
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1.Tb_UsersDataTable dataTable) {
+        public virtual int Update(DBTAEMDataSet2.Tb_UsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBTAEMDataSet1 dataSet) {
+        public virtual int Update(DBTAEMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "Tb_Users");
         }
         
@@ -46802,7 +46802,7 @@ SELECT UserNumber, UserName, UserStatus, TheDate, UserGroup, ChangePassword, Not
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DBTAEMDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DBTAEMDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tb_UsersTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Tb_Users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -47073,7 +47073,7 @@ SELECT UserNumber, UserName, UserStatus, TheDate, UserGroup, ChangePassword, Not
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DBTAEMDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DBTAEMDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tb_UsersTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Tb_Users.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -47315,7 +47315,7 @@ SELECT UserNumber, UserName, UserStatus, TheDate, UserGroup, ChangePassword, Not
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DBTAEMDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DBTAEMDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._accountTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Account.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -47581,7 +47581,7 @@ SELECT UserNumber, UserName, UserStatus, TheDate, UserGroup, ChangePassword, Not
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DBTAEMDataSet1 dataSet) {
+        public virtual int UpdateAll(DBTAEMDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -1,4 +1,4 @@
-﻿namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface
+﻿namespace ExchangeAndMony.pages.transfer.transferInitializatuionInterface
 {
     partial class RecipientInfo
     {
@@ -557,6 +557,7 @@
             this.btn_add.Size = new System.Drawing.Size(128, 47);
             this.btn_add.TabIndex = 19;
             this.btn_add.Text = "اضافة";
+            this.btn_add.Click += new System.EventHandler(this.Btn_add_Click);
             // 
             // btn_exit
             // 

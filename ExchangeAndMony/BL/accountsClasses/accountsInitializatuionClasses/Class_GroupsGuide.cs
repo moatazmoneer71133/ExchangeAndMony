@@ -5,51 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using ExchangeAndMony.model;
 using ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface;
+
 namespace ExchangeAndMony.BL.accountsClasses.accountsInitializatuionClasses
 {
     class Class_GroupsGuide
     {
         DBTAEMEntities db;
-       
 
 
+         
 
         public void loadData(GroupsGuide groups)
         {
-      
 
 
-                using (var db = new DBTAEMEntities())
-                {
-                    //  الكيانات التي نريد عرضها
-                    var entities = db.Tb_Groups.ToList();
 
-                    //  الحقول التي نريد عرضها
-                    var selectedFields = new List<string> { "GroupNumber", "GroupName", "TheDate" , "UserName","Note" };
+            db = new DBTAEMEntities();
+           
+            groups.dataGridView_groups.DataSource = db.Tb_Groups.OrderByDescending(x => x.GroupNumber).ToList();
 
-                    //   قائمة من الكائنات المجهولة تحتوي على الحقول المحددة
-                    var anonymousObjects = entities.Select(x => new {
-                        Field1 = x.GetType().GetProperty(selectedFields[0]).GetValue(x),
-                        Field2 = x.GetType().GetProperty(selectedFields[1]).GetValue(x),
-                        Field3 = x.GetType().GetProperty(selectedFields[2]).GetValue(x),
-                        Field4 = x.GetType().GetProperty(selectedFields[3]).GetValue(x),
-                        Field5 = x.GetType().GetProperty(selectedFields[4]).GetValue(x),
-                     
-                    });
-
-                // ربط DataGridView بالقائمة
-
-                groups.dataGridView_groups.DataSource = anonymousObjects.ToList();
-                groups.dataGridView_groups.Columns[0].HeaderText = "رقم المجموعة";
-                groups.dataGridView_groups.Columns[1].HeaderText = " اسم المجموعة";
-                groups.dataGridView_groups.Columns[2].HeaderText = "اسم المستخدم";
-                groups.dataGridView_groups.Columns[3].HeaderText = "التاريخ ";
-                groups.dataGridView_groups.Columns[4].HeaderText = "  الملاحظة";
-
-            }
-            
-
-}
+          
+        }
        
         public void addGroup(GroupsGuide groups)
         {

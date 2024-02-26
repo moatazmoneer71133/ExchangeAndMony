@@ -30,11 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupsGuide));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView_groups = new DevExpress.XtraGrid.GridControl();
+            this.tbGroupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colGroupNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGroupName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTheDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_groupNumber = new System.Windows.Forms.TextBox();
             this.txt_groupName = new System.Windows.Forms.TextBox();
@@ -56,15 +60,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbGroupsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTAEMDataSet2 = new ExchangeAndMony.DBTAEMDataSet2();
             this.timer_message_seccess = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView_groups = new System.Windows.Forms.DataGridView();
+            this.tb_GroupsTableAdapter1 = new ExchangeAndMony.DBTAEMDataSet2TableAdapters.Tb_GroupsTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_groups)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGroupsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_Search)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMessage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_groups)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGroupsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,6 +88,93 @@
             this.panel1.Size = new System.Drawing.Size(1308, 771);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dataGridView_groups
+            // 
+            this.dataGridView_groups.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.dataGridView_groups.DataSource = this.tbGroupsBindingSource1;
+            this.dataGridView_groups.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView_groups.Location = new System.Drawing.Point(0, 357);
+            this.dataGridView_groups.MainView = this.gridView1;
+            this.dataGridView_groups.Name = "dataGridView_groups";
+            this.dataGridView_groups.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridView_groups.Size = new System.Drawing.Size(1308, 414);
+            this.dataGridView_groups.TabIndex = 10;
+            this.dataGridView_groups.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // tbGroupsBindingSource
+            // 
+            this.tbGroupsBindingSource.DataMember = "Tb_Groups";
+            // 
+            // gridView1
+            // 
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colGroupNumber,
+            this.colGroupName,
+            this.colUserName,
+            this.colTheDate,
+            this.colNote});
+            this.gridView1.GridControl = this.dataGridView_groups;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // colGroupNumber
+            // 
+            this.colGroupNumber.Caption = "رقم المجموعة";
+            this.colGroupNumber.FieldName = "GroupNumber";
+            this.colGroupNumber.MinWidth = 25;
+            this.colGroupNumber.Name = "colGroupNumber";
+            this.colGroupNumber.OptionsColumn.ReadOnly = true;
+            this.colGroupNumber.Visible = true;
+            this.colGroupNumber.VisibleIndex = 0;
+            this.colGroupNumber.Width = 94;
+            // 
+            // colGroupName
+            // 
+            this.colGroupName.Caption = "اسم المجموعة";
+            this.colGroupName.FieldName = "GroupName";
+            this.colGroupName.MinWidth = 25;
+            this.colGroupName.Name = "colGroupName";
+            this.colGroupName.OptionsColumn.ReadOnly = true;
+            this.colGroupName.Visible = true;
+            this.colGroupName.VisibleIndex = 1;
+            this.colGroupName.Width = 94;
+            // 
+            // colUserName
+            // 
+            this.colUserName.Caption = "اسم المستخدم";
+            this.colUserName.FieldName = "UserName";
+            this.colUserName.MinWidth = 25;
+            this.colUserName.Name = "colUserName";
+            this.colUserName.OptionsColumn.ReadOnly = true;
+            this.colUserName.Visible = true;
+            this.colUserName.VisibleIndex = 2;
+            this.colUserName.Width = 94;
+            // 
+            // colTheDate
+            // 
+            this.colTheDate.Caption = "التاريخ";
+            this.colTheDate.FieldName = "TheDate";
+            this.colTheDate.MinWidth = 25;
+            this.colTheDate.Name = "colTheDate";
+            this.colTheDate.OptionsColumn.ReadOnly = true;
+            this.colTheDate.Visible = true;
+            this.colTheDate.VisibleIndex = 3;
+            this.colTheDate.Width = 94;
+            // 
+            // colNote
+            // 
+            this.colNote.Caption = "الملاحظة";
+            this.colNote.FieldName = "Note";
+            this.colNote.MinWidth = 25;
+            this.colNote.Name = "colNote";
+            this.colNote.OptionsColumn.ReadOnly = true;
+            this.colNote.Visible = true;
+            this.colNote.VisibleIndex = 4;
+            this.colNote.Width = 94;
             // 
             // groupBox1
             // 
@@ -108,6 +205,7 @@
             this.txt_groupName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_groupName.Size = new System.Drawing.Size(288, 30);
             this.txt_groupName.TabIndex = 17;
+            this.txt_groupName.TextChanged += new System.EventHandler(this.Txt_groupName_TextChanged);
             this.txt_groupName.Enter += new System.EventHandler(this.Txt_groupName_Enter);
             // 
             // txt_groupDescription
@@ -267,6 +365,7 @@
             // 
             // txt_Search
             // 
+            this.txt_Search.Font = new System.Drawing.Font("Tempus Sans ITC", 10F);
             this.txt_Search.Location = new System.Drawing.Point(47, 15);
             this.txt_Search.Multiline = true;
             this.txt_Search.Name = "txt_Search";
@@ -320,49 +419,24 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "دليل المجموعات";
             // 
+            // tbGroupsBindingSource1
+            // 
+            this.tbGroupsBindingSource1.DataMember = "Tb_Groups";
+            this.tbGroupsBindingSource1.DataSource = this.dBTAEMDataSet2;
+            // 
+            // dBTAEMDataSet2
+            // 
+            this.dBTAEMDataSet2.DataSetName = "DBTAEMDataSet2";
+            this.dBTAEMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // timer_message_seccess
             // 
             this.timer_message_seccess.Interval = 1000;
             this.timer_message_seccess.Tick += new System.EventHandler(this.Timer_message_seccess_Tick);
             // 
-            // dataGridView_groups
+            // tb_GroupsTableAdapter1
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_groups.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView_groups.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_groups.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_groups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_groups.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView_groups.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView_groups.GridColor = System.Drawing.Color.DarkGray;
-            this.dataGridView_groups.Location = new System.Drawing.Point(0, 357);
-            this.dataGridView_groups.Name = "dataGridView_groups";
-            this.dataGridView_groups.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView_groups.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView_groups.RowTemplate.Height = 26;
-            this.dataGridView_groups.Size = new System.Drawing.Size(1308, 414);
-            this.dataGridView_groups.TabIndex = 10;
-            this.dataGridView_groups.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_groups_CellDoubleClick);
-            this.dataGridView_groups.DoubleClick += new System.EventHandler(this.DataGridView_groups_DoubleClick);
+            this.tb_GroupsTableAdapter1.ClearBeforeFill = true;
             // 
             // GroupsGuide
             // 
@@ -375,6 +449,9 @@
             this.Text = "/*";
             this.Load += new System.EventHandler(this.GroupsGuide_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_groups)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGroupsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -382,36 +459,48 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_Search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMessage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_groups)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGroupsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox3;
-        public DevExpress.XtraEditors.SimpleButton btn_edit;
-        public DevExpress.XtraEditors.SimpleButton btn_delete;
-        public DevExpress.XtraEditors.SimpleButton btn_print;
-        public DevExpress.XtraEditors.SimpleButton btn_update;
-        public DevExpress.XtraEditors.SimpleButton btn_add;
-        public DevExpress.XtraEditors.SimpleButton btn_exit;
+        private DBTAEMDataSet1 dBTAEMDataSet1;
+        private DBTAEMDataSet1TableAdapters.Tb_GroupsTableAdapter tb_GroupsTableAdapter;
+        internal System.Windows.Forms.Panel panel1;
+        internal System.Windows.Forms.Panel panel2;
+        internal System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.DateTimePicker dateTimePicker1;
+        internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.GroupBox groupBox1;
+        internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.Label label11;
+        internal System.Windows.Forms.GroupBox groupBox3;
+        internal System.Windows.Forms.TextBox txt_Search;
+        internal DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        internal System.Windows.Forms.BindingSource tbGroupsBindingSource;
+        internal DevExpress.XtraGrid.Columns.GridColumn colGroupNumber;
+        internal DevExpress.XtraGrid.Columns.GridColumn colGroupName;
+        internal DevExpress.XtraGrid.Columns.GridColumn colUserName;
+        internal DevExpress.XtraGrid.Columns.GridColumn colTheDate;
+        internal DevExpress.XtraGrid.Columns.GridColumn colNote;
+        internal DBTAEMDataSet2 dBTAEMDataSet2;
+        internal System.Windows.Forms.BindingSource tbGroupsBindingSource1;
+        internal DBTAEMDataSet2TableAdapters.Tb_GroupsTableAdapter tb_GroupsTableAdapter1;
+        internal DevExpress.XtraEditors.SimpleButton btn_edit;
+        internal DevExpress.XtraEditors.SimpleButton btn_delete;
+        internal DevExpress.XtraEditors.SimpleButton btn_print;
+        internal DevExpress.XtraEditors.SimpleButton btn_update;
+        internal DevExpress.XtraEditors.SimpleButton btn_add;
+        internal DevExpress.XtraEditors.SimpleButton btn_exit;
         internal System.Windows.Forms.PictureBox PictureBoxMessage;
         internal System.Windows.Forms.Label lbl_Message;
-        public System.Windows.Forms.Timer timer_message_seccess;
+        internal System.Windows.Forms.Timer timer_message_seccess;
         internal System.Windows.Forms.TextBox txt_groupName;
         internal System.Windows.Forms.TextBox txt_groupDescription;
         internal System.Windows.Forms.TextBox txt_groupNumber;
-        private System.Windows.Forms.TextBox txt_Search;
         internal System.Windows.Forms.PictureBox picture_Search;
-        internal System.Windows.Forms.DataGridView dataGridView_groups;
+        internal DevExpress.XtraGrid.GridControl dataGridView_groups;
     }
 }

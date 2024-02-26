@@ -32,46 +32,48 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrencyPricesGuide));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.tbCurrenciesPricesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBTAEMDataSet = new ExchangeAndMony.DBTAEMDataSet();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTAEMDataSet2 = new ExchangeAndMony.DBTAEMDataSet2();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colCurrencyPriceNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCurrencyNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTtranferFrom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTtranferTo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTtranferPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPurchPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPurchasePrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSellingPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLowPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHeghtPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLowPricePay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHighestPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLowPricePurchasing = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLowPriceSelling = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHeghtPricePay = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHeghtPriceSelling = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHighestPricePurchasing = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHighestPriceSelling = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.currencie_com2 = new ExchangeAndMony.pages.currencie_com();
+            this.currencie_com1 = new ExchangeAndMony.pages.currencie_com();
             this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_HighestPriceSelling = new System.Windows.Forms.TextBox();
+            this.txt_HighestPricePurchasing = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txt_LowPriceSelling = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_LowPricePurchasing = new System.Windows.Forms.TextBox();
+            this.txt_SellingPrice = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_PurchasePrice = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_HighestPrice = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt_LowPrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_TtranferPrice = new System.Windows.Forms.TextBox();
+            this.txt_Note = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_edit = new DevExpress.XtraEditors.SimpleButton();
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
@@ -81,20 +83,24 @@
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
             this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PictureBoxMessage = new System.Windows.Forms.PictureBox();
+            this.lbl_Message = new System.Windows.Forms.Label();
+            this.picture_Search = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txt_Search = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.tb_CurrenciesPricesTableAdapter = new ExchangeAndMony.DBTAEMDataSetTableAdapters.Tb_CurrenciesPricesTableAdapter();
-            this.picture_Search = new System.Windows.Forms.PictureBox();
-            this.txt_Search = new System.Windows.Forms.TextBox();
+            this.timer_message_seccess = new System.Windows.Forms.Timer(this.components);
+            this.tb_CurrenciesPricesTableAdapter = new ExchangeAndMony.DBTAEMDataSet2TableAdapters.Tb_CurrenciesPricesTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbCurrenciesPricesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMessage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_Search)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,7 +118,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.tbCurrenciesPricesBindingSource;
+            this.gridControl1.DataSource = this.bindingSource1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridControl1.Location = new System.Drawing.Point(0, 437);
             this.gridControl1.MainView = this.gridView1;
@@ -123,194 +129,208 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // tbCurrenciesPricesBindingSource
+            // bindingSource1
             // 
-            this.tbCurrenciesPricesBindingSource.DataMember = "Tb_CurrenciesPrices";
-            this.tbCurrenciesPricesBindingSource.DataSource = this.dBTAEMDataSet;
+            this.bindingSource1.DataMember = "Tb_CurrenciesPrices";
+            this.bindingSource1.DataSource = this.dBTAEMDataSet2;
             // 
-            // dBTAEMDataSet
+            // dBTAEMDataSet2
             // 
-            this.dBTAEMDataSet.DataSetName = "DBTAEMDataSet";
-            this.dBTAEMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dBTAEMDataSet2.DataSetName = "DBTAEMDataSet2";
+            this.dBTAEMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.gridView1.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.gridView1.Appearance.FixedLine.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.gridView1.Appearance.FixedLine.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.gridView1.Appearance.Preview.Options.UseFont = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colCurrencyPriceNumber,
+            this.colCurrencyNumber,
             this.colTtranferFrom,
             this.colTtranferTo,
             this.colTtranferPrice,
-            this.colPurchPrice,
+            this.colPurchasePrice,
             this.colSellingPrice,
             this.colLowPrice,
-            this.colHeghtPrice,
-            this.colLowPricePay,
+            this.colHighestPrice,
+            this.colLowPricePurchasing,
             this.colLowPriceSelling,
-            this.colHeghtPricePay,
-            this.colHeghtPriceSelling,
+            this.colHighestPricePurchasing,
+            this.colHighestPriceSelling,
             this.colNote});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // colCurrencyPriceNumber
+            // 
+            this.colCurrencyPriceNumber.FieldName = "CurrencyPriceNumber";
+            this.colCurrencyPriceNumber.MinWidth = 25;
+            this.colCurrencyPriceNumber.Name = "colCurrencyPriceNumber";
+            this.colCurrencyPriceNumber.Visible = true;
+            this.colCurrencyPriceNumber.VisibleIndex = 0;
+            this.colCurrencyPriceNumber.Width = 94;
+            // 
+            // colCurrencyNumber
+            // 
+            this.colCurrencyNumber.FieldName = "CurrencyNumber";
+            this.colCurrencyNumber.MinWidth = 25;
+            this.colCurrencyNumber.Name = "colCurrencyNumber";
+            this.colCurrencyNumber.Visible = true;
+            this.colCurrencyNumber.VisibleIndex = 1;
+            this.colCurrencyNumber.Width = 94;
+            // 
             // colTtranferFrom
             // 
-            this.colTtranferFrom.Caption = "التحويل من";
             this.colTtranferFrom.FieldName = "TtranferFrom";
             this.colTtranferFrom.MinWidth = 25;
             this.colTtranferFrom.Name = "colTtranferFrom";
             this.colTtranferFrom.Visible = true;
-            this.colTtranferFrom.VisibleIndex = 0;
-            this.colTtranferFrom.Width = 89;
+            this.colTtranferFrom.VisibleIndex = 2;
+            this.colTtranferFrom.Width = 94;
             // 
             // colTtranferTo
             // 
-            this.colTtranferTo.Caption = "التحويل الي";
             this.colTtranferTo.FieldName = "TtranferTo";
             this.colTtranferTo.MinWidth = 25;
             this.colTtranferTo.Name = "colTtranferTo";
             this.colTtranferTo.Visible = true;
-            this.colTtranferTo.VisibleIndex = 1;
-            this.colTtranferTo.Width = 89;
+            this.colTtranferTo.VisibleIndex = 3;
+            this.colTtranferTo.Width = 94;
             // 
             // colTtranferPrice
             // 
-            this.colTtranferPrice.Caption = "سعر التحويل";
             this.colTtranferPrice.FieldName = "TtranferPrice";
             this.colTtranferPrice.MinWidth = 25;
             this.colTtranferPrice.Name = "colTtranferPrice";
             this.colTtranferPrice.Visible = true;
-            this.colTtranferPrice.VisibleIndex = 2;
-            this.colTtranferPrice.Width = 89;
+            this.colTtranferPrice.VisibleIndex = 4;
+            this.colTtranferPrice.Width = 94;
             // 
-            // colPurchPrice
+            // colPurchasePrice
             // 
-            this.colPurchPrice.Caption = "سعر الشراء";
-            this.colPurchPrice.FieldName = "PurchPrice";
-            this.colPurchPrice.MinWidth = 25;
-            this.colPurchPrice.Name = "colPurchPrice";
-            this.colPurchPrice.Visible = true;
-            this.colPurchPrice.VisibleIndex = 3;
-            this.colPurchPrice.Width = 89;
+            this.colPurchasePrice.FieldName = "PurchasePrice";
+            this.colPurchasePrice.MinWidth = 25;
+            this.colPurchasePrice.Name = "colPurchasePrice";
+            this.colPurchasePrice.Visible = true;
+            this.colPurchasePrice.VisibleIndex = 5;
+            this.colPurchasePrice.Width = 94;
             // 
             // colSellingPrice
             // 
-            this.colSellingPrice.Caption = "سعر البيع";
             this.colSellingPrice.FieldName = "SellingPrice";
             this.colSellingPrice.MinWidth = 25;
             this.colSellingPrice.Name = "colSellingPrice";
             this.colSellingPrice.Visible = true;
-            this.colSellingPrice.VisibleIndex = 4;
-            this.colSellingPrice.Width = 89;
+            this.colSellingPrice.VisibleIndex = 6;
+            this.colSellingPrice.Width = 94;
             // 
             // colLowPrice
             // 
-            this.colLowPrice.Caption = "السعر الادنى";
             this.colLowPrice.FieldName = "LowPrice";
             this.colLowPrice.MinWidth = 25;
             this.colLowPrice.Name = "colLowPrice";
             this.colLowPrice.Visible = true;
-            this.colLowPrice.VisibleIndex = 5;
-            this.colLowPrice.Width = 89;
+            this.colLowPrice.VisibleIndex = 7;
+            this.colLowPrice.Width = 94;
             // 
-            // colHeghtPrice
+            // colHighestPrice
             // 
-            this.colHeghtPrice.Caption = "السعر الاعلى";
-            this.colHeghtPrice.FieldName = "HeghtPrice";
-            this.colHeghtPrice.MinWidth = 25;
-            this.colHeghtPrice.Name = "colHeghtPrice";
-            this.colHeghtPrice.Visible = true;
-            this.colHeghtPrice.VisibleIndex = 6;
-            this.colHeghtPrice.Width = 89;
+            this.colHighestPrice.FieldName = "HighestPrice";
+            this.colHighestPrice.MinWidth = 25;
+            this.colHighestPrice.Name = "colHighestPrice";
+            this.colHighestPrice.Visible = true;
+            this.colHighestPrice.VisibleIndex = 8;
+            this.colHighestPrice.Width = 94;
             // 
-            // colLowPricePay
+            // colLowPricePurchasing
             // 
-            this.colLowPricePay.Caption = "سعر الادنى للشراء";
-            this.colLowPricePay.FieldName = "LowPricePay";
-            this.colLowPricePay.MinWidth = 25;
-            this.colLowPricePay.Name = "colLowPricePay";
-            this.colLowPricePay.Visible = true;
-            this.colLowPricePay.VisibleIndex = 7;
-            this.colLowPricePay.Width = 89;
+            this.colLowPricePurchasing.FieldName = "LowPricePurchasing";
+            this.colLowPricePurchasing.MinWidth = 25;
+            this.colLowPricePurchasing.Name = "colLowPricePurchasing";
+            this.colLowPricePurchasing.Visible = true;
+            this.colLowPricePurchasing.VisibleIndex = 9;
+            this.colLowPricePurchasing.Width = 94;
             // 
             // colLowPriceSelling
             // 
-            this.colLowPriceSelling.Caption = "السعر الادنى للبيع";
             this.colLowPriceSelling.FieldName = "LowPriceSelling";
             this.colLowPriceSelling.MinWidth = 25;
             this.colLowPriceSelling.Name = "colLowPriceSelling";
             this.colLowPriceSelling.Visible = true;
-            this.colLowPriceSelling.VisibleIndex = 8;
-            this.colLowPriceSelling.Width = 89;
+            this.colLowPriceSelling.VisibleIndex = 10;
+            this.colLowPriceSelling.Width = 94;
             // 
-            // colHeghtPricePay
+            // colHighestPricePurchasing
             // 
-            this.colHeghtPricePay.Caption = "السعر الاعلى للشراء";
-            this.colHeghtPricePay.FieldName = "HeghtPricePay";
-            this.colHeghtPricePay.MinWidth = 25;
-            this.colHeghtPricePay.Name = "colHeghtPricePay";
-            this.colHeghtPricePay.Visible = true;
-            this.colHeghtPricePay.VisibleIndex = 9;
-            this.colHeghtPricePay.Width = 89;
+            this.colHighestPricePurchasing.FieldName = "HighestPricePurchasing";
+            this.colHighestPricePurchasing.MinWidth = 25;
+            this.colHighestPricePurchasing.Name = "colHighestPricePurchasing";
+            this.colHighestPricePurchasing.Visible = true;
+            this.colHighestPricePurchasing.VisibleIndex = 11;
+            this.colHighestPricePurchasing.Width = 94;
             // 
-            // colHeghtPriceSelling
+            // colHighestPriceSelling
             // 
-            this.colHeghtPriceSelling.Caption = "السعر الاعلى للبيع";
-            this.colHeghtPriceSelling.FieldName = "HeghtPriceSelling";
-            this.colHeghtPriceSelling.MinWidth = 25;
-            this.colHeghtPriceSelling.Name = "colHeghtPriceSelling";
-            this.colHeghtPriceSelling.Visible = true;
-            this.colHeghtPriceSelling.VisibleIndex = 10;
-            this.colHeghtPriceSelling.Width = 89;
+            this.colHighestPriceSelling.FieldName = "HighestPriceSelling";
+            this.colHighestPriceSelling.MinWidth = 25;
+            this.colHighestPriceSelling.Name = "colHighestPriceSelling";
+            this.colHighestPriceSelling.Visible = true;
+            this.colHighestPriceSelling.VisibleIndex = 12;
+            this.colHighestPriceSelling.Width = 94;
             // 
             // colNote
             // 
-            this.colNote.Caption = "ملاحظات";
             this.colNote.FieldName = "Note";
             this.colNote.MinWidth = 25;
             this.colNote.Name = "colNote";
             this.colNote.Visible = true;
-            this.colNote.VisibleIndex = 11;
-            this.colNote.Width = 102;
+            this.colNote.VisibleIndex = 13;
+            this.colNote.Width = 94;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.currencie_com2);
+            this.groupBox1.Controls.Add(this.currencie_com1);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_HighestPriceSelling);
+            this.groupBox1.Controls.Add(this.txt_HighestPricePurchasing);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.txt_LowPriceSelling);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.txt_LowPricePurchasing);
+            this.groupBox1.Controls.Add(this.txt_SellingPrice);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.txt_PurchasePrice);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_HighestPrice);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.txt_LowPrice);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txt_TtranferPrice);
+            this.groupBox1.Controls.Add(this.txt_Note);
             this.groupBox1.Location = new System.Drawing.Point(28, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1265, 260);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
+            // 
+            // currencie_com2
+            // 
+            this.currencie_com2.Location = new System.Drawing.Point(696, 33);
+            this.currencie_com2.Name = "currencie_com2";
+            this.currencie_com2.Size = new System.Drawing.Size(159, 25);
+            this.currencie_com2.TabIndex = 2;
+            // 
+            // currencie_com1
+            // 
+            this.currencie_com1.Location = new System.Drawing.Point(996, 33);
+            this.currencie_com1.Name = "currencie_com1";
+            this.currencie_com1.Size = new System.Drawing.Size(159, 25);
+            this.currencie_com1.TabIndex = 1;
             // 
             // label14
             // 
@@ -332,21 +352,23 @@
             this.label5.TabIndex = 52;
             this.label5.Text = "أعلى سعر شراء";
             // 
-            // textBox10
+            // txt_HighestPriceSelling
             // 
-            this.textBox10.Location = new System.Drawing.Point(387, 156);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(159, 26);
-            this.textBox10.TabIndex = 51;
+            this.txt_HighestPriceSelling.Location = new System.Drawing.Point(387, 156);
+            this.txt_HighestPriceSelling.Multiline = true;
+            this.txt_HighestPriceSelling.Name = "txt_HighestPriceSelling";
+            this.txt_HighestPriceSelling.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_HighestPriceSelling.Size = new System.Drawing.Size(159, 26);
+            this.txt_HighestPriceSelling.TabIndex = 11;
             // 
-            // textBox2
+            // txt_HighestPricePurchasing
             // 
-            this.textBox2.Location = new System.Drawing.Point(387, 116);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 26);
-            this.textBox2.TabIndex = 50;
+            this.txt_HighestPricePurchasing.Location = new System.Drawing.Point(387, 116);
+            this.txt_HighestPricePurchasing.Multiline = true;
+            this.txt_HighestPricePurchasing.Name = "txt_HighestPricePurchasing";
+            this.txt_HighestPricePurchasing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_HighestPricePurchasing.Size = new System.Drawing.Size(159, 26);
+            this.txt_HighestPricePurchasing.TabIndex = 8;
             // 
             // label13
             // 
@@ -368,13 +390,14 @@
             this.label7.TabIndex = 48;
             this.label7.Text = "أدنى سعر شراء";
             // 
-            // textBox9
+            // txt_LowPriceSelling
             // 
-            this.textBox9.Location = new System.Drawing.Point(696, 156);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(159, 26);
-            this.textBox9.TabIndex = 47;
+            this.txt_LowPriceSelling.Location = new System.Drawing.Point(696, 156);
+            this.txt_LowPriceSelling.Multiline = true;
+            this.txt_LowPriceSelling.Name = "txt_LowPriceSelling";
+            this.txt_LowPriceSelling.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_LowPriceSelling.Size = new System.Drawing.Size(159, 26);
+            this.txt_LowPriceSelling.TabIndex = 10;
             // 
             // label12
             // 
@@ -386,21 +409,23 @@
             this.label12.TabIndex = 44;
             this.label12.Text = "سعر البيع";
             // 
-            // textBox5
+            // txt_LowPricePurchasing
             // 
-            this.textBox5.Location = new System.Drawing.Point(696, 118);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(159, 26);
-            this.textBox5.TabIndex = 46;
+            this.txt_LowPricePurchasing.Location = new System.Drawing.Point(696, 118);
+            this.txt_LowPricePurchasing.Multiline = true;
+            this.txt_LowPricePurchasing.Name = "txt_LowPricePurchasing";
+            this.txt_LowPricePurchasing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_LowPricePurchasing.Size = new System.Drawing.Size(159, 26);
+            this.txt_LowPricePurchasing.TabIndex = 7;
             // 
-            // textBox8
+            // txt_SellingPrice
             // 
-            this.textBox8.Location = new System.Drawing.Point(996, 156);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(159, 26);
-            this.textBox8.TabIndex = 43;
+            this.txt_SellingPrice.Location = new System.Drawing.Point(996, 156);
+            this.txt_SellingPrice.Multiline = true;
+            this.txt_SellingPrice.Name = "txt_SellingPrice";
+            this.txt_SellingPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_SellingPrice.Size = new System.Drawing.Size(159, 26);
+            this.txt_SellingPrice.TabIndex = 9;
             // 
             // label11
             // 
@@ -412,13 +437,15 @@
             this.label11.TabIndex = 45;
             this.label11.Text = "سعر الشراء";
             // 
-            // textBox7
+            // txt_PurchasePrice
             // 
-            this.textBox7.Location = new System.Drawing.Point(996, 116);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(159, 26);
-            this.textBox7.TabIndex = 42;
+            this.txt_PurchasePrice.Location = new System.Drawing.Point(996, 116);
+            this.txt_PurchasePrice.Multiline = true;
+            this.txt_PurchasePrice.Name = "txt_PurchasePrice";
+            this.txt_PurchasePrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_PurchasePrice.Size = new System.Drawing.Size(159, 26);
+            this.txt_PurchasePrice.TabIndex = 6;
+            this.txt_PurchasePrice.TextChanged += new System.EventHandler(this.Txt_PurchasePrice_TextChanged);
             // 
             // label9
             // 
@@ -430,13 +457,14 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "السعر الأعلى";
             // 
-            // textBox3
+            // txt_HighestPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(387, 73);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 26);
-            this.textBox3.TabIndex = 40;
+            this.txt_HighestPrice.Location = new System.Drawing.Point(387, 73);
+            this.txt_HighestPrice.Multiline = true;
+            this.txt_HighestPrice.Name = "txt_HighestPrice";
+            this.txt_HighestPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_HighestPrice.Size = new System.Drawing.Size(159, 26);
+            this.txt_HighestPrice.TabIndex = 5;
             // 
             // label8
             // 
@@ -448,43 +476,14 @@
             this.label8.TabIndex = 39;
             this.label8.Text = "السعر الأدنى";
             // 
-            // textBox1
+            // txt_LowPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(696, 75);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 26);
-            this.textBox1.TabIndex = 38;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Items.AddRange(new object[] {
-            "حساب",
-            "نقد"});
-            this.comboBox1.Location = new System.Drawing.Point(692, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBox1.Size = new System.Drawing.Size(163, 24);
-            this.comboBox1.TabIndex = 37;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.comboBox2.IntegralHeight = false;
-            this.comboBox2.Items.AddRange(new object[] {
-            "حساب",
-            "نقد"});
-            this.comboBox2.Location = new System.Drawing.Point(992, 32);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBox2.Size = new System.Drawing.Size(163, 24);
-            this.comboBox2.TabIndex = 36;
+            this.txt_LowPrice.Location = new System.Drawing.Point(696, 75);
+            this.txt_LowPrice.Multiline = true;
+            this.txt_LowPrice.Name = "txt_LowPrice";
+            this.txt_LowPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_LowPrice.Size = new System.Drawing.Size(159, 26);
+            this.txt_LowPrice.TabIndex = 4;
             // 
             // label4
             // 
@@ -526,21 +525,24 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "التحويل من ";
             // 
-            // textBox6
+            // txt_TtranferPrice
             // 
-            this.textBox6.Location = new System.Drawing.Point(996, 73);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(159, 26);
-            this.textBox6.TabIndex = 31;
+            this.txt_TtranferPrice.Location = new System.Drawing.Point(996, 73);
+            this.txt_TtranferPrice.Multiline = true;
+            this.txt_TtranferPrice.Name = "txt_TtranferPrice";
+            this.txt_TtranferPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TtranferPrice.Size = new System.Drawing.Size(159, 26);
+            this.txt_TtranferPrice.TabIndex = 3;
+            this.txt_TtranferPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_TtranferPrice_KeyPress);
             // 
-            // textBox4
+            // txt_Note
             // 
-            this.textBox4.Location = new System.Drawing.Point(387, 210);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(768, 25);
-            this.textBox4.TabIndex = 30;
+            this.txt_Note.Location = new System.Drawing.Point(387, 210);
+            this.txt_Note.Multiline = true;
+            this.txt_Note.Name = "txt_Note";
+            this.txt_Note.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_Note.Size = new System.Drawing.Size(768, 25);
+            this.txt_Note.TabIndex = 12;
             // 
             // groupBox3
             // 
@@ -582,6 +584,7 @@
             this.btn_delete.Size = new System.Drawing.Size(125, 47);
             this.btn_delete.TabIndex = 23;
             this.btn_delete.Text = "حذف";
+            this.btn_delete.Click += new System.EventHandler(this.Btn_delete_Click);
             // 
             // btn_print
             // 
@@ -595,6 +598,7 @@
             this.btn_print.Size = new System.Drawing.Size(125, 47);
             this.btn_print.TabIndex = 22;
             this.btn_print.Text = "طباعة";
+            this.btn_print.Click += new System.EventHandler(this.Btn_print_Click);
             // 
             // btn_update
             // 
@@ -634,6 +638,7 @@
             this.btn_add.Size = new System.Drawing.Size(128, 47);
             this.btn_add.TabIndex = 19;
             this.btn_add.Text = "اضافة";
+            this.btn_add.Click += new System.EventHandler(this.Btn_add_Click_1);
             // 
             // btn_exit
             // 
@@ -653,6 +658,8 @@
             this.panel2.BackColor = System.Drawing.Color.SeaShell;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.PictureBoxMessage);
+            this.panel2.Controls.Add(this.lbl_Message);
             this.panel2.Controls.Add(this.picture_Search);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txt_Search);
@@ -664,6 +671,31 @@
             this.panel2.Size = new System.Drawing.Size(1325, 63);
             this.panel2.TabIndex = 1;
             // 
+            // PictureBoxMessage
+            // 
+            this.PictureBoxMessage.Location = new System.Drawing.Point(460, 10);
+            this.PictureBoxMessage.Name = "PictureBoxMessage";
+            this.PictureBoxMessage.Size = new System.Drawing.Size(30, 28);
+            this.PictureBoxMessage.TabIndex = 72;
+            this.PictureBoxMessage.TabStop = false;
+            // 
+            // lbl_Message
+            // 
+            this.lbl_Message.Font = new System.Drawing.Font("Tempus Sans ITC", 14F);
+            this.lbl_Message.Location = new System.Drawing.Point(316, 6);
+            this.lbl_Message.Name = "lbl_Message";
+            this.lbl_Message.Size = new System.Drawing.Size(158, 39);
+            this.lbl_Message.TabIndex = 71;
+            // 
+            // picture_Search
+            // 
+            this.picture_Search.Location = new System.Drawing.Point(8, 14);
+            this.picture_Search.Name = "picture_Search";
+            this.picture_Search.Size = new System.Drawing.Size(30, 28);
+            this.picture_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_Search.TabIndex = 70;
+            this.picture_Search.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -673,6 +705,17 @@
             this.label3.Size = new System.Drawing.Size(66, 26);
             this.label3.TabIndex = 4;
             this.label3.Text = "التاريخ";
+            // 
+            // txt_Search
+            // 
+            this.txt_Search.Location = new System.Drawing.Point(44, 11);
+            this.txt_Search.Multiline = true;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_Search.Size = new System.Drawing.Size(171, 34);
+            this.txt_Search.TabIndex = 69;
+            this.txt_Search.Tag = "";
+            this.txt_Search.TextChanged += new System.EventHandler(this.Txt_Search_TextChanged);
             // 
             // dateTimePicker1
             // 
@@ -692,29 +735,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "دليل أسعار العملات";
             // 
+            // timer_message_seccess
+            // 
+            this.timer_message_seccess.Interval = 1000;
+            this.timer_message_seccess.Tick += new System.EventHandler(this.Timer_message_seccess_Tick);
+            // 
             // tb_CurrenciesPricesTableAdapter
             // 
             this.tb_CurrenciesPricesTableAdapter.ClearBeforeFill = true;
-            // 
-            // picture_Search
-            // 
-            this.picture_Search.Location = new System.Drawing.Point(8, 14);
-            this.picture_Search.Name = "picture_Search";
-            this.picture_Search.Size = new System.Drawing.Size(30, 28);
-            this.picture_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture_Search.TabIndex = 70;
-            this.picture_Search.TabStop = false;
-            // 
-            // txt_Search
-            // 
-            this.txt_Search.Location = new System.Drawing.Point(44, 11);
-            this.txt_Search.Multiline = true;
-            this.txt_Search.Name = "txt_Search";
-            this.txt_Search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_Search.Size = new System.Drawing.Size(171, 34);
-            this.txt_Search.TabIndex = 69;
-            this.txt_Search.Tag = "";
-            this.txt_Search.TextChanged += new System.EventHandler(this.Txt_Search_TextChanged);
             // 
             // CurrencyPricesGuide
             // 
@@ -728,14 +756,15 @@
             this.Load += new System.EventHandler(this.CurrencyPricesGuide_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbCurrenciesPricesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBTAEMDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMessage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_Search)).EndInit();
             this.ResumeLayout(false);
 
@@ -751,28 +780,16 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         public DevExpress.XtraEditors.SimpleButton btn_edit;
         public DevExpress.XtraEditors.SimpleButton btn_delete;
@@ -781,24 +798,44 @@
         public DevExpress.XtraEditors.SimpleButton btn_search;
         public DevExpress.XtraEditors.SimpleButton btn_add;
         public DevExpress.XtraEditors.SimpleButton btn_exit;
+        private System.Windows.Forms.BindingSource tbCurrenciesPricesBindingSource;
+        internal System.Windows.Forms.PictureBox picture_Search;
+        private System.Windows.Forms.TextBox txt_Search;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DBTAEMDataSet dBTAEMDataSet;
-        private System.Windows.Forms.BindingSource tbCurrenciesPricesBindingSource;
-        private DBTAEMDataSetTableAdapters.Tb_CurrenciesPricesTableAdapter tb_CurrenciesPricesTableAdapter;
+        private DBTAEMDataSet2 dBTAEMDataSet2;
+        private DevExpress.XtraGrid.Columns.GridColumn colCurrencyPriceNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colCurrencyNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colTtranferFrom;
         private DevExpress.XtraGrid.Columns.GridColumn colTtranferTo;
         private DevExpress.XtraGrid.Columns.GridColumn colTtranferPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn colPurchPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colPurchasePrice;
         private DevExpress.XtraGrid.Columns.GridColumn colSellingPrice;
         private DevExpress.XtraGrid.Columns.GridColumn colLowPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn colHeghtPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn colLowPricePay;
+        private DevExpress.XtraGrid.Columns.GridColumn colHighestPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colLowPricePurchasing;
         private DevExpress.XtraGrid.Columns.GridColumn colLowPriceSelling;
-        private DevExpress.XtraGrid.Columns.GridColumn colHeghtPricePay;
-        private DevExpress.XtraGrid.Columns.GridColumn colHeghtPriceSelling;
+        private DevExpress.XtraGrid.Columns.GridColumn colHighestPricePurchasing;
+        private DevExpress.XtraGrid.Columns.GridColumn colHighestPriceSelling;
         private DevExpress.XtraGrid.Columns.GridColumn colNote;
-        internal System.Windows.Forms.PictureBox picture_Search;
-        private System.Windows.Forms.TextBox txt_Search;
+        private DBTAEMDataSet1 dBTAEMDataSet1;
+        private DBTAEMDataSet1TableAdapters.Tb_CurrenciesPricesTableAdapter tb_CurrenciesPricesTableAdapter2;
+        internal System.Windows.Forms.Timer timer_message_seccess;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private DBTAEMDataSet2TableAdapters.Tb_CurrenciesPricesTableAdapter tb_CurrenciesPricesTableAdapter;
+        internal System.Windows.Forms.TextBox txt_HighestPriceSelling;
+        internal System.Windows.Forms.TextBox txt_HighestPricePurchasing;
+        internal System.Windows.Forms.TextBox txt_LowPriceSelling;
+        internal System.Windows.Forms.TextBox txt_LowPricePurchasing;
+        internal System.Windows.Forms.TextBox txt_SellingPrice;
+        internal System.Windows.Forms.TextBox txt_PurchasePrice;
+        internal System.Windows.Forms.TextBox txt_HighestPrice;
+        internal System.Windows.Forms.TextBox txt_LowPrice;
+        internal System.Windows.Forms.TextBox txt_TtranferPrice;
+        internal System.Windows.Forms.TextBox txt_Note;
+        internal currencie_com currencie_com1;
+        internal currencie_com currencie_com2;
+        internal System.Windows.Forms.PictureBox PictureBoxMessage;
+        internal System.Windows.Forms.Label lbl_Message;
     }
 }

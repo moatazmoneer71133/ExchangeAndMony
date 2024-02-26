@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ExchangeAndMony;
 using System.Data.SqlClient;
+using ExchangeAndMony.BL;
 using ExchangeAndMony.pages.accountsInterface.Classes;
 
 namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterface
@@ -77,7 +78,7 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
 
             data.conection.con.Open();
             //from Currencise1
-            dataAdapter = new SqlDataAdapter("select CurrencyNumbers,CurrencyName,ArabicSymbol,EnglishSymbol,username,Date,Note from Currencise", data.conection.con);
+            dataAdapter = new SqlDataAdapter("select CurrencyNumbers,CurrencyName,ArabicSymbol,EnglishSymbol,username,Date,Note from Tb_Currencise", data.conection.con);
             // dataAdapter.
             dt.Clear();
             dataAdapter.Fill(dt);
@@ -99,7 +100,7 @@ namespace ExchangeAndMony.pages.accountsInterface.accountsInitializatuionInterfa
         {
             data.conection.con.Open();
             //from Currencise1
-            dataAdapter = new SqlDataAdapter("select CurrencyNumbers,CurrencyName,ArabicSymbol,EnglishSymbol,Date,Note from Currencise", data.conection.con);
+            dataAdapter = new SqlDataAdapter("select CurrencyNumbers,CurrencyName,ArabicSymbol,EnglishSymbol,Date,Note from Tb_Currencise", data.conection.con);
             dataAdapter.Fill(dt);
             DGV_currency.DataSource = dt;
             data.conection.con.Close();

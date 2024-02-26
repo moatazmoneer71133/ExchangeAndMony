@@ -1,4 +1,4 @@
-﻿namespace ExchangeAndMony.pages.transferInterface.transferInitializatuionInterface
+﻿namespace ExchangeAndMony.pages.transfer.transferInitializatuionInterface
 {
     partial class PersonalInfo
     {
@@ -70,10 +70,10 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.gridControl_Divert = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -186,6 +186,7 @@
             this.btn_add.Size = new System.Drawing.Size(128, 47);
             this.btn_add.TabIndex = 19;
             this.btn_add.Text = "اضافة";
+            this.btn_add.Click += new System.EventHandler(this.Btn_add_Click);
             // 
             // btn_exit
             // 
@@ -529,34 +530,6 @@
             this.gridView1.GridControl = this.gridControl_Divert;
             this.gridView1.Name = "gridView1";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(544, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 33);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "معلومات شخصية";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1031, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeftLayout = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 25);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1226, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "التاريخ";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SeaShell;
@@ -570,6 +543,34 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1300, 63);
             this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1226, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "التاريخ";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(1031, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.RightToLeftLayout = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(180, 25);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(544, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 33);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "معلومات شخصية";
             // 
             // PersonalInfo
             // 
